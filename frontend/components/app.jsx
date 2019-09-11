@@ -3,20 +3,23 @@ import {
     Route, Redirect, Switch,
     Link, HashRouter
 } from 'react-router-dom';
-import LogInFormContainer from './login_form/login_form_container';
-import SignUpFormContainer from './login_form/signup_form_container';
-import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
+// import LogInFormContainer from './login_form/login_form_container';
+// import SignUpFormContainer from './login_form/signup_form_container';
+// import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
+import Modal from './modal/modal';
+
 
 const App = () => (
     <div>
+        <Modal />
         <header>
             <Link to='/'>
                 <h1> Beaucoup </h1>
             </Link>
         </header>
         <Switch>
-            <AuthRoute path='/login' component={LogInFormContainer} />
-            <AuthRoute path='/signup' component={SignUpFormContainer} />
+            {/* <AuthRoute path='/login' component={LogInFormContainer} />
+            <AuthRoute path='/signup' component={SignUpFormContainer} /> */}
         </Switch>
     </div>
 );
