@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import LogInFormContainer from './login_form/login_form_container';
 import SignUpFormContainer from './login_form/signup_form_container';
+import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 
 const App = () => (
     <div>
