@@ -17,3 +17,38 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: gray;
+  display: inline-flex;
+}
+
+li {
+  float: left;
+}
+
+#nav-logout {
+  float: right;
+}
+#nav-login {
+  float: right;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+

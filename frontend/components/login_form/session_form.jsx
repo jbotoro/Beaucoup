@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
                     <div className='login-label-container'>
                         <label> Email:
                             <input
-                                type="text"
+                                type="email"
                                 value={this.state.email}
                             />
                         </label>
