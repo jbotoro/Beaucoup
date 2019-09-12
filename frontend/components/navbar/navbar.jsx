@@ -16,21 +16,18 @@ class NavBar extends React.Component  {
                 <div className='Nav-main-buttons'>
                     <button 
                         className='Nav-signup' 
-                        onClick={this.props.openModal('signup')}> 
+                        onClick={() => this.props.openModal('signup')}> 
                         START YOUR FREE TRIAL
                     </button>
                     <button 
                         className='Nav-login'
-                        onClick={this.props.openModal('login')}>
+                        onClick={() => this.props.openModal('login')}>
                         LOG IN
                     </button>
                 </div>
             </nav>
         )
-    }
-    
-    
-
-}
+    };
+};
 
 export default NavBar;

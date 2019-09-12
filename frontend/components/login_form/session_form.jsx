@@ -19,6 +19,12 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
     renderErrors() {
         return (
             <ul>
@@ -35,7 +41,7 @@ class SessionForm extends React.Component {
         return (
             <div className='login-form-parent'>
                 <form onSubmit={this.handleSubmit} className='login-form'>
-                    {this.props.formType} or {this.props.navLink}
+                    {this.props.formType} 
                     <br />
                     {this.renderErrors()}
 
@@ -44,6 +50,7 @@ class SessionForm extends React.Component {
                             <input
                                 type="email"
                                 value={this.state.email}
+                                onChange={this.update('email')}
                             />
                         </label>
                         <br />
@@ -51,6 +58,7 @@ class SessionForm extends React.Component {
                             <input
                                 type="password"
                                 value={this.state.password}
+                                onChange={this.update('password')}
                             />
                         </label>
                         <br />

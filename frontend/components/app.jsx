@@ -7,7 +7,7 @@ import {
 // import SignUpFormContainer from './login_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 import Modal from './modal/modal';
-import NavBar from './navbar/navbar';
+import NavBar from './navbar/navbar_container';
 
 
 const App = () => (
