@@ -1,0 +1,33 @@
+.Nav-main-container {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    top:0;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+.Nav-main-buttons {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.Nav-signup {
+    color: black;
+    margin: 4px 40px 0px 0px;
+    padding: 0 32px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.Nav-login {
+
+}
+
+.Nav-logo {
+
+}
