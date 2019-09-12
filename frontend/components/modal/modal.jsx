@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../login_form/login_form_container';
 import SignupFormContainer from '../login_form/signup_form_container';
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal,id, closeModal }) {
     if (!modal) {
         return null;
     }
+    
     let component;
     switch (modal) {
         case 'login':
@@ -30,7 +31,7 @@ function Modal({ modal, closeModal }) {
 
 const mapStateToProps = state => {
     return {
-        modal: state.ui.modal
+        modal: state.ui.modal.type,
     };
 };
 

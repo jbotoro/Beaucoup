@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
       @user = User.find_by_id(params[:id])
       
       unless @user
-        render :json "User not found"
+        render json: "User not found"
       else
         render 'api/users/show'
       end
