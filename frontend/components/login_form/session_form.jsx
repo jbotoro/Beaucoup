@@ -1,5 +1,6 @@
 import React from 'react';
 import merge from 'lodash.merge';
+import {withRouter} from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let user = merge({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(this.props.closeModal);
     }
 
     update(field) {
@@ -26,10 +27,11 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
+       
         return (
             <ul>
-                {this.props.errors.map((error, idx) => (
-                    <li key={`error-${idx}`}>
+                {this.props.errors.map( (error, idx) => (
+                    <li key={`${idx}`}>
                         {error}
                     </li>
                 ))}
@@ -41,7 +43,8 @@ class SessionForm extends React.Component {
         return (
             <div className='login-form-parent'>
                 <form onSubmit={this.handleSubmit} className='login-form'>
-                    {this.props.formType} 
+                     Please {this.props.formType} 
+                    <div onClick={this.props.closeModal} className="close-x">X</div>
                     <br />
                     {this.renderErrors()}
 
@@ -70,4 +73,4 @@ class SessionForm extends React.Component {
     }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);

@@ -9,7 +9,7 @@ class NavBar extends React.Component  {
     }
     
     render () {
-        // debugger
+       
         return (
             <nav className = 'Nav-main-container'>
                 <span className='Nav-logo'> Beaucoup </span>
