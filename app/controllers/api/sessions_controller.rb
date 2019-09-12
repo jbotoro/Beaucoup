@@ -1,5 +1,5 @@
-class SessionsController < ApplicationController
-    def create
+class Api::SessionsController < ApplicationController
+     def create
         @user = User.find_by_credentials(
         params[:user][:email], 
         params[:user][:password]
@@ -22,4 +22,3 @@ class SessionsController < ApplicationController
         end
     end
 end
-

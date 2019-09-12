@@ -17,10 +17,10 @@ export const receiveErrors = errors => ({
 
 
 export const login = formUser => dispatch => (
-    APIUtil.signup(formUser)
-        .then(user => (dispatch(receiveCurrentUser(user)))
+    APIUtil.login(formUser)
+        .then(user => (dispatch(receiveCurrentUser(user))))
         .fail(errors => (dispatch(receiveErrors(errors))))
-));
+);
 
 export const logout = () => dispatch => (
     APIUtil.logout()

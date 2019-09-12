@@ -18,7 +18,7 @@
   transform: translate(-50%, -50%);
 }
 
-ul {
+.Nav-main-container {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -27,20 +27,21 @@ ul {
   top: 0;
   background-color: gray;
   display: inline-flex;
+  width: 100%;
 }
 
-li {
+.Nav-logo {
   float: left;
 }
 
-#nav-logout {
+.Nav-logout {
   float: right;
 }
-#nav-login {
+.Nav-login {
   float: right;
 }
 
-li a, .dropbtn {
+.Nav-main-container * {
   display: inline-block;
   color: white;
   text-align: center;
