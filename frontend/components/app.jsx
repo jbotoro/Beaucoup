@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 // import LogInFormContainer from './login_form/login_form_container';
 // import SignUpFormContainer from './login_form/signup_form_container';
-// import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
+import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 import Modal from './modal/modal';
 import NavBar from './navbar/navbar';
 
@@ -13,10 +13,8 @@ import NavBar from './navbar/navbar';
 const App = () => (
     <div>
         <Modal />
-        <header>
-            <Link to='/'>
-                <h1> Beaucoup </h1>
-            </Link>
+        <header className= 'app-header-container'>
+            <AuthRoute exact path='/' component={NavBar} />
         </header>
         <Switch>
             {/* <AuthRoute path='/login' component={LogInFormContainer} />

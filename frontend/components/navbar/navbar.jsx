@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import SignedInLinks from './signed_in';
-import SignedOutLinks from './signed_out';
+// import {Link} from 'react-router-dom';
+// import SignedInLinks from './signed_in';
+// import SignedOutLinks from './signed_out';
 
 class NavBar extends React.Component  {
     constructor(props) {
@@ -9,6 +9,7 @@ class NavBar extends React.Component  {
     }
     
     render () {
+        // debugger
         return (
             <nav className = 'Nav-main-container'>
                 <span className='Nav-logo'> Beaucoup </span>
