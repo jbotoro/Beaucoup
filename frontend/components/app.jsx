@@ -12,7 +12,7 @@ import NavBar from './navbar/navbar';
 
 const App = () => (
     <div>
-        <NavBar />
+        <Modal />
         <header>
             <Link to='/'>
                 <h1> Beaucoup </h1>

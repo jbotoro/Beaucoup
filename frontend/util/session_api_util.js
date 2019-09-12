@@ -1,16 +1,16 @@
-export const signup = (formUser) => (
+export const signup = (user) => (
     $.ajax({
         url: '/api/users',
         method: 'Post',
-        data: { formUser }
+        data: { user }
     })
 );
 
-export const login = (formUser) => (
+export const login = (user) => (
     $.ajax({
         url: '/session',
         method: 'Post',
-        data: { formUser }
+        data: { user }
     })
 );
 
