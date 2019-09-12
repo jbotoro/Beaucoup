@@ -3,25 +3,33 @@ import {Link} from 'react-router-dom';
 import SignedInLinks from './signed_in';
 import SignedOutLinks from './signed_out';
 
-const NavBar = () => {
-    let links;
-    if (window.currentUser) {
-        links = <SignedInLinks />
-    } else {
-        links = <SignedOutLinks />
+class NavBar extends React.Component  {
+    constructor(props) {
+        super(props);
     }
-    return (
-        <nav className="nav-wrapper">
-            <div className='container'>
-                <ul>
-                    <li>
-                        <Link to='/' className='beaucoup logo'> Beaucoup </Link>
-                    </li>
-                    {links}
-                </ul>
-            </div>
-        </nav>
-    )
+    
+    render () {
+        return (
+            <nav className = 'Nav-main-container'>
+                <span className='Nav-logo'> Beaucoup </span>
+                <div className='Nav-main-buttons'>
+                    <button 
+                        className='Nav-signup' 
+                        onClick={this.props.openModal('signup')}> 
+                        START YOUR FREE TRIAL
+                    </button>
+                    <button 
+                        className='Nav-login'
+                        onClick={this.props.openModal('login')}>
+                        LOG IN
+                    </button>
+                </div>
+            </nav>
+        )
+    }
+    
+    
+
 }
 
 export default NavBar;

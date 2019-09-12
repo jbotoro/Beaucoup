@@ -31,7 +31,7 @@ function Modal({ modal,id, closeModal }) {
 
 const mapStateToProps = state => {
     return {
-        modal: state.ui.modal.type,
+        modal: state.ui.modal,
     };
 };
 
