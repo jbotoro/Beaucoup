@@ -8,6 +8,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 import Modal from './modal/modal';
 import NavBar from './navbar/navbar_container';
+import Splash from './splash_page/splash_container';
 
 
 const App = () => (
@@ -17,8 +18,7 @@ const App = () => (
             <AuthRoute exact path='/' component={NavBar} />
         </header>
         <Switch>
-            {/* <AuthRoute path='/login' component={LogInFormContainer} />
-            <AuthRoute path='/signup' component={SignUpFormContainer} /> */}
+            <AuthRoute exact path='/' component={Splash} />
         </Switch>
     </div>
 );
