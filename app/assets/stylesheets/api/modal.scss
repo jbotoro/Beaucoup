@@ -14,3 +14,133 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+form {
+    width: 400px;
+}
+
+.login-form-parent {
+    width: 400px;
+    margin: 100px 160px 70px 160px;
+    display: flex;
+    color: black;
+    background-color: white;
+    position: relative;
+    border: 1px solid (0,0,0,0.2);
+    font-weight: 400;
+}
+
+.login-input {
+    cursor: text;
+    background-color: #f5f6f7;
+    box-sizing: border-box;
+    border: 0px none rgb(206,210,218);
+    width: 300px;
+    text-align: start;
+    padding: 1px 11px 1px 1px;
+    margin-top:5px;
+    margin-bottom: 20px;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.login-errors-messages {
+    color: red;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.login-submit-button {
+    font-family: sans-serif;
+    background-color: black;
+    width: 300px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 50px;
+    line-height: 14px;
+    letter-spacing: 5px; 
+}
+
+::placeholder {
+    color: #bfc3ca;
+    font-size: 14px;
+}
+.modal-close-div {
+    height: 50px;
+    line-height: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+.modal-close-button {
+    color: rgb(92,101,115);
+    cursor: pointer;
+    display: block;
+    font-size: 36px;
+    height: 20px;
+    font-weight: 200;
+    background-color: white;
+    border: 0px, none, white;
+    padding-top: 5px;
+    padding-right: 10px;
+    line-height: 15px;
+    font-family: sans-serif;
+}
+
+.modal-login-container {
+    display: block;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.modal-welcome-message-container {
+    display: block;
+    color: #b2b4bf;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight:400;
+    width: 250px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+.demo-user-button {
+    display: flex;
+    width: 300px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    height: 50px;
+    line-height: 18px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(57,87,157);
+    border: 0px none black;
+    cursor: pointer;
+}
+
+.modal-divider-div {
+    display: flex-start;
+    background-color: rgb(235,237,242);
+    width: 300px;
+    height: 2px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    border-top: .5px solid rgb(235,247,242);
+}
+
+.modal-divider-child {
+    width: 20px;
+    font-weight: 600;
+    color: rgb(94,101,115);
+    background-color: white;
+    margin-left: 130px;
+    margin-top: -10px;
+}
+

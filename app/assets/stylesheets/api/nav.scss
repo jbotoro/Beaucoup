@@ -1,20 +1,22 @@
 .Nav-main-container {
-    width: 100%;
     padding-left: 40px;
     padding-right: 40px;
     display: flex;
     top:0;
     text-transform: uppercase;
     justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 1px;
 }
 .Nav-main-buttons {
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .Nav-signup {
     color: black;
+    border: none;
     margin: 4px 40px 0px 0px;
     padding: 0 32px;
     font-size: 14px;
@@ -25,9 +27,29 @@
 }
 
 .Nav-login {
-
+    color: black;
+    border: none;
+    padding: 17px 0px 17px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 4px 0px;
 }
 
 .Nav-logo {
+    width: 90px;
+    height: 70px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+    font-size: 24px;
+    margin-top: 30px;
+}
 
+.Nav-login:hover {
+    color: darkgray;
+}
+.Nav-signup:hover {
+    color: darkgray;
 }
