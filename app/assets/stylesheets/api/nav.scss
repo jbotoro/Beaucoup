@@ -15,7 +15,7 @@
 }
 
 .Nav-signup {
-    color: black;
+    color: white;
     border: none;
     margin: 4px 40px 0px 0px;
     padding: 0 32px;
@@ -24,10 +24,11 @@
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .Nav-login {
-    color: black;
+    color: white;
     border: none;
     padding: 17px 0px 17px;
     font-size: 14px;
@@ -35,6 +36,7 @@
     cursor: pointer;
     font-weight: 600;
     margin: 4px 0px;
+    background-color: transparent;
 }
 
 .Nav-logo {
@@ -42,7 +44,7 @@
     height: 70px;
     box-sizing: border-box;
     font-family: sans-serif;
-    color: black;
+    color: white;
     font-size: 24px;
     margin-top: 30px;
 }

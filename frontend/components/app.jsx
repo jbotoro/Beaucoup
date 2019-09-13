@@ -13,9 +13,12 @@ import Splash from './splash_page/splash_container';
 
 const App = () => (
     <div>
-        <Modal />
+        {/* <Modal /> */}
         <header className= 'app-header-container'>
-            <AuthRoute exact path='/' component={NavBar} />
+            <Switch>
+                <AuthRoute exact path='/' component={NavBar} />
+            </Switch>
+            
         </header>
         <Switch>
             <AuthRoute exact path='/' component={Splash} />

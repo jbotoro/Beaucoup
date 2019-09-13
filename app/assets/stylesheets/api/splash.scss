@@ -1,0 +1,79 @@
+.splash-main-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    margin-bottom: -400px;
+    background-position: center;
+    background: ( linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image_url('masthead.jpg'));
+    background-size: cover;
+}
+
+.main-masthead-container {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    height: 400px;
+    padding: 40px 80px;
+}
+
+.main-masthead-header {
+    font-size: 48px;
+    line-height: 40px;
+}
+
+.masthead-content-1 {
+    margin-top: 32px;
+    font-size: 24px;
+}
+
+.masthead-content-2 {
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+.masthead-free-trail-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 24px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.masthead-free-trail-button {
+    display: block;
+    cursor: pointer;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    background-color: white;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    letter-spacing: 2px;
+    height: 50px;
+    width: 200px;
+}
+
+.masthead-trail-details {
+    display: flex;
+    justify-content: center;
+    opacity: 0.5;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.masthead-free-trail-button:hover {
+    position: relative;
+    top: -2px;
+    box-shadow: 1px 1.5px 5px rgb(92,90,90)
+}
