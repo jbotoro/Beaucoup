@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     background: rgba(0,0,0,0.7);
-    z-index: 10000;
+    z-index: 1000;
 }
 
 .modal-child {
@@ -15,11 +15,11 @@
   transform: translate(-50%, -50%);
 }
 form {
-    width: 400px;
+    width: 416px;
 }
 
 .login-form-parent {
-    width: 400px;
+    width: 416px;
     margin: 100px 160px 70px 160px;
     display: flex;
     color: black;
@@ -27,6 +27,7 @@ form {
     position: relative;
     border: 1px solid (0,0,0,0.2);
     font-weight: 400;
+    height: 531px;
 }
 
 .login-input {
@@ -51,25 +52,25 @@ form {
 
 .login-submit-button {
     font-family: sans-serif;
-    background-color: black;
-    width: 300px;
+    background-color:#292c33;
+    width: 308px;
     font-size: 14px;
     cursor: pointer;
     color: white;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 41px;
     text-align: center;
-    height: 50px;
+    height: 56px;
     line-height: 14px;
-    letter-spacing: 5px; 
+    letter-spacing: 1px; 
 }
 
 ::placeholder {
     color: #bfc3ca;
     font-size: 14px;
 }
-.modal-close-div {
-    height: 50px;
+.modal-header {
+    height: 47px;
     line-height: 24px;
     display: flex;
     justify-content: flex-end;
@@ -82,8 +83,8 @@ form {
     height: 20px;
     font-weight: 200;
     background-color: white;
-    border: 0px, none, white;
-    padding-top: 5px;
+    border: 0px none white;
+    padding-top: 15px;
     padding-right: 10px;
     line-height: 15px;
     font-family: sans-serif;
@@ -93,54 +94,97 @@ form {
     display: block;
     font-family: sans-serif;
     font-size: 16px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 54px;
+    margin-right: 54px;
     text-align: center;
     line-height: 24px;
+    font-weight: 400;
+    height: 491px;
+
 }
 
 .modal-welcome-message-container {
-    display: block;
-    color: #b2b4bf;
+    color: #5e6573;
     font-size: 24px;
     font-family: sans-serif;
-    font-weight:400;
-    width: 250px;
+    font-weight:300;
+    width: 308px;
+    height: 24px;
     margin-bottom: 24px;
     text-align: left;
+    letter-spacing: -0.5px;
+    line-height: 26px;
 }
 .demo-user-button {
     display: flex;
-    width: 300px;
+    width: 308px;
     font-weight: 600;
-    letter-spacing: 2px;
-    height: 50px;
+    color: white;
+    height: 56px;
     line-height: 18px;
     align-items: center;
     justify-content: center;
-    background-color: rgb(57,87,157);
-    border: 0px none black;
+    background-color: #39579D;
+    border: 0;
     cursor: pointer;
 }
 
 .modal-divider-div {
     display: flex-start;
     background-color: rgb(235,237,242);
-    width: 300px;
+    width: 308px;
     height: 2px;
     text-align: center;
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 16px;
-    border-top: .5px solid rgb(235,247,242);
+    border: 1px solid #ebedf2;
+    margin-top: 27px;
+    margin-bottom: 23px;
+    box-sizing: border-box;
+
 }
 
 .modal-divider-child {
-    width: 20px;
+    width: 24px;
     font-weight: 600;
-    color: rgb(94,101,115);
+    height: 14px;
+    color: #5e6573;
     background-color: white;
-    margin-left: 130px;
-    margin-top: -10px;
+    position: relative;
+    top: -11px;
+    left: 142px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.modal-footer-divider-div {
+    box-sizing: border-box;
+    height: 2px;
+    width: 416px;
+    border: 1px solid #ebedf2;
+}
+
+.login-email-label {
+    font-weight: 600;
+    height: 18px;
+    width: 40px;
+    color: #5e6573;
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+}
+
+.login-password-label {
+    font-weight: 600;
+    height: 18px;
+    width: 40px;
+    color: #5e6573;
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
 }
 

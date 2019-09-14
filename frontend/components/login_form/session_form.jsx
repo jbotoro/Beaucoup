@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
         return (
             <div className='login-form-parent'>
                 <form onSubmit={this.handleSubmit} className='login-form'>
-                    <div className="modal-close-div">
+                    <div className="modal-header">
                         <button className='modal-close-button'onClick={() => this.props.closeModal}> X </button>
                     </div>
                     <div className='modal-login-container'>
@@ -78,6 +78,7 @@ class SessionForm extends React.Component {
                        
                         <input className="login-submit-button" type="submit" value={this.props.formType} />
                     </div>
+                    <div className='modal-footer-divider-div'></div>
                 </form>
             </div>
         );

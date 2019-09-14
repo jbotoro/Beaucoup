@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 class Splash extends React.Component {
    
+ 
 
     render () {
         return (
@@ -21,7 +22,7 @@ class Splash extends React.Component {
                     <div className='masthead-free-trail-container'>
                         <button 
                             className='masthead-free-trail-button'
-                            onClick={this.props.openModal('signup')}
+                            onClick={() => this.props.openModal('signup')}
                             >START YOUR FREE TRIAL
                         </button>
                     </div>
