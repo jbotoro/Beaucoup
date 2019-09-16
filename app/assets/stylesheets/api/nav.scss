@@ -2,11 +2,12 @@
     padding-left: 40px;
     padding-right: 40px;
     display: flex;
-    top:0;
+    top: 74px;
     text-transform: uppercase;
     justify-content: space-between;
-    font-family: sans-serif;
+    font-family: "Proza", sans-serif;
     font-size: 1px;
+    
 }
 .Nav-main-buttons {
     display: flex;
@@ -43,10 +44,10 @@
     width: 90px;
     height: 70px;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Proza", sans-serif;
     color: white;
     font-size: 24px;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .Nav-login:hover {

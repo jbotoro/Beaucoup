@@ -30,6 +30,16 @@ class Splash extends React.Component {
                         Free trial available for new and eligible returning subscribers only.
                     </div>
                 </div>
+                <div className='masthead-child-container'>
+                    <div className='masthead-child-options'>
+                        <div className='masthead-child-options-header'>
+                            PLAN OPTIONS
+                        </div>
+                        <button className='masthead-child-options-button'>
+                            <img src={window.down_arrow} className='masthead-child-options-img'/>
+                        </button>
+                    </div>
+                </div>
             </div>
         )
     }

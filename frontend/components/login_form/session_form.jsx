@@ -46,39 +46,49 @@ class SessionForm extends React.Component {
                     <div className="modal-header">
                         <button className='modal-close-button'onClick={() => this.props.closeModal}> X </button>
                     </div>
+                    
                     <div className='modal-login-container'>
-                        <div className='modal-welcome-message-container'>
-                            {this.props.formType} to Beaucoup
+                        <div className='modal-login-body'>
+                            <div className='modal-welcome-message-container'>
+                                {this.props.formType} to Beaucoup
+                            </div>
+                            <div className='modal-login-main'>
+                                <div className='demo-user-button-div'>
+                                    <button className='demo-user-button'>Login Demo User</button>
+                                </div>
+                                <div className='modal-divider-div'>
+                                    <div className='modal-divider-child'>or</div>
+                                </div>
+                                <div className='modal-login-form'>
+                                    <div className='login-email-label'> EMAIL </div>
+                                    <input
+                                        className='login-input'
+                                        type="email"
+                                        placeholder='EMAIL'
+                                        value={this.state.email}
+                                        onChange={this.update('email')}
+                                    />
+                                    <div className='login-password-label'>PASSWORD</div>
+                                    <input
+                                        className='login-input'
+                                        type="password"
+                                        placeholder="PASSWORD"
+                                        value={this.state.password}
+                                        onChange={this.update('password')}
+                                    />
+                                </div>
+                                <div className='login-errors-messages'>{this.renderErrors()}</div>
+                            
+                                <input className="login-submit-button" type="submit" value={this.props.formType} />
+                            </div>
                         </div>
-                        <div className='demo-user-button-div'>
-                            <button className='demo-user-button'>Login Demo User</button>
+                        <div className='modal-footer-divider-div'></div>
+                        <div className='modal-footer-trial-message'> Don't have an account?&nbsp;
+                            <a href="#" className='modal-footer-trial-link'> Start your free trial</a>
                         </div>
-                        <div className='modal-divider-div'>
-                            <div className='modal-divider-child'>or</div>
-                        </div>
-                        <div className='modal-login-form'>
-                            <div className='login-email-label'> EMAIL </div>
-                            <input
-                                className='login-input'
-                                type="email"
-                                placeholder='EMAIL'
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                            />
-                            <div className='login-password-label'>PASSWORD</div>
-                            <input
-                                className='login-input'
-                                type="password"
-                                placeholder="PASSWORD"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                            />
-                        </div>
-                        <div className='login-errors-messages'>{this.renderErrors()}</div>
-                       
-                        <input className="login-submit-button" type="submit" value={this.props.formType} />
                     </div>
-                    <div className='modal-footer-divider-div'></div>
+                    <div className='modal-footer-container'></div>
+                    
                 </form>
             </div>
         );

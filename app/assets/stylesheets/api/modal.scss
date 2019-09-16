@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     background: rgba(0,0,0,0.7);
-    z-index: 1000;
+    z-index: 100;
 }
 
 .modal-child {
@@ -14,34 +14,51 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-form {
-    width: 416px;
-}
+// form {
+//     width: 416px;
+// }
+
+// .login-form-parent {
+//     width: 416px;
+//     margin: 100px 160px 70px 160px;
+//     display: flex;
+//     color: black;
+//     background-color: white;
+//     position: relative;
+//     border: 1px solid (0,0,0,0.2);
+//     font-weight: 400;
+//     height: 531px;
+// }
 
 .login-form-parent {
-    width: 416px;
-    margin: 100px 160px 70px 160px;
-    display: flex;
-    color: black;
     background-color: white;
+    width: 418px;
+    border-radius: 0;
     position: relative;
-    border: 1px solid (0,0,0,0.2);
-    font-weight: 400;
-    height: 531px;
+    display: flex;
+    margin: 80px auto;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.2);
+    z-index: 50;
 }
 
 .login-input {
     cursor: text;
-    background-color: #f5f6f7;
+    background-color: #fff !important;
     box-sizing: border-box;
-    border: 0px none rgb(206,210,218);
-    width: 300px;
+    border: 1px solid #ced2da;
+    width: 308px;
     text-align: start;
-    padding: 1px 11px 1px 1px;
+    padding-left: 11px;
     margin-top:5px;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     font-size: 100%;
     font-weight: 400;
+    height: 48px;
+    outline:0;
+    font-family: "Proza", sans-serif;
+    font-size: 16px;
+    line-height:18px;
 }
 
 .login-errors-messages {
@@ -51,7 +68,7 @@ form {
 }
 
 .login-submit-button {
-    font-family: sans-serif;
+    font-family: "Proza", sans-serif;
     background-color:#292c33;
     width: 308px;
     font-size: 14px;
@@ -61,7 +78,7 @@ form {
     margin-bottom: 41px;
     text-align: center;
     height: 56px;
-    line-height: 14px;
+    line-height: 15px;
     letter-spacing: 1px; 
 }
 
@@ -74,6 +91,7 @@ form {
     line-height: 24px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 .modal-close-button {
     color: rgb(92,101,115);
@@ -87,33 +105,47 @@ form {
     padding-top: 15px;
     padding-right: 10px;
     line-height: 15px;
-    font-family: sans-serif;
+    font-family: "Proza", sans-serif;
 }
 
 .modal-login-container {
-    display: block;
-    font-family: sans-serif;
-    font-size: 16px;
-    margin-left: 54px;
-    margin-right: 54px;
-    text-align: center;
-    line-height: 24px;
+    // display: block;
+    // font-family: sans-serif;
+    // font-size: 16px;
+    // margin-left: 54px;
+    // margin-right: 54px;
+    // text-align: center;
+    // line-height: 24px;
+    // font-weight: 400;
+    // height: 491px;
+    // width: 418px;
+    padding: 0;
+    transition: opacity .15s linear ;
     font-weight: 400;
-    height: 491px;
 
 }
 
 .modal-welcome-message-container {
-    color: #5e6573;
-    font-size: 24px;
-    font-family: sans-serif;
-    font-weight:300;
-    width: 308px;
+    // color: #5e6573;
+    // font-size: 24px;
+    // font-family: sans-serif;
+    // font-weight:300;
+    // width: 308px;
+    // height: 24px;
+    // margin-bottom: 24px;
+    // text-align: left;
+    // letter-spacing: -0.5px;
+    // line-height: 26px;
+    font-weight: 300;
     height: 24px;
-    margin-bottom: 24px;
-    text-align: left;
+    width: 149px;
+    color: #5e6573;
+    font-family: "Proza", sans-serif;
+    font-size: 24px;
     letter-spacing: -0.5px;
     line-height: 26px;
+    margin-bottom: 24px;
+
 }
 .demo-user-button {
     display: flex;
@@ -152,10 +184,11 @@ form {
     color: #5e6573;
     background-color: white;
     position: relative;
-    top: -11px;
+    top: -6px;
     left: 142px;
-    font-family: sans-serif;
+    font-family: "Proza", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     text-align: center;
 }
 
@@ -171,7 +204,7 @@ form {
     height: 18px;
     width: 40px;
     color: #5e6573;
-    font-family: sans-serif;
+    font-family: "Proza", sans-serif;
     font-size: 12px;
     letter-spacing: 0.5px;
     line-height: 18px;
@@ -182,9 +215,36 @@ form {
     height: 18px;
     width: 40px;
     color: #5e6573;
-    font-family: sans-serif;
+    font-family:"Proza", sans-serif;
     font-size: 12px;
     letter-spacing: 0.5px;
     line-height: 18px;
 }
 
+.modal-login-body {
+    margin-left: 54px;
+    margin-right: 54px;
+}
+
+
+.modal-footer-trial-message {
+    font-weight: 400;
+    height: 14px;
+    margin-left: 67.5px;
+    margin-top: 24.79px;
+    color: #aeb4bf;
+    font-family: "Proza", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.modal-footer-container {
+    height: 24px;
+    padding: 0;
+}
+
+.modal-footer-trial-link {
+    color: rgb(51,112,187);
+    opacity: 1;
+    text-decoration: none;
+}
