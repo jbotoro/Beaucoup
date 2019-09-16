@@ -9,6 +9,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 import Modal from './modal/modal';
 import NavBar from './navbar/navbar_container';
 import Splash from './splash_page/splash_container';
+import loggedInNavBar from './logged_in_navbar/logged_in_navbar_container';
 
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
         <header className= 'app-header-container'>
             <Switch>
                 <AuthRoute exact path='/' component={NavBar} />
+                <ProtectedRoute path='/videos' component={loggedInNavBar} />
             </Switch>
         </header>
         <Route exact path='/' component={Splash} />
