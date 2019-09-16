@@ -7,7 +7,11 @@ class Api::MoviesController < ApplicationController
 
     def show 
         @movie = Movie.find_by_id(params[:id])
-        return nil unless @movie
+        if @movie
+            render 'api/movies/show'
+        else
+            render json: 'Movie not found'
+        end
     end
 
     private
