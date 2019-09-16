@@ -39,7 +39,7 @@
     margin: 80px auto;
     flex-direction: column;
     border: 1px solid rgba(0,0,0,0.2);
-    z-index: 50;
+    z-index: 100;
 }
 
 .login-input {
@@ -92,6 +92,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1000;
 }
 .modal-close-button {
     color: rgb(92,101,115);
