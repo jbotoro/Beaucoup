@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Setup Rails authenticity token header since rails-ujs doesn't seem to be
     // doing it
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-        }
-    })
+    // $.ajaxSetup({
+    //     headers: {
+    //         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+    //     }
+    // })
     
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} /> , root);
