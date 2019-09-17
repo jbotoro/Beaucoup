@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoUser = this.demoUser.bind(this);
     }
 
 
@@ -20,10 +21,10 @@ class SessionForm extends React.Component {
         this.props.processForm(user).then(this.props.closeModal);
     }
 
-    // demoUser () {
-    //     let user = {email: 'demo@demo.com', password:'123456'}
-    //     this.props.processForm(user).then(this.props.closeModal);
-    // }
+    demoUser () {
+        let user = { email:'demo@demo.com' , password:'password' }
+        this.props.processForm(user).then(this.props.closeModal);
+    }
 
     update(field) {
         return e => this.setState({
@@ -60,7 +61,7 @@ class SessionForm extends React.Component {
                             </div>
                             <div className='modal-login-main'>
                                 <div className='demo-user-button-div'>
-                                    <button className='demo-user-button'>Login Demo User</button>
+                                    <button className='demo-user-button' onClick={this.demoUser}>Login Demo User</button>
                                 </div>
                                 <div className='modal-divider-div'>
                                     <div className='modal-divider-child'>or</div>
@@ -90,7 +91,7 @@ class SessionForm extends React.Component {
                         </div>
                         <div className='modal-footer-divider-div'></div>
                         <div className='modal-footer-trial-message'> Don't have an account?&nbsp;
-                            <a href="#" className='modal-footer-trial-link'> Start your free trial</a>
+                            <a href="#" className='modal-footer-trial-link' onClick={this.props.otherForm}> Start your free trial</a>
                         </div>
                     </div>
                     <div className='modal-footer-container'></div>

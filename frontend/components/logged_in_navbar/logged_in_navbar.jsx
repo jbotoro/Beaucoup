@@ -8,11 +8,11 @@ const browseCategories = ['Action', 'Adventure', 'Cartoons','Classics','Comedy',
 class loggedInNavBar extends React.Component {
     constructor(props){
         super(props);
-        this.browseToggle = this.browseToggle.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
     }
-
+   
     
-
+    
     categories () {
         return (
             <ul className='browse-menu-genres'>
@@ -23,16 +23,29 @@ class loggedInNavBar extends React.Component {
         )
     }
 
+    redirect() {
+
+    }
+    handleLogout() {
+        this.props.logout().then(this.props.history.push('/'))
+    }
+
+
     browseToggle () {
-        $('.loggedin-navbar-browse-menu').mouseover(function() {
-            $('.loggedin-navbar-browse-menu').addClass('loggedin-navbar-browse-menu--hover'),
-            function () {
-                $('.loggedin-navbar-browse-menu').removeClass('loggedin-navbar-browse-menu--hover')
-            }
-        })
+        document.querySelector('.loggedin-navbar-browse-menu').classList.add('loggedin-navbar-browse-menu--hover')
+    }
+    leaveBrowse () {
+        document.querySelector('.loggedin-navbar-browse-menu--hover').classList.remove('loggedin-navbar-browse-menu--hover')
+    }
+    profileToggle () {
+        document.querySelector('.loggedin-navbar-item-profile-dropdown').classList.add('loggedin-navbar-item-profile-dropdown--open')
+    }
+    leaveProfile () {
+        document.querySelector('.loggedin-navbar-item-profile-dropdown--open').classList.remove('loggedin-navbar-item-profile-dropdown--open')
     }
     
     render () {
+    
         return (
             <header className='Nav GlobalNav GlobalNav--masthead GlobalNav--transparent'>
                 <div className='loggedin-navbar-header-main-container'>
@@ -40,7 +53,7 @@ class loggedInNavBar extends React.Component {
                         <div className='loggedin-navbar-item-logo'>
                             <Link className='navbar-link'to='/videos'> Beaucoup </Link>
                         </div>
-                        <div className='loggedin-navbar-browse' aria-expanded='false' onMouseOver={this.browseToggle()}>
+                        <div className='loggedin-navbar-browse' aria-expanded='false' onMouseOver={this.browseToggle} onMouseLeave={this.leaveBrowse}>
                             <div className='loggedin-navbar-browse-item'>
                                 <button className='loggedin-navbar-browse-button'>
                                     <img src="" className='loggedin-navbar-browse-button-icon'/>
@@ -75,7 +88,7 @@ class loggedInNavBar extends React.Component {
                                 <span className='loggedin-navbar-search-label'> Search</span>
                             </Link>
                         </div>
-                        <div className='loggedin-navbar-item-profile-container' aria-expanded='false'> 
+                        <div className='loggedin-navbar-item-profile-container' aria-expanded='false' onMouseOver={this.profileToggle} onMouseLeave={this.leaveProfile}> 
                             <div className='loggedin-navbar-profile-item'>
                                 <button className='loggedin-navbar-profile-dropdown-button'>
                                     <div className='loggedin-profile-icon'></div>
@@ -84,7 +97,7 @@ class loggedInNavBar extends React.Component {
                             </div>
                             <div className='loggedin-navbar-item-profile-dropdown'>
                                 <div className='loggedin-navbar-profile-dropdown-links'>
-                                    <button className='loggedin-navbar-profile-logout-button' onClick={() => this.props.logout}>
+                                    <button className='loggedin-navbar-profile-logout-button' onClick={this.handleLogout} >
                                         Log Out
                                     </button>
                                 </div>

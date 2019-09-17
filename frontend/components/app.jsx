@@ -10,6 +10,7 @@ import Modal from './modal/modal';
 import NavBar from './navbar/navbar_container';
 import Splash from './splash_page/splash_container';
 import loggedInNavBar from './logged_in_navbar/logged_in_navbar_container';
+import {withRouter} from 'react-router-dom'
 
 
 const App = () => (
