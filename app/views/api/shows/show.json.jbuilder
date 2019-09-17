@@ -1,0 +1,1 @@
+json.extract! @show :id, :title, :year, :rating, :description, :seasons

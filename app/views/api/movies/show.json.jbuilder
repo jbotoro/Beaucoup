@@ -1,0 +1,1 @@
+json.extract! @movie :id, :title, :year, :rating, :description
