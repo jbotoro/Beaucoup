@@ -20,6 +20,11 @@ class SessionForm extends React.Component {
         this.props.processForm(user).then(this.props.closeModal);
     }
 
+    // demoUser () {
+    //     let user = {email: 'demo@demo.com', password:'123456'}
+    //     this.props.processForm(user).then(this.props.closeModal);
+    // }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -27,7 +32,7 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-       
+      
         return (
             <ul>
                 {this.props.errors.map( (error, idx) => (
@@ -42,10 +47,11 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className='login-form-parent'>
+                <div className="modal-header">
+                    <button className='modal-close-button' onClick={this.props.closeModal}> X </button>
+                </div>
                 <form onSubmit={this.handleSubmit} className='login-form'>
-                    <div className="modal-header">
-                        <button className='modal-close-button'onClick={() => this.props.closeModal}> X </button>
-                    </div>
+                   
                     
                     <div className='modal-login-container'>
                         <div className='modal-login-body'>
