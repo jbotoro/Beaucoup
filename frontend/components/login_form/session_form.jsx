@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
 
     demoUser () {
         let user = { email:'demo@demo.com' , password:'password' }
-        this.props.processForm(user).then(this.props.closeModal);
+        this.props.demoLogin(user).then(this.props.closeModal);
     }
 
     update(field) {
