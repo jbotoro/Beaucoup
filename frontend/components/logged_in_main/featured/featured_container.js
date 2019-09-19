@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { fetchMovie, fetchMovies } from '../../../actions/movies_actions';
-import {fetchShow, fetchShows} from '../../../actions/shows_actions';
+import { findMovie, findMovies } from '../../../actions/movies_actions';
+import {findShow, findShows} from '../../../actions/shows_actions';
 import loggedInFeatured from './logged_in_featured';
 
 const mapStateToProps = state => ({
@@ -10,10 +10,10 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    fetchMovie: (movie) => dispatch(fetchMovie(movie)),
-    fetchMovies: () => dispatch(fetchMovies()),
-    fetchShow: (show) => dispatch(fetchShow(show)),
-    fetchShows: () => dispatch(fetchShows())
+    findMovie: (movie) => dispatch(findMovie(movie)),
+    findMovies: () => dispatch(findMovies()),
+    findShow: (show) => dispatch(findShow(show)),
+    findShows: () => dispatch(findShows())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(loggedInFeatured);

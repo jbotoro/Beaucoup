@@ -1,5 +1,5 @@
 import React from 'react';
-
+import FeaturedList from './featured/featured_container';
 
 
 
@@ -21,24 +21,45 @@ class loggedInMain extends React.Component {
                                         <div className='loggedin-masthead-above-vertical-slider-collection'>
                                             <div>
                                                 <div className='loggedin-masthead-tile'>
-                                                    <div className='loggedin-masthead-tile-spacer'></div>
-                                                    <div className='masthead-tile-thumbnail'>
-                                                        <div className='masthead-tile-thumbnail-anim-group'>
-                                                            {/* add masthead tile img here */}
-                                                            <img src="" alt=""/>
-                                                        </div>
-                                                        <div className='masthead-tile-thumbnail-scrim'>
-
-                                                        </div>
-                                                    </div>
+                                                    <div className='loggedin-masthead-tile-background'></div>
+                      
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                {/* <Featured /> */}
-                                {/*  this should be a featured component/featured component container */}
+                                <div className='featuredList-main-div-wrapper'>
+                                    <FeaturedList />
+                                </div>
                              </div>
+                        </div>
+                        <div className='hub-collection-movies'>
+                            <div className='simple-hub-collection-container'>
+                                <div className='simple-hub-collection-header'>]
+
+                                </div>
+                                <div className='simple-hub-collection-list'>
+                                    <div className='simple-hub-collection-list-wrapper'>
+                                        <div className='WindowedCollectionList'>
+                                            {/* insert movies container here */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='hub-collection-shows'>
+                            <div className='simple-hub-collection-container'>
+                                <div className='simple-hub-collection-header'>]
+
+                                </div>
+                                <div className='simple-hub-collection-list'>
+                                    <div className='simple-hub-collection-list-wrapper'>
+                                        <div className='WindowedCollectionList'>
+                                            {/* insert shows container here */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

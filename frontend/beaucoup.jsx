@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
-    window.store = store;
-    window.login = login;
-    window.signup = signup;
-    window.dispatch = store.dispatch;
-    window.logout = logout;
-    window.getState = store.getState
+    // window.store = store;
+    // window.login = login;
+    // window.signup = signup;
+    // window.dispatch = store.dispatch;
+    // window.logout = logout;
+    // window.getState = store.getState
 
     // Setup Rails authenticity token header since rails-ujs doesn't seem to be
     // doing it

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchMovie, fetchMovies } from '../../../actions/movies_actions';
+import { findMovie, ffindMovies } from '../../../actions/movies_actions';
 import loggedInMovies from './logged_in_movies';
 
 const mapStateToProps = state => ({
@@ -8,8 +8,8 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    fetchMovie: (movie) => dispatch(fetchMovie(movie)),
-    fetchMovies: () => dispatch(fetchMovies())
+    findMovie: (movie) => dispatch(findMovie(movie)),
+    findMovies: () => dispatch(findMovies())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(loggedInMovies);

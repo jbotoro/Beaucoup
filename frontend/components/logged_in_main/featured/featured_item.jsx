@@ -60,3 +60,5 @@ class featuredListItem extends React.Component {
         )
     }
 }
+
+export default featuredListItem;

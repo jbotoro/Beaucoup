@@ -1,0 +1,148 @@
+// body {
+//     --white: rgb(255, 255, 255);
+//     --white--97: rgba(255, 255, 255, 0.97);
+//     --white--10: rgba(255, 255, 255, 0.1);
+//     --white--30: rgba(255, 255, 255, 0.3);
+//     --black: rgb(0, 0, 0);
+//     --black--10: rgba(0, 0, 0, 0.1);
+//     --black--20: rgba(0, 0, 0, 0.2);
+//     --black--60: rgba(0, 0, 0, 0.6);
+//     --gray-1: rgb(41, 44, 51);
+//     --gray-1--35: rgb(41, 44, 51, 0.35);
+//     --gray-2: rgb(107, 119, 144);
+//     --gray-2--25: rgb(107, 119, 144, 0.25);
+//     --gray-4: rgb(184, 190, 204);
+//     --gray-5: rgb(220, 223, 230);
+//     --gray-5--70: rgb(220, 223, 230, 0.7);
+//     --gray-5--30: rgb(220, 223, 230, 0.3);
+//     --gray-6: rgb(235, 237, 242);
+//     --gray-6--50: rgb(235, 237, 242, 0.5);
+//     --gray-7: rgb(247, 248, 250);
+//     --red: rgb(222,27,75);
+//     --nm-gray-1: rgb(18, 20, 23);
+//     --nm-gray-2: rgb(30, 33, 38);
+//     --nm-gray-3: rgb(36, 39, 46);
+//     --nm-gray-4: rgb(46, 49, 56);
+//     --nm-gray-5: rgb(144, 146, 150);
+//     --background--primary: var(--white);
+//     --background--secondary: var(--gray-6);
+//     --background--nav: var(--white--97);
+//     --background--nav-dropdown: var(--white--97);
+//     --background--details-dropdown: var(--white);
+//     --background--details-dropdown-selected: var(--gray-7);
+//     --background--icon: var(--white);
+//     --background--generic-tile: var(--white);
+//     --background--dvr-tile: var(--gray-6);
+//     --background--my-stuff-footer: var(--gray-7);
+//     --text--primary: var(--gray-1);
+//     --text--secondary: var(--gray-2);
+//     --text--alternate: var(--gray-2);
+//     --accent--light: var(--gray-6);
+//     --accent--dark: var(--gray-6);
+//     --accent--nav: var(--gray-6--50);
+//     --accent--nav-dark: var(--black);
+//     --button--light: var(--gray-4);
+//     --button--recording: var(--red);
+//     --shadow--light: var(--gray-1--35);
+//     --shadow--dark: var(--gray-2--25);
+//     --backdrop--modal: rgba(41, 44, 51, 0.9);
+//     --status-bar: var(--gray-5--70);
+//     --status-bar--details: var(--gray-5--30);
+//     --progress-bar-gray: rgb(134, 141, 155);
+//     --green: rgb(48, 229, 135);
+//     --green-30: rgb(48, 229, 135, 0.3);
+//     --live-guide-border: var(--gray-6);
+//     --live-guide-cell: var(--white);
+//     --live-guide-cell--gray: var(--gray-7);
+//     --live-guide-cell--hover: var(--gray-6);
+//     --live-guide-channel-logo: var(--gray-1);
+//     --live-guide-channel-logo--hover: var(--gray-1);
+//     --live-guide-text: rgb(41, 44, 51, 0.7);
+//     --live-guide-text--hover: var(--gray-1);
+//     --live-guide-icon: var(--gray-1);
+//     --live-guide-accent: var(--black--10);
+//     --live-guide-cell--gray-transparent: rgba(247, 248, 250, 0);
+//     --live-guide-cell--hover-transparent: rgba(235, 237, 242, 0);
+//     --transparent: rgba(255, 255, 255, 0);
+//     font-weight: 400;
+//     font-stretch: normal;
+//     font-size: 16px;
+//     line-height: 24px;
+//     font-family: 'Proza', Helvetica, Arial, sans-serif;
+//     color: #6b7790;
+
+// }
+
+* {
+    box-sizing: border-box;
+}
+
+.loggedin-main-wrapper {
+    min-height: calc(100vh - 72px);
+    position: relative;
+}
+
+.loggedin-main-hub {
+    overflow-x: hidden;
+}
+
+.loggedin-main-hub-collections-container {
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+    width: calc(100% - 72px);
+}
+
+.loggedin-collection {
+    animation: collectionFade 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: collectionFade;
+}
+
+.loggedin-masthead-vertical-slider-collection {
+    padding-bottom: 48px;
+}
+
+.WindowedList {
+    white-space: nowrap;
+}
+
+.WindowedListItem {
+    display: inline-block;
+    width: calc(100% + 72px);
+    white-space: normal;
+    vertical-align: top;
+    transition: 0.5s opacity ease-in;
+    height: 750px;
+}
+
+.loggedin-masthead-above-vertical-slider-collection {
+    margin-left: -36px;
+    width: calc(100% + 72px);
+    margin-bottom: -56px;
+    overflow: hidden;
+    max-height: calc(100% - 72px);
+}
+
+.loggedin-masthead-tile {
+    overflow: visible;
+    position: relative;
+    background-color: var(--gray-1);
+}
+
+.loggedin-masthead-tile-background {
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: ( linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image_url('main-masthead-background.jpg'));
+    height: calc(100% - 72px);
+    background-size: contain;
+    
+}
+

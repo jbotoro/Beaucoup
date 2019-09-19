@@ -1,0 +1,29 @@
+.featuredList-main-div-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    background-color: red;
+}
+
+
+.loggedin-main-featured-wrapper {
+    box-sizing: border-box;
+    background-color: blue;
+    position: relative;
+    height: 380px;
+    width: calc(100% - 72px);
+}
+
+.loggedin-main-featured-container {
+    white-space: nowrap;
+    --WindowedList-items: 3;
+}
+
+.loggedin-main-featured-item-container {
+    display: inline-block;
+    width: calc( 100% / var(--WindowedList-items));
+    height: 380px;
+    white-space: normal;
+    vertical-align: top;
+    transition: 0.5s opacity ease-in;
+}
+

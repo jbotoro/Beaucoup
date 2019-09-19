@@ -73,7 +73,7 @@ body {
     --live-guide-cell--gray-transparent: rgba(247, 248, 250, 0);
     --live-guide-cell--hover-transparent: rgba(235, 237, 242, 0);
     --transparent: rgba(255, 255, 255, 0);
-
+    min-height: 100vh;
     font-stretch: normal;
     line-height: 24px;
     font-family: "Proza", Arial, Helvetica, sans-serif;
@@ -120,7 +120,6 @@ body {
 }
 
 .loggedin-navbar-item-logo {
-    margin-left: -20px;
     display: flex;
 }
 .navbar-item-logo-link{
@@ -145,12 +144,15 @@ body {
 
 .loggedin-navbar-browse-item {
     display: flex;
+    background: transparent;
 }
 
 
 
-.loggedin-navbar-browse-button-icon {
-
+.loggedin-navbar-browse-button {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
 }
 
 .loggedin-navbar-browse-label {
@@ -237,6 +239,7 @@ ul, ol {
     max-width: 1000;
     text-transform: none;
     padding: 0 0 0 35px;
+    color: black;
 }
 
 .browse-menu-genres-item {
@@ -293,7 +296,6 @@ ul, ol {
 }
 
 .loggedin-navbar-item-profile-container {
-    margin-right: -20px;
     display: flex;
 }
 

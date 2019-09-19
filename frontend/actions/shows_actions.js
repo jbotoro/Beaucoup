@@ -5,12 +5,12 @@ export const FETCH_SHOW = 'FETCH_SHOW';
 export const FETCH_SHOWS = 'FETCH_SHOWS';
 export const FETCH_ERRORS = 'FETCH_ERRORS'
 
-const fetchShow = (show) => ({
+const getShow = (show) => ({
     type: FETCH_SHOW,
     show
 });
 
-const fetchShows = (shows) => ({
+const getShows = (shows) => ({
     type: FETCH_SHOWS,
     shows
 })
@@ -23,11 +23,11 @@ const fetchErrors = (errors) => ({
 
 export const findShows = () => dispatch => (
     fetchShows()
-        .then(shows => dispatch(fetchShows(shows)))
+        .then(shows => dispatch(getShows(shows)))
         .fail(errors => dispatch(fetchErrors(errors)))
 )
-export const findshow = (show) => dispatch => (
+export const findShow = (show) => dispatch => (
     fetchShow(show)
-        .then(show => dispatch(fetchShow(show)))
+        .then(show => dispatch(getShow(show)))
         .fail(errors => dispatch(fetchErrors(errors)))
 )

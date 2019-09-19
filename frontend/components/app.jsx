@@ -11,6 +11,7 @@ import NavBar from './navbar/navbar_container';
 import Splash from './splash_page/splash_container';
 import loggedInNavBar from './logged_in_navbar/logged_in_navbar_container';
 import {withRouter} from 'react-router-dom'
+import loggedInMain from './logged_in_main/logged_index_container';
 
 
 const App = () => (
@@ -20,6 +21,9 @@ const App = () => (
             <Switch>
                 <AuthRoute exact path='/' component={NavBar} />
                 <ProtectedRoute path='/videos' component={loggedInNavBar} />
+            </Switch>
+            <Switch>
+                <ProtectedRoute path ='/videos' component={loggedInMain} />
             </Switch>
         </header>
         <Route exact path='/' component={Splash} />
