@@ -46,3 +46,5 @@ class loggedInMain extends React.Component {
         )
     }
 }
+
+export default loggedInMain;
