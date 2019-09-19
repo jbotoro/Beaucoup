@@ -1,4 +1,5 @@
 import React from 'react';
+import MovieItemContainer from './movie_item_container';
 
 class loggedInMovies extends React.Component {
     constructor(props) {
@@ -10,21 +11,23 @@ class loggedInMovies extends React.Component {
 
     render () {
 
-        const selected_movies = this.state.movies.map(movie => {
+        const mapAllMovies = this.state.movies.map(movie => {
             return (
-                // insert movie item container
+                <MovieItemContainer movie={movie} key={movie.id}/>
             )
         });
-
+        const displayedMovies = mapAllMovies.slice(0,3)
 
         return (
             <div className='logged-movies-main-wrapper'>
                 <div className="logged-movies-main-container">
                     <ul className='logged-movies-main-items-container'>
-                        {/* insert 5 movie items here */}
+                        {displayedMovies}
                     </ul>
                 </div>
             </div>
         )
     }
 }
+
+export default loggedInMovies;

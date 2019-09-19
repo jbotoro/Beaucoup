@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturedList from './featured/featured_container';
-
+import MovieList from './movies/movies_container';
+import ShowList from './shows/shows_container';
 
 
 class loggedInMain extends React.Component {
@@ -41,6 +42,7 @@ class loggedInMain extends React.Component {
                                 <div className='simple-hub-collection-list'>
                                     <div className='simple-hub-collection-list-wrapper'>
                                         <div className='WindowedCollectionList'>
+                                            <MovieList />
                                             {/* insert movies container here */}
                                         </div>
                                     </div>
@@ -55,6 +57,7 @@ class loggedInMain extends React.Component {
                                 <div className='simple-hub-collection-list'>
                                     <div className='simple-hub-collection-list-wrapper'>
                                         <div className='WindowedCollectionList'>
+                                            <ShowList />
                                             {/* insert shows container here */}
                                         </div>
                                     </div>
