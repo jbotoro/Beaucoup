@@ -10,10 +10,7 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    findMovie: (movie) => dispatch(findMovie(movie)),
-    findMovies: () => dispatch(findMovies()),
-    findShow: (show) => dispatch(findShow(show)),
-    findShows: () => dispatch(findShows())
+    findMovies: () => dispatch(findMovies())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(loggedInFeatured);

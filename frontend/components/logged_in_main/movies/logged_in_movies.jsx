@@ -9,6 +9,15 @@ class loggedInMovies extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.props.findMovies()
+            .then(() => {
+                this.setState({
+                    movies: this.props.movies.map(movie => { movie })
+                })
+            })
+    }
+
     render () {
 
         const mapAllMovies = this.state.movies.map(movie => {
@@ -16,7 +25,7 @@ class loggedInMovies extends React.Component {
                 <MovieItemContainer movie={movie} key={movie.id}/>
             )
         });
-        const displayedMovies = mapAllMovies.slice(0,3)
+        const displayedMovies = mapAllMovies.splice(Math.floor(Math.random() * mapAllMovies.length), 4);
 
         return (
             <div className='logged-movies-main-wrapper'>

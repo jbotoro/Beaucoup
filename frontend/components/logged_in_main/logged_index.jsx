@@ -36,7 +36,7 @@ class loggedInMain extends React.Component {
                         </div>
                         <div className='hub-collection-movies'>
                             <div className='simple-hub-collection-container'>
-                                <div className='simple-hub-collection-header'>]
+                                <div className='simple-hub-collection-header'>
 
                                 </div>
                                 <div className='simple-hub-collection-list'>
@@ -51,7 +51,7 @@ class loggedInMain extends React.Component {
                         </div>
                         <div className='hub-collection-shows'>
                             <div className='simple-hub-collection-container'>
-                                <div className='simple-hub-collection-header'>]
+                                <div className='simple-hub-collection-header'>
 
                                 </div>
                                 <div className='simple-hub-collection-list'>

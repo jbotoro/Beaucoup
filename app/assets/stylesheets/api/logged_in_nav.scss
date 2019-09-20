@@ -262,6 +262,7 @@ ul, ol {
 
 .loggedin-navbar-item-search {
     display: flex;
+    transform: translateY(30px)
 }
 
 .navbar-link {
@@ -269,7 +270,7 @@ ul, ol {
     padding: 0 20px;
     color: currentColor;
     cursor: pointer;
-    align-items: center;
+    align-items: center !important;
     letter-spacing: normal;
     transition: opacity 0.3s ease;
     align-self: stretch;

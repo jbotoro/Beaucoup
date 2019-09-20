@@ -9,6 +9,16 @@ class loggedInShows extends React.Component {
         }
     }
 
+
+    componentDidMount() {
+        this.props.findShows()
+            .then(() => {
+                this.setState({
+                    shows: this.props.shows.map(show => { return show})
+                })
+            })
+    }
+
     render() {
 
         const mapAllShows = this.state.shows.map(show => {
@@ -17,7 +27,7 @@ class loggedInShows extends React.Component {
             )
         });
 
-        const displayedShows = mapAllShows.slice(0,3)
+        const displayedShows = mapAllShows.splice(Math.floor(Math.random() * mapAllShows.length), 4);
         return (
             <div className='logged-shows-main-wrapper'>
                 <div className="logged-shows-main-container">

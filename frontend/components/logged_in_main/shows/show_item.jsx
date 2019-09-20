@@ -10,7 +10,7 @@ class showItem extends React.Component {
 
     handlePlayShow(e) {
         e.preventDefault();
-        this.props.history.push(`/videos/shows/play/${this.props.show.id}`)
+        this.props.history.push(`/videos/shows/${this.props.show.id}`)
     }
 
     render() {
@@ -18,6 +18,7 @@ class showItem extends React.Component {
             <div className='simple-show-item-container'>
                 <div className='simple-show-item'>
                     <button onClick={() => this.handlePlayShow} className='simple-show-item-play-button'>
+                        <video src={this.props.show.video_url}></video>
                         <img src={this.props.show.image_url} />
                     </button>
                 </div>

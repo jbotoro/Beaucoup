@@ -9,6 +9,18 @@ class loggedInNavBar extends React.Component {
     constructor(props){
         super(props);
         this.handleLogout = this.handleLogout.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
+    }
+
+    handleScroll () {
+        const y_index =  window.pageYOffset;
+        const solid_nav_y_index = 75;
+
+        if ( y_index > solid_nav_y_index) {
+            let x = document.querySelector('.Nav GlobalNav GlobalNav--masthead GlobalNav--transparent').classList.remove('--transparent')
+            console.log(x);
+        }
+
     }
    
     
@@ -23,9 +35,6 @@ class loggedInNavBar extends React.Component {
         )
     }
 
-    redirect() {
-
-    }
     handleLogout() {
         this.props.logout().then(this.props.history.push('/'))
     }
@@ -47,7 +56,7 @@ class loggedInNavBar extends React.Component {
     render () {
     
         return (
-            <header className='Nav GlobalNav GlobalNav--masthead GlobalNav--transparent'>
+            <header className='Nav GlobalNav GlobalNav--masthead GlobalNav--transparent' onScroll={this.handleScroll}>
                 <div className='loggedin-navbar-header-main-container'>
                     <div className='loggedin-navbar'>
                         <div className='loggedin-navbar-item-logo'>
@@ -82,16 +91,26 @@ class loggedInNavBar extends React.Component {
                             <Link className='navbar-link' to='/my-stuff'>myStuff</Link>
                         </div>
                         <div className='loggedin-navbar-item-spacer'></div>
-                        <div className='logged-in-navbar-item-search'>
+                        <div className='loggedin-navbar-item-profile-container' aria-expanded='false' onMouseOver={this.profileToggle} onMouseLeave={this.leaveProfile}>
+                            <div className='loggedin-navbar-profile-item'>
+                                <button >
+                                    <Link className='navbar-link' to='/search'>
+                                        <img src='' className='loggedin-navbar-search-icon' />
+                                        <span className='loggedin-navbar-search-label' > Search</span>
+                                    </Link>
+                                </button>
+                            </div>
+                        </div>
+                        {/* <div className='logged-in-navbar-item-search' style={{ display: 'flex' }} >
                             <Link className='navbar-link' to='/search'> 
                                 <img src='' className='loggedin-navbar-search-icon'/>
-                                <span className='loggedin-navbar-search-label'> Search</span>
+                                <span className='loggedin-navbar-search-label' > Search</span>
                             </Link>
-                        </div>
+                        </div> */}
                         <div className='loggedin-navbar-item-profile-container' aria-expanded='false' onMouseOver={this.profileToggle} onMouseLeave={this.leaveProfile}> 
                             <div className='loggedin-navbar-profile-item'>
                                 <button className='loggedin-navbar-profile-dropdown-button'>
-                                    <div className='loggedin-profile-icon'></div>
+                                    <div className='loggedin-profile-icon'> D </div>
                                     <span className='loggedin-profile-name-label'> Demo User</span>
                                 </button>
                             </div>

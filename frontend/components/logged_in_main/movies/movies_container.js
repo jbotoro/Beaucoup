@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { findMovie, ffindMovies } from '../../../actions/movies_actions';
+import { findMovie, findMovies } from '../../../actions/movies_actions';
 import loggedInMovies from './logged_in_movies';
 
 const mapStateToProps = state => ({

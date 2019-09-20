@@ -20,6 +20,7 @@ const App = () => (
         <header className= 'app-header-container'>
             <Switch>
                 <AuthRoute exact path='/' component={NavBar} />
+                {/* <ProtectedRoute path='/videos/videoplayer/:videoId' component={VideoPlayer} /> */}
                 <ProtectedRoute path='/videos' component={loggedInNavBar} />
             </Switch>
             <Switch>

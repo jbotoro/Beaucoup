@@ -18,6 +18,8 @@ class Movie < ApplicationRecord
     :video_url, :image_url, presence: true
     validates :title, uniqueness: true
 
+    has_one_attached :image
+    has_one_attached :video
 
     def self.find_by_title(title)
         @movie = Movie.find_by(title: title)
