@@ -182,7 +182,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     box-sizing: content-box;
-    width: calc(100%-56px);
+    width: calc(100% - 72px);
 }
 
 .loggedin-navbar-browse-menu-container {
@@ -195,6 +195,7 @@ body {
 }
 
 .loggedin-navbar-browse-menu--hover .loggedin-navbar-browse-menu-container {
+    height: auto;
     max-height: 800px;
     transition: max-height 0.3s ease-in;
 }
@@ -203,15 +204,28 @@ body {
     padding: 40px;
     height: 100%;
     display: flex;
+    box-sizing: border-box;
 }
 
 .loggedin-navbar-browse-menu-hubs {
     padding: 0 30px 0 0;
+    box-sizing: border-box;
+}
+
+.loggedin-navbar-browse-menu-categories{
+    border-left: 1px solid var(--accent--dark);
+    column-count: 1;
+    max-width: 1000px;
+    text-transform: none;
+    padding: 0 0 0 35px;
+    box-sizing: border-box;
+    color: black;
 }
 
 ul, ol {
     margin-top: 0;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .loggedin-navbar-browse-menu-hubs-item {
@@ -233,14 +247,14 @@ ul, ol {
     border-bottom: 2px solid transparent;
 }
 
-.browse-menu-genres {
-    border-left: 1px solid var(--accent--dark);
-    column-count: 2;
-    max-width: 1000;
-    text-transform: none;
-    padding: 0 0 0 35px;
-    color: black;
-}
+// .browse-menu-genres {
+//     border-left: 1px solid var(--accent--dark);
+//     column-count: 2;
+//     max-width: 1000;
+//     text-transform: none;
+//     padding: 0 0 0 35px;
+//     color: black;
+// }
 
 .browse-menu-genres-item {
     list-style: none;
@@ -302,6 +316,7 @@ ul, ol {
 
 .loggedin-navbar-profile-item {
     display: flex;
+    background: transparent;
 }
 
 .loggedin-navbar-profile-dropdown-button {
@@ -320,6 +335,12 @@ ul, ol {
     background: none;
     border: 0;
     text-decoration: none;
+}
+
+.loggedin-search-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
 }
 
 .loggedin-profile-icon {

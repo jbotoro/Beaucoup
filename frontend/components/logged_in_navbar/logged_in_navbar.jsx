@@ -81,19 +81,21 @@ class loggedInNavBar extends React.Component {
                                                     <Link className='browse-menu-hub-links' to='/videos/shows'> Shows </Link>
                                                 </li>
                                             </ul>
-                                            {this.categories()}
+                                            <ul className='loggedin-navbar-browse-menu-categories'>
+                                                {this.categories()}
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className='loggedin-navbar-item-myStuff'>
-                            <Link className='navbar-link' to='/my-stuff'>myStuff</Link>
+                            <Link className='navbar-link' to='/my-stuff'>My Stuff</Link>
                         </div>
                         <div className='loggedin-navbar-item-spacer'></div>
                         <div className='loggedin-navbar-item-profile-container' aria-expanded='false' onMouseOver={this.profileToggle} onMouseLeave={this.leaveProfile}>
                             <div className='loggedin-navbar-profile-item'>
-                                <button >
+                                <button className='loggedin-search-btn'>
                                     <Link className='navbar-link' to='/search'>
                                         <img src='' className='loggedin-navbar-search-icon' />
                                         <span className='loggedin-navbar-search-label' > Search</span>

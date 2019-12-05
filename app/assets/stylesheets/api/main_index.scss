@@ -141,9 +141,11 @@
 .loggedin-masthead-tile-background {
     width: 100%;
     padding-bottom: 56.25%;
-    background: ( linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image_url('masthead-background-2.jpg'));
+    background: ( linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image_url('masthead.jpg'));
     height: 100%;
-    background-size: contain;
+    background-size: auto;
+    background-position: 50% 50%;
+  
 
     
 }
