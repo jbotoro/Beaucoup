@@ -8,20 +8,37 @@ const browseCategories = ['Action', 'Adventure', 'Cartoons','Classics','Comedy',
 class loggedInNavBar extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            currentNav: 'Nav GlobalNav GlobalNav--masthead GlobalNav--transparent'
+        };
         this.handleLogout = this.handleLogout.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
     }
 
-    handleScroll () {
-        const y_index =  window.pageYOffset;
-        const solid_nav_y_index = 75;
+    componentDidMount() {
+        this.handleScroll();
+        window.addEventListener('scroll', this.handleScroll);
+    }
 
-        if ( y_index > solid_nav_y_index) {
-            let x = document.querySelector('.Nav GlobalNav GlobalNav--masthead GlobalNav--transparent').classList.remove('--transparent')
-            console.log(x);
+    handleScroll () {
+        
+
+        let y_index = window.pageYOffset;
+        if (y_index === 0) {
+            console.log( 'we out here')
+            this.setState({
+                currentNav: 'Nav GlobalNav GlobalNav--masthead GlobalNav--transparent'
+            })
+        } else {
+            console.log('we in here')
+            this.setState ({
+                currentNav: 'Nav GlobalNav GlobalNav--masthead'
+            })
+    
         }
 
     }
+
    
     
     
@@ -56,7 +73,7 @@ class loggedInNavBar extends React.Component {
     render () {
     
         return (
-            <header className='Nav GlobalNav GlobalNav--masthead GlobalNav--transparent' onScroll={this.handleScroll}>
+            <header className={this.state.currentNav}>
                 <div className='loggedin-navbar-header-main-container'>
                     <div className='loggedin-navbar'>
                         <div className='loggedin-navbar-item-logo'>
