@@ -46,6 +46,17 @@ class SessionForm extends React.Component {
     }
 
     render() {
+
+        let FormHeader;
+        let OtherFormHeader;
+
+        if(this.props.formType === 'signup') {
+            FormHeader = "Sign Up"
+            OtherFormHeader = "Login"
+        } else {
+            FormHeader = "Login"
+            OtherFormHeader = "Sign Up" 
+        }
         return (
             <div className='login-form-parent'>
                 <div className="modal-header">
@@ -57,7 +68,7 @@ class SessionForm extends React.Component {
                     <div className='modal-login-container'>
                         <div className='modal-login-body'>
                             <div className='modal-welcome-message-container'>
-                                {this.props.formType} to Beaucoup
+                                {FormHeader} to Beaucoup
                             </div>
                             <div className='modal-login-main'>
                                 <div className='demo-user-button-div'>
@@ -86,7 +97,7 @@ class SessionForm extends React.Component {
                                 </div>
                                 <div className='login-errors-messages'>{this.renderErrors()}</div>
                             
-                                <input className="login-submit-button" type="submit" value={this.props.formType} />
+                                <input className="login-submit-button" type="submit" value={FormHeader} />
                             </div>
                         </div>
                         <div className='modal-footer-divider-div'></div>

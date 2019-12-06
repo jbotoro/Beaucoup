@@ -74,79 +74,392 @@
 // }
 
 
-* {
-    box-sizing: border-box;
-}
+// * {
+//     box-sizing: border-box;
+// }
 
-.loggedin-main-wrapper {
-    min-height: calc(100vh - 72px);
-    position: relative;
-}
+// .loggedin-main-wrapper {
+//     min-height: calc(100vh - 72px);
+//     position: relative;
+// }
 
 .loggedin-main-hub {
     overflow-x: hidden;
 }
 
-.loggedin-main-hub-collections-container {
-    margin-bottom: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: content-box;
-    width: calc(100% - 72px);
-}
+// .loggedin-main-hub-collections-container {
+//     margin-bottom: 200px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     box-sizing: content-box;
+//     width: calc(100% - 72px);
+// }
 
-.loggedin-collection {
-    animation: collectionFade 1s;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: collectionFade;
-}
+// .loggedin-collection {
+//     animation: collectionFade 1s;
+//     animation-duration: 1s;
+//     animation-timing-function: ease;
+//     animation-delay: 0s;
+//     animation-iteration-count: 1;
+//     animation-direction: normal;
+//     animation-fill-mode: none;
+//     animation-play-state: running;
+//     animation-name: collectionFade;
+// }
 
-.loggedin-masthead-vertical-slider-collection {
-    padding-bottom: 48px;
-}
+// .loggedin-masthead-vertical-slider-collection {
+//     padding-bottom: 48px;
+// }
 
-.WindowedList {
-    white-space: nowrap;
-}
+// .WindowedList {
+//     white-space: nowrap;
+// }
 
-.WindowedListItem {
-    display: inline-block;
-    width: calc(100% + 72px);
-    white-space: normal;
-    vertical-align: top;
-    transition: 0.5s opacity ease-in;
-    height: 750px;
-}
+// .WindowedListItem {
+//     display: inline-block;
+//     width: calc(100% + 72px);
+//     white-space: normal;
+//     vertical-align: top;
+//     transition: 0.5s opacity ease-in;
+//     height: 750px;
+// }
 
-.loggedin-masthead-above-vertical-slider-collection {
-    margin-left: -36px;
-    width: calc(100% + 72px);
-    margin-bottom: -56px;
-    overflow: hidden;
-    max-height: calc(100% - 72px);
-}
+// .loggedin-masthead-above-vertical-slider-collection {
+//     margin-left: -36px;
+//     width: calc(100% + 72px);
+//     margin-bottom: -56px;
+//     overflow: hidden;
+//     max-height: calc(100% - 72px);
+// }
 
-.loggedin-masthead-tile {
-    overflow: visible;
-    position: relative;
-    background-color: var(--gray-1);
-}
+// .loggedin-masthead-tile {
+//     overflow: visible;
+//     position: relative;
+//     background-color: var(--gray-1);
+// }
 
-.loggedin-masthead-tile-background {
-    width: 100%;
-    padding-bottom: 56.25%;
-    background: ( linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image_url('masthead.jpg'));
-    height: 100%;
-    background-size: auto;
-    background-position: 50% 50%;
+// .loggedin-masthead-tile-background {
+//     width: 100%;
+//     padding-bottom: 56.25%;
+//     background: ( linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image_url('masthead.jpg'));
+//     height: 100%;
+//     background-size: auto;
+//     background-position: 50% 50%;
   
 
+    .masthead-main {
+        background: (linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),image_url('masthead.jpeg')) ;
+        background-size: cover;
+        background-position: center;
+        height: 588px;
+        display: flex;
+        align-items: center;
+    }
+
+    .masthead-details {
+       font-size: 18px;
+       width: 50%;
+       height: 285px;
+       color: white;
+       margin-left: 100px;
+       margin-top: 30px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       font-family: 'Quicksand', sans-serif;
+    }
+
+    .postmasthead-hub-container {
+        margin-left: 40px; 
+        margin-right: 40px;
+        height: 100%;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .featured-hub-container {
+        display: flex;
+        height: 500px;
+        padding-bottom: 48px;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+     .featured-hub-1 {
+        margin-top: -80px;
+        width: 25%;
+        background-color: red;
+        // background-image: linear-gradient(to top, rgba(31, 93, 185, 0.6) 0%, rgba(255, 255, 255, 0.1) 70%), image_url('kung_movie_3');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .featured-hub-1-info {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        width: 100%;
+        height: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .featured-hub-1-extra {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        height: 75%;
+        width: 100%;
+        margin: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+    }
+
+    .featured-hub-2-container {
+        margin-top: -80px;
+        width: 25%;
+        background-color: red;
+        // background-image: linear-gradient(to top, rgba(31, 93, 185, 0.6) 0%, rgba(255, 255, 255, 0.1) 70%), image_url('kung_movie_2');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+
+    .featured-hub-2 {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        width: 100%;
+        height: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
     
-}
+    .featured-hub-2-info {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        height: 75%;
+        width: 100%;
+        margin: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+    }
+
+    .featured-hub-3-container {
+        margin-top: -80px;
+        width: 25%;
+        background-color: red;
+        // background-image: linear-gradient(to top, rgba(31, 93, 185, 0.6) 0%, rgba(255, 255, 255, 0.1) 70%), image_url('kung-fu-panda-4');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+
+    .featured-hub-3{
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        width: 100%;
+        height: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column
+    }
+    
+    .featured-hub-3-info {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        height: 75%;
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+    }
+
+    .featured-hub-4-container {
+        margin-top: -80px;
+        width: 25%;
+        background-color: red;
+        // background-image: linear-gradient(to top, rgba(31, 93, 185, 0.6) 0%, rgba(255, 255, 255, 0.1) 70%), image_url('kung_movie_5');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+
+    .featured-hub-4 {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        width: 100%;
+        height: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column
+    }
+    
+    .featured-hub-4-info {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        height: 75%;
+        width: 100%;
+        margin: 0 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+    }
+
+     .shows-collection-container-header {
+        font-size: 18px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+    .shows-collection-container {
+        margin-top: 20px;
+        width: 100%;
+        height: 375px;
+        display: flex;
+    }
+
+    .shows-collection-items {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        height: 100%;
+        width: 50%
+    }
+
+    .shows-collection-item-1 {
+        background-color: blue;
+        // background-image: image_url('walkerwide.jpeg');
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .shows-collection-item-1-info {
+        position: absolute;
+        visibility: hidden;
+        box-sizing: border-box;
+        bottom: 0;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(59, 7, 75);
+        padding: 15px;
+    }
+
+    .shows-collection-item-2 {
+        // background-image: image_url('badlandswide.png');
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        background-color: blue;
+    }
+
+    .shows-collection-item-2-info {
+        position: absolute;
+        visibility: hidden;
+        box-sizing: border-box;
+        bottom: 0;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(59, 7, 75);
+        padding: 15px;
+    }
+
+    .shows-collection-item-3 {
+        // background-image: image_url('the-matrix.jpg');
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        background-color: blue;;
+    }
+
+    .shows-collection-item-3-info{
+        position: absolute;
+        visibility: hidden;
+        box-sizing: border-box;
+        bottom: 0;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(59, 7, 75);
+        padding: 15px;
+    }
+
+    .shows-collection-item-4 {
+        // background-image: image_url('panda-land.jpg');
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        background-color: blue;
+    }
+
+    .shows-collection-item-4-info {
+        position: absolute;
+        visibility: hidden;
+        box-sizing: border-box;
+        bottom: 0;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(59, 7, 75);
+        padding: 15px;
+    }
+
+    .shows-slider-container {
+        margin-top: 20px;
+     }
+
+     .movies-slider-container {
+         margin-top: 20px;
+     }
+
+// }
 
