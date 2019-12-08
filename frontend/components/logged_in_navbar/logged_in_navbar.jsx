@@ -74,80 +74,125 @@ class loggedInNavBar extends React.Component {
     render () {
     
         return (
-            <header className={this.state.currentNav}>
-                <div className='loggedin-navbar-header-main-container'>
-                    <div className='loggedin-navbar'>
-                        <div className='loggedin-navbar-item-logo'>
-                            <Link className='navbar-link'to='/videos'> Beaucoup </Link>
+          <header className={this.state.currentNav}>
+            <div className="loggedin-navbar-header-main-container">
+              <div className="loggedin-navbar">
+                <div className="loggedin-navbar-item-logo">
+                  <Link className="navbar-link-logo" to="/videos">
+                    {" "}
+                    Beaucoup{" "}
+                  </Link>
+                </div>
+                <div
+                  className="loggedin-navbar-browse"
+                  aria-expanded="false"
+                  onMouseOver={this.browseToggle}
+                  onMouseLeave={this.leaveBrowse}
+                >
+                  <div className="loggedin-navbar-browse-item">
+                    <button className="loggedin-navbar-browse-button">
+                      <i class="material-icons"> menu </i>
+                      {/* <img src={SearchIcon} className='loggedin-navbar-browse-button-icon'/> */}
+                      <span className="loggedin-navbar-browse-label">
+                        {" "}
+                        Browse
+                      </span>
+                    </button>
+                  </div>
+                  <div className="loggedin-navbar-browse-menu">
+                    <div className="loggedin-navbar-browse-dropdown-container">
+                      <div className="loggedin-navbar-browse-menu-container">
+                        <div className="loggedin-navbar-browse-menu-items">
+                          <ul className="loggedin-navbar-browse-menu-hubs">
+                            <li className="loggedin-navbar-browse-menu-hubs-item">
+                              <Link
+                                className="browse-menu-hub-links"
+                                to="/videos/movies"
+                              >
+                                {" "}
+                                Movies{" "}
+                              </Link>
+                            </li>
+                            <li className="loggedin-navbar-browse-menu-hubs-item">
+                              <Link
+                                className="browse-menu-hub-links"
+                                to="/videos/shows"
+                              >
+                                {" "}
+                                Shows{" "}
+                              </Link>
+                            </li>
+                          </ul>
+                          <ul className="loggedin-navbar-browse-menu-categories">
+                            {this.categories()}
+                          </ul>
                         </div>
-                        <div className='loggedin-navbar-browse' aria-expanded='false' onMouseOver={this.browseToggle} onMouseLeave={this.leaveBrowse}>
-                            <div className='loggedin-navbar-browse-item'>
-                                <button className='loggedin-navbar-browse-button'>
-                                    <i class='material-icons'> menu </i>
-                                    {/* <img src={SearchIcon} className='loggedin-navbar-browse-button-icon'/> */}
-                                    <span className='loggedin-navbar-browse-label'> Browse</span>
-                                </button>
-                            </div>
-                            <div className='loggedin-navbar-browse-menu' >
-                                <div className='loggedin-navbar-browse-dropdown-container'>
-                                    <div className='loggedin-navbar-browse-menu-container'>
-                                        <div className='loggedin-navbar-browse-menu-items'>
-                                            <ul className='loggedin-navbar-browse-menu-hubs'>
-                                                <li className='loggedin-navbar-browse-menu-hubs-item'>
-                                                    <Link className='browse-menu-hub-links' to='/videos/movies'> Movies </Link>
-                                                </li>
-                                                <li className='loggedin-navbar-browse-menu-hubs-item'>
-                                                    <Link className='browse-menu-hub-links' to='/videos/shows'> Shows </Link>
-                                                </li>
-                                            </ul>
-                                            <ul className='loggedin-navbar-browse-menu-categories'>
-                                                {this.categories()}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='loggedin-navbar-item-myStuff'>
-                            <Link className='navbar-link' to='/my-stuff'>My Stuff</Link>
-                        </div>
-                        <div className='loggedin-navbar-item-spacer'></div>
-                        <div className='loggedin-navbar-item-profile-container' aria-expanded='false'>
-                            <div className='loggedin-navbar-profile-item'>
-                                <button className='loggedin-search-btn'>
-                                    <Link className='navbar-link' to='/search'>
-                                        <i class="material-icons"> search </i>
-                                        {/* <img src={SearchIcon} className='loggedin-navbar-search-icon' /> */}
-                                        <span className='loggedin-navbar-search-label' > Search</span>
-                                    </Link>
-                                </button>
-                            </div>
-                        </div>
-                        {/* <div className='logged-in-navbar-item-search' style={{ display: 'flex' }} >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="loggedin-navbar-item-myStuff">
+                  <div className='loggedin-navbar-myStuff-icon-wrap'>
+                    <i class="material-icons md-1">done</i>
+                  </div>
+                  <Link className="navbar-link" to="/my-stuff">
+                    My Stuff
+                  </Link>
+                </div>
+                <div className="loggedin-navbar-item-spacer"></div>
+                <div
+                  className="loggedin-navbar-item-profile-container"
+                  aria-expanded="false"
+                >
+                  <div className="loggedin-navbar-profile-item">
+                    <button className="loggedin-search-btn">
+                      <Link className="navbar-link" to="/search">
+                        <i class="material-icons"> search </i>
+                        {/* <img src={SearchIcon} className='loggedin-navbar-search-icon' /> */}
+                        <span className="loggedin-navbar-search-label">
+                          {" "}
+                          Search
+                        </span>
+                      </Link>
+                    </button>
+                  </div>
+                </div>
+                {/* <div className='logged-in-navbar-item-search' style={{ display: 'flex' }} >
                             <Link className='navbar-link' to='/search'> 
                                 <img src='' className='loggedin-navbar-search-icon'/>
                                 <span className='loggedin-navbar-search-label' > Search</span>
                             </Link>
                         </div> */}
-                        <div className='loggedin-navbar-item-profile-container' aria-expanded='false' onMouseOver={this.profileToggle} onMouseLeave={this.leaveProfile}> 
-                            <div className='loggedin-navbar-profile-item'>
-                                <button className='loggedin-navbar-profile-dropdown-button'>
-                                    <div className='loggedin-profile-icon'> D </div>
-                                    <span className='loggedin-profile-name-label'> Demo User</span>
-                                </button>
-                            </div>
-                            <div className='loggedin-navbar-item-profile-dropdown'>
-                                <div className='loggedin-navbar-profile-dropdown-links'>
-                                    <button className='loggedin-navbar-profile-logout-button' onClick={this.handleLogout} >
-                                        Log Out
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                <div
+                  className="loggedin-navbar-item-profile-container"
+                  aria-expanded="false"
+                  onMouseOver={this.profileToggle}
+                  onMouseLeave={this.leaveProfile}
+                >
+                  <div className="loggedin-navbar-profile-item">
+                    <button className="loggedin-navbar-profile-dropdown-button">
+                      <div className="loggedin-profile-icon"> D </div>
+                      <span className="loggedin-profile-name-label">
+                        {" "}
+                        Demo User
+                      </span>
+                    </button>
+                  </div>
+                  <div className="loggedin-navbar-item-profile-dropdown">
+                    <div className="loggedin-navbar-profile-dropdown-links">
+                      <button
+                        className="loggedin-navbar-profile-logout-button"
+                        onClick={this.handleLogout}
+                      >
+                        Log Out
+                      </button>
                     </div>
+                  </div>
                 </div>
-            </header>
-        )
+              </div>
+            </div>
+          </header>
+        );
     }
 }
 

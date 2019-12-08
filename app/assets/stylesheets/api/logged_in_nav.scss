@@ -140,6 +140,8 @@ body {
 
 .loggedin-navbar-browse {
     display: flex;
+    margin: auto;
+    padding: 15px;
 }
 
 .loggedin-navbar-browse-item {
@@ -216,7 +218,7 @@ body {
 
 .loggedin-navbar-browse-menu-categories{
     border-left: 1px solid var(--accent--dark);
-    column-count: 1;
+    column-count: 2;
     max-width: 1000px;
     text-transform: none;
     padding: 0 0 0 35px;
@@ -269,6 +271,9 @@ ul, ol {
 
 .loggedin-navbar-item-myStuff {
     display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 15px;
 }
 
 
@@ -417,4 +422,38 @@ ul, ol {
     cursor: pointer;
     text-transform: none;
     overflow: visible;
+}
+
+.material-icons.md-1 {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    // border: 1px solid white;
+}
+.loggedin-navbar-myStuff-icon-wrap {
+    position: relative;
+    border: 1px solid white;
+    align-content: center;
+    padding: 1px 5px 1px 5px;
+    cursor: pointer;
+}
+
+.navbar-link-logo {
+    display: flex;
+    padding: 0 20px;
+    color: currentColor;
+    margin-left: 20px;
+    // margin: 25px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    align-items: center !important;
+    letter-spacing: normal;
+    transition: opacity 0.3s ease;
+    align-self: stretch;
+    width: 100%;
+    position: relative;
+    background: none;
+    border: 0;
+    text-decoration: none;
 }
