@@ -1,6 +1,7 @@
 import React from 'react';
 import merge from 'lodash.merge';
 import {withRouter} from 'react-router-dom';
+import { setTimeout } from 'timers';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class SessionForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoUser = this.demoUser.bind(this);
+        this.delay = this.delay.bind(this);
     }
 
 
@@ -32,8 +34,12 @@ class SessionForm extends React.Component {
         });
     }
 
+    delay() {
+        setTimeout( () => this.renderErrors(), 3000)
+    }
+
     renderErrors() {
-      
+        debugger
         return (
             <ul>
                 {this.props.errors.map( (error, idx) => (
@@ -48,14 +54,14 @@ class SessionForm extends React.Component {
     render() {
 
         let FormHeader;
-        let OtherFormHeader;
+        // let OtherFormHeader;
 
         if(this.props.formType === 'signup') {
             FormHeader = "Sign Up"
-            OtherFormHeader = "Login"
+            // OtherFormHeader = "Login"
         } else {
             FormHeader = "Login"
-            OtherFormHeader = "Sign Up" 
+            // OtherFormHeader = "Sign Up" 
         }
         return (
             <div className='login-form-parent'>
@@ -95,7 +101,7 @@ class SessionForm extends React.Component {
                                         onChange={this.update('password')}
                                     />
                                 </div>
-                                <div className='login-errors-messages'>{this.renderErrors()}</div>
+    <div className='login-errors-messages'>{this.delay()}</div>
                             
                                 <input className="login-submit-button" type="submit" value={FormHeader} />
                             </div>

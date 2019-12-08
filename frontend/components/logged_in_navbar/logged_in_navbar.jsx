@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import SearchIcon from "@material-ui/icons/Search";
 
 const browseCategories = ['Action', 'Adventure', 'Cartoons','Classics','Comedy',
 'Drama', 'Family', 'Horror', 'Kids','Late Night','New Anime','Old Anime','Romance','Science Fiction','Teen','Thriller'
@@ -82,7 +83,8 @@ class loggedInNavBar extends React.Component {
                         <div className='loggedin-navbar-browse' aria-expanded='false' onMouseOver={this.browseToggle} onMouseLeave={this.leaveBrowse}>
                             <div className='loggedin-navbar-browse-item'>
                                 <button className='loggedin-navbar-browse-button'>
-                                    <img src="" className='loggedin-navbar-browse-button-icon'/>
+                                    <i class='material-icons'> menu </i>
+                                    {/* <img src={SearchIcon} className='loggedin-navbar-browse-button-icon'/> */}
                                     <span className='loggedin-navbar-browse-label'> Browse</span>
                                 </button>
                             </div>
@@ -110,11 +112,12 @@ class loggedInNavBar extends React.Component {
                             <Link className='navbar-link' to='/my-stuff'>My Stuff</Link>
                         </div>
                         <div className='loggedin-navbar-item-spacer'></div>
-                        <div className='loggedin-navbar-item-profile-container' aria-expanded='false' onMouseOver={this.profileToggle} onMouseLeave={this.leaveProfile}>
+                        <div className='loggedin-navbar-item-profile-container' aria-expanded='false'>
                             <div className='loggedin-navbar-profile-item'>
                                 <button className='loggedin-search-btn'>
                                     <Link className='navbar-link' to='/search'>
-                                        <img src='' className='loggedin-navbar-search-icon' />
+                                        <i class="material-icons"> search </i>
+                                        {/* <img src={SearchIcon} className='loggedin-navbar-search-icon' /> */}
                                         <span className='loggedin-navbar-search-label' > Search</span>
                                     </Link>
                                 </button>
