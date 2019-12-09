@@ -24,8 +24,8 @@ featured1 = Show.create!(
     seasons: 4,
     year: 2016,
     rating: 8.5)
-featured1_FeaturePic = open(https://beaucoup-dev.amazonaws.com/myheroacademiaseason1tall.jpg)
-featured1.photo.attach(io: featured1_FeaturePic, filename:'myheroacademiaseason1tall.jpg' )
+featured1_featurePic = open(https://beaucoup-dev.amazonaws.com/myheroacademiaseason1tall.jpg)
+featured1.tall_photo.attach(io: featured1_featurePic, filename:'myheroacademiaseason1tall.jpg' )
 featured1_normalPic = open(https://beaucoup-dev.amazonaws.com/mha1square.jpg)
 featured1.photo.attach(io: featured1_normalPic, filename:'mha1square.jpg')
 
@@ -34,8 +34,8 @@ featured2 = Movie.create!(title: 'Cowboy Bebop: The Movie',
     and it's up the bounty-hunting Bebop crew to catch the cold-blooded culprit.`, 
     rating: 7.9,
     year: 2003 )
-featured2_FeaturePic = open(https://beaucoup-dev.amazonaws.com/cowboybebopthemovie.jpg)
-featured2.photo.attach(io: featured2_FeaturePic, filename: 'cowboybebopthemovie.jpg')
+featured2_featurePic = open(https://beaucoup-dev.amazonaws.com/cowboybebopthemovie.jpg)
+featured2.tall_photo.attach(io: featured2_featurePic, filename: 'cowboybebopthemovie.jpg')
 featured2_normalPic = open(https://beaucoup-dev.amazonaws.com/bebopsquare.jpg)
 featured2.photo.attach(io: featured2_normalPic, filename: 'bebopsquare.jpg')
 featured2_video = open(https://beaucoup-dev.amazonaws.com/CowboyBebopMovie.mp4)
@@ -49,8 +49,8 @@ featured3 = Show.create(title: 'Death Note',
     seasons: 1,
     rating: 9.0,
     year: 2006)
-featured3_FeaturePic = open(https://beaucoup-dev.amazonaws.com/deathnotetall.jpg)
-featured3.photo.attach(io: featured3_FeaturePic, filename:'deathnotetall.jpg')
+featured3_featurePic = open(https://beaucoup-dev.amazonaws.com/deathnotetall.jpg)
+featured3.tall_photo.attach(io: featured3_featurePic, filename:'deathnotetall.jpg')
 featured3_normalPic = open(https://beaucoup-dev.amazonaws.com/deathnotesquare.jpg)
 featured3.photo.attach(io: featured3_normalPic, filename: 'deathnotesquare.jpg')
 
@@ -61,8 +61,8 @@ featured4 = Show.create(title: 'Dragon Ball Super',
     seasons: 1,
     rating: 8.4,
     year: 2015)
-featured4_FeaturePic = open(https://beaucoup-dev.amazonaws.com/dbzsupertall2.jpg)
-featured4.photo.attach(io: featured4_FeaturePic, filename:'dbzsupertall2.jpg')
+featured4_featurePic = open(https://beaucoup-dev.amazonaws.com/dbzsupertall2.jpg)
+featured4.tall_photo.attach(io: featured4_featurePic, filename:'dbzsupertall2.jpg')
 featured4_normalPic = open(https://beaucoup-dev.amazonaws.com/dbzsupersquare.jpg)
 featured4.photo.attach(io: featured4_normalPic, filename:'dbzsupersquare.jpg')
 
