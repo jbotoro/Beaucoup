@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
+Movie.destroy_all
+Show.destroy_all
+Episode.destroy_all
 
 
 demo = User.create!({email:'demo@demo.com', password:'password'})
@@ -15,12 +18,12 @@ featured1 = Show.create(title: 'My Hero Academia',
     description: 'A superhero-loving boy without any powers is determined to 
     enroll in a prestigious hero academy and learn what it really means to be a 
     hero.',
-    seasons: '4',
+    seasons: 4,
     year: 2016,
     rating: 8.5)
-featured1_FeaturePic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/my-hero-academia-season-1-tall.jpg)
-featured1.photo.attach(io: featured1_FeaturePic, filename:'my-hero-academia-season-1-tall.jpg' )
-featured1_normalPic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/mha1square.jpg)
+featured1_FeaturePic = open(https://beaucoup-dev.amazonaws.com/myheroacademiaseason1tall.jpg)
+featured1.photo.attach(io: featured1_FeaturePic, filename:'myheroacademiaseason1tall.jpg' )
+featured1_normalPic = open(https://beaucoup-dev.amazonaws.com/mha1square.jpg)
 featured1.photo.attach(io: featured1_normalPic, filename:'mha1square.jpg')
 
 featured2 = Movie.create(title: 'Cowboy Bebop: The Movie',
@@ -28,11 +31,11 @@ featured2 = Movie.create(title: 'Cowboy Bebop: The Movie',
     and it's up the bounty-hunting Bebop crew to catch the cold-blooded culprit.`, 
     rating: 7.9,
     year: 2003 )
-featured2_FeaturePic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/cowboy-bebop-the-movie.jpg)
-featured2.photo.attach(io: featured2_FeaturePic, filename: 'cowboy-bebop-the-movie.jpg')
-featured2_normalPic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/bebopsquare.jpg)
+featured2_FeaturePic = open(https://beaucoup-dev.amazonaws.com/cowboybebopthemovie.jpg)
+featured2.photo.attach(io: featured2_FeaturePic, filename: 'cowboybebopthemovie.jpg')
+featured2_normalPic = open(https://beaucoup-dev.amazonaws.com/bebopsquare.jpg)
 featured2.photo.attach(io: featured2_normalPic, filename: 'bebopsquare.jpg')
-featured2_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/CowboyBebopMovie.mp4)
+featured2_video = open(https://beaucoup-dev.amazonaws.com/CowboyBebopMovie.mp4)
 featured2.video.attach(io: featured2_video, filename:'CowboyBebopMovie.mp4')
 
 
@@ -43,9 +46,9 @@ featured3 = Show.create(title: 'Death Note',
     seasons: 1,
     rating: 9.0,
     year: 2006)
-featured3_FeaturePic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnotetall.jpg)
+featured3_FeaturePic = open(https://beaucoup-dev.amazonaws.com/deathnotetall.jpg)
 featured3.photo.attach(io: featured3_FeaturePic, filename:'deathnotetall.jpg')
-featured3_normalPic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnotesquare.jpg)
+featured3_normalPic = open(https://beaucoup-dev.amazonaws.com/deathnotesquare.jpg)
 featured3.photo.attach(io: featured3_normalPic, filename: 'deathnotesquare.jpg')
 
 
@@ -55,9 +58,9 @@ featured4 = Show.create(title: 'Dragon Ball Super',
     seasons: 1,
     rating: 8.4,
     year: 2015)
-featured4_FeaturePic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbzsupertall2.jpg)
+featured4_FeaturePic = open(https://beaucoup-dev.amazonaws.com/dbzsupertall2.jpg)
 featured4.photo.attach(io: featured4_FeaturePic, filename:'dbzsupertall2.jpg')
-featured4_normalPic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbzsupersquare.jpg)
+featured4_normalPic = open(https://beaucoup-dev.amazonaws.com/dbzsupersquare.jpg)
 featured4.photo.attach(io: featured4_normalPic, filename:'dbzsupersquare.jpg')
 
 
@@ -68,7 +71,7 @@ show1 = Show.create(title: 'Attack on Titan',
     seasons: 4,
     rating: 8.8,
     year: 2013)
-show1_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/attackontitan.jpg)
+show1_pic = open(https://beaucoup-dev.amazonaws.com/attackontitan.jpg)
 show1.photo.attach(io: show1_pic, filename: 'attackontitan.jpg')
 
 show2 = Show.create(title:'Hunter x Hunter',
@@ -78,7 +81,7 @@ show2 = Show.create(title:'Hunter x Hunter',
     seasons: 1,
     rating: 8.9,
     year:2011)
-show2_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterxhunter.jpg)
+show2_pic = open(https://beaucoup-dev.amazonaws.com/hunterxhunter.jpg)
 show2.photo.attach(io: show2_pic, filename: 'hunterxhunter.jpg')
 
 show3 = Show.create(title:'Naruto',
@@ -89,7 +92,7 @@ show3 = Show.create(title:'Naruto',
     seasons: 1,
     year: 2002,
     rating: 8.5)
-show3_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/naruto.jpg)
+show3_pic = open(https://beaucoup-dev.amazonaws.com/naruto.jpg)
 show3.photo.attach(io: show3_pic, filename: 'naruto.jpg')
 
 show4 = Show.create(title: 'One Punch Man',
@@ -98,7 +101,7 @@ show4 = Show.create(title: 'One Punch Man',
     seasons: 2,
     rating: 8.9,
     year: 2015)
-show4_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/onepunch.jpg)
+show4_pic = open(https://beaucoup-dev.amazonaws.com/onepunch.jpg)
 show4.photo.attach(io: show4_pic, filename:"onepunch.jpg")
 
 show5 = Show.create(title:'Pokemon',
@@ -107,7 +110,7 @@ show5 = Show.create(title:'Pokemon',
     seasons: 23,
     year: 1997,
     rating: 7.4)
-show5_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemon.jpg)
+show5_pic = open(https://beaucoup-dev.amazonaws.com/pokemon.jpg)
 show5.photo.attach(io: show5_pic, filename: 'pokemon.jpg')
 
 show6 = Show.create(title: 'Samurai Champloo',
@@ -117,7 +120,7 @@ show6 = Show.create(title: 'Samurai Champloo',
     seasons: 1,
     rating: 8.5,
     year: 2004)
-show6_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/champloo.jpg)
+show6_pic = open(https://beaucoup-dev.amazonaws.com/champloo.jpg)
 show6.photo.attach(io: show6_pic, filename: 'champloo.jpg')
 
 show7 = Show.create(title: 'Tokyo Ghoul',
@@ -127,7 +130,7 @@ show7 = Show.create(title: 'Tokyo Ghoul',
     seasons: 1,
     rating: 7.9,
     year: 2014)
-show7_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/tokyoghoul.jpg)
+show7_pic = open(https://beaucoup-dev.amazonaws.com/tokyoghoul.jpg)
 show7.photo.attach(io: show7_pic, filename: 'tokyoghoul.jpg')
 
 show8 = Show.create(title: 'Neon Genesis Evangelion',
@@ -136,7 +139,7 @@ show8 = Show.create(title: 'Neon Genesis Evangelion',
     seasons: 1,
     rating: 8.5,
     year: 1995)
-show8_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/neongenesis.jpg)
+show8_pic = open(https://beaucoup-dev.amazonaws.com/neongenesis.jpg)
 show8.photo.attach(io: show8_pic, filename:"neongenesis.jpg")
 
 movie1 = Movie.create(title:'Digimon: The Movie',
@@ -144,7 +147,7 @@ movie1 = Movie.create(title:'Digimon: The Movie',
     together.',
     rating:6.1,
     year: 2000)
-movie1_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/DigimonTheMovie.mkv)
+movie1_video = open(https://beaucoup-dev.amazonaws.com/DigimonTheMovie.mkv)
 movie1.video.attach(io: movie1_video, filename:'DigimonTheMovie.mkv')
 
 movie2 = Movie.create(title: 'Your Name',
@@ -152,7 +155,7 @@ movie2 = Movie.create(title: 'Your Name',
     connection forms, will distance be the only thing to keep them apart?',
     rating: 8.4,
     year: 2017)
-movie2_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/yourname.mp4)
+movie2_video = open(https://beaucoup-dev.amazonaws.com/yourname.mp4)
 movie2.video.attach(io: movie2_video, filename:'yourname.mp4')
 
 movie3 = Movie.create(title:"Pokemon: The First Movie",
@@ -160,7 +163,7 @@ movie3 = Movie.create(title:"Pokemon: The First Movie",
     results are horrific and disastrous.',
     rating: 6.2,
     year: 1999)
-movie3_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/PokemonMovie.mp4)
+movie3_video = open(https://beaucoup-dev.amazonaws.com/PokemonMovie.mp4)
 movie3.video.attach(io: movie3_video, filename: 'PokemonMovie.mp4')
 
 
@@ -170,9 +173,9 @@ myheroep1 = Episode.create(title:'Izuku Midoriya: Origin',
     hero, All Might, change his fate?',
     episode_number: 1,
     show_id: 1 )
-myhero1_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/MyHeroAcademia01.mkv)
+myhero1_video = open(https://beaucoup-dev.amazonaws.com/MyHeroAcademia01.mkv)
 myheroep1.video.attach(io:  myhero1_video, filename: 'MyHeroAcademia01.mkv')
-myhero1_img = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/myheroep1img.jpg)
+myhero1_img = open(https://beaucoup-dev.amazonaws.com/myheroep1img.jpg)
 myheroep1.photo.attach(io: myhero1_img, filename: 'myheroep1img.jpg')
 
 myheroep2 = Episode.create(title:'What It Takes to Be a Hero',
@@ -181,9 +184,9 @@ myheroep2 = Episode.create(title:'What It Takes to Be a Hero',
      able to save the day again?`,
     episode_number: 2,
     show_id: 1)
-myhero2_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/MyHeroAcademia02.mkv)
+myhero2_video = open(https://beaucoup-dev.amazonaws.com/MyHeroAcademia02.mkv)
 myheroep2.video.attach( io: myhero2_video, filename: 'MyHeroAcademia02.mkv')
-myhero2_img = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/myheroep2img.jpg)
+myhero2_img = open(https://beaucoup-dev.amazonaws.com/myheroep2img.jpg)
 myheroep2.photo.attach(io: myhero2_img, filename: 'myheroep2img.jpg')
 
 deathnoteep1 = Episode.create(title: 'Shinsei',
@@ -191,9 +194,9 @@ deathnoteep1 = Episode.create(title: 'Shinsei',
     anyone whose name he writes in it.',
     episode_number: 1,
     show_id: 2)
-deathnotevid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/DeathNote01.mkv)
+deathnotevid1 = open(https://beaucoup-dev.amazonaws.com/DeathNote01.mkv)
 deathnoteep1.video.attach(io: deathnotevid1, filename: 'DeathNote01.mkv')
-deathnoteimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnoteep1img.jpg)
+deathnoteimg1 = open(https://beaucoup-dev.amazonaws.com/deathnoteep1img.jpg)
 deathnoteep1.photo.attach(io: deathnoteimg1, filename: 'deathnoteep1img.jpg')
 
 
@@ -203,9 +206,9 @@ deathnoteep2 = Episode.create(title: 'Confrontation',
       force be set up in Japan.`,
     episode_number: 2,
     show_id: 2)
-deathnotevid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/DeathNote02.mkv)
+deathnotevid2 = open(https://beaucoup-dev.amazonaws.com/DeathNote02.mkv)
 deathnoteep2.video.attach(io: deathnotevid2, filename: 'DeathNote02.mkv')
-deathnoteimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnoteep2img.jpg)
+deathnoteimg2 = open(https://beaucoup-dev.amazonaws.com/deathnoteep2img.jpg)
 deathnoteep2.photo.attach(io: deathnoteimg2, filename: 'deathnoteep2img.jpg')
 
 
@@ -214,9 +217,9 @@ dragonsuperep1 = Episode.create(title:'A Peacetime Reward: Who Gets the 100,000,
     fighting.',
     episode_number: 1,
     show_id: 3)
-dragonballvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/DragonBallSuper01.mp4)
+dragonballvid1 = open(https://beaucoup-dev.amazonaws.com/DragonBallSuper01.mp4)
 dragonsuperep1.video.attach(io: dragonballvid1, filename: 'DragonBallSuper01.mp4')
-dragonballimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbsuperep1img.jpg)
+dragonballimg1 = open(https://beaucoup-dev.amazonaws.com/dbsuperep1img.jpg)
 dragonsuperep1.photo.attach(io: dragonballimg1, filename: 'dbsuperep1img.jpg')
 
 
@@ -224,9 +227,9 @@ dragonsuperep2 = Episode.create(title:'To the Promised Resort! Vegeta Takes a Fa
     description: 'Vegeta, Bulma and Trunks take a family trip.',
     episode_number: 2,
     show_id: 3)
-dragonballvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/DragonBallSuper02.mkv)
+dragonballvid2 = open(https://beaucoup-dev.amazonaws.com/DragonBallSuper02.mkv)
 dragonsuperep2.video.attach(io: dragonballvid2, filename: 'DragonBallSuper02.mkv')
-dragonballimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbsuperep2img.jpg)
+dragonballimg2 = open(https://beaucoup-dev.amazonaws.com/dbsuperep2img.jpg)
 dragonsuperep2.photo.attach(io: dragonballimg2, filename: 'dbsuperep2img.jpg')
 
 
@@ -238,9 +241,9 @@ attackep1 = Episode.create(title: 'To You, in 2000 Years: The Fall of Shiganshin
       to livestock.',
     episode_number: 1,
     show_id: 4)
-attackvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/AttackOnTitan01.mkv)
+attackvid1 = open(https://beaucoup-dev.amazonaws.com/AttackOnTitan01.mkv)
 attackep1.video.attach(io: attackvid1, filename:'AttackOnTitan01.mkv')
-attackimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/attackep1img.jpg)
+attackimg1 = open(https://beaucoup-dev.amazonaws.com/attackep1img.jpg)
 attackep1.photo.attach(io: attackimg1, filename: 'attackep1img.jpg')
 
 
@@ -251,9 +254,9 @@ attackep2 = Episode.create(title: 'That Day: The Fall of Shiganshina, Part 2',
         a harsh life waiting for them, however.',
     episode_number: 2,
     show_id: 4)
-attackvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/AttackOnTitan02.mkv)
+attackvid2 = open(https://beaucoup-dev.amazonaws.com/AttackOnTitan02.mkv)
 attackep2.video.attach(io: attackvid2, filename: 'AttackOnTitan02.mkv')
-attackimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/attackep2img.jpg)
+attackimg2 = open(https://beaucoup-dev.amazonaws.com/attackep2img.jpg)
 attackep2.photo.attach(io: attackimg2, filename: 'attackep2img.jpg')
 
 
@@ -265,9 +268,9 @@ hunterep1 = Episode.create(title:'Departure x and x Friends',
     approaching and meets Leorio and Kurapika.`,
     episode_number: 1,
     show_id: 5)
-huntervid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/HxH01.mp4)
+huntervid1 = open(https://beaucoup-dev.amazonaws.com/HxH01.mp4)
 hunterep1.video.attach(io: huntervid1, filename: 'HxH01.mp4')
-hunterimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterep1img.jpg)
+hunterimg1 = open(https://beaucoup-dev.amazonaws.com/hunterep1img.jpg)
 hunterep1.photo.attach(io: hunterimg1, filename: 'hunterep1img.jpg')
 
 
@@ -278,9 +281,9 @@ hunterep2 = Episode.create(title: 'Test × of × Tests',
     requiring them to choose between 2 possible answers.',
     episode_number: 2,
     show_id: 5)
-huntervid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/HxH02.mp4)
+huntervid2 = open(https://beaucoup-dev.amazonaws.com/HxH02.mp4)
 hunterep2.video.attach(io: huntervid2, filename: 'HxH02.mp4')
-hunterimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterep2img.jpg)
+hunterimg2 = open(https://beaucoup-dev.amazonaws.com/hunterep2img.jpg)
 hunterep2.photo.attach(io: hunterimg2, filename: 'hunterep2img.jpg')
 
 
@@ -291,9 +294,9 @@ nartuoep1 = Episode.create(title: 'He Appears! Naruto Uzumaki',
     seen in a 12-year-old boy.',
     episode_number: 1,
     show_id: 6)
-narutovid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Naruto01.mkv)
+narutovid1 = open(https://beaucoup-dev.amazonaws.com/Naruto01.mkv)
 nartuoep1.video.attach(io: narutovid1, filename: 'Naruto01.mkv')
-narutoimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/narutoep1img.jpg)
+narutoimg1 = open(https://beaucoup-dev.amazonaws.com/narutoep1img.jpg)
 nartuoep1.photo.attach(io: narutoimg1, filename: 'narutoep1img.jpg')
 
 
@@ -303,9 +306,9 @@ narutoep2 = Episode.create(title: 'My Name is Konohamaru!',
     grandson.`,
     episode_number: 2,
     show_id: 6)
-narutovid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Naruto02.mkv)
+narutovid2 = open(https://beaucoup-dev.amazonaws.com/Naruto02.mkv)
 narutoep2.video.attach(io: narutovid2, filename: 'Naruto02.mkv')
-narutoimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/narutoep2img.jpg)
+narutoimg2 = open(https://beaucoup-dev.amazonaws.com/narutoep2img.jpg)
 narutoep2.photo.attach(io: narutoimg2, filename:'narutoep2img.jpg')
 
 
@@ -315,9 +318,9 @@ onepunchep1 = Episode.create(title: 'Return of the Hero',
     recruit various assassins and villains.',
     episode_number: 13,
     show_id: 7)
-onepunchvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/OnePunchMan01.mp4)
+onepunchvid1 = open(https://beaucoup-dev.amazonaws.com/OnePunchMan01.mp4)
 onepunchep1.video.attach(io: onepunchvid1, filename: 'OnePunchMan01.mp4')
-onepunchimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/onepunchepimg.jpg)
+onepunchimg1 = open(https://beaucoup-dev.amazonaws.com/onepunchepimg.jpg)
 onepunchep1.photo.attach(io: onepunchimg1, filename: 'onepunchepimg.jpg')
 
 
@@ -326,9 +329,9 @@ pokemonep1 = Episode.create(title: 'Pokémon, I Choose You!',
     receives his first Pokémon, the reluctant Pikachu.',
     episode_number: 1,
     show_id: 8)
-pokemonvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Pokemon01.mp4)
+pokemonvid1 = open(https://beaucoup-dev.amazonaws.com/Pokemon01.mp4)
 pokemonep1.video.attach(io: pokemonvid1, filename: 'Pokemon01.mp4')
-pokemonimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemonep1img.jpg)
+pokemonimg1 = open(https://beaucoup-dev.amazonaws.com/pokemonep1img.jpg)
 pokemonep1.photo.attach(io: pokemonimg1, filename: 'pokemonep1img.jpg')
 
 
@@ -338,9 +341,9 @@ pokemonep2 = Episode.create(title: 'Pokémon Emergency!',
     attacked by Pokemon thieves calling themselves, Team Rocket.',
     episode_number: 2,
     show_id: 8)
-pokemonvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Pokemon02.mp4)
+pokemonvid2 = open(https://beaucoup-dev.amazonaws.com/Pokemon02.mp4)
 pokemonep2.video.attach(io: pokemonvid2, filename: 'Pokemon02.mp4')
-pokemonimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemonep2img.jpg)
+pokemonimg2 = open(https://beaucoup-dev.amazonaws.com/pokemonep2img.jpg)
 pokemonep2.photo.attach(io: pokemonimg2, filename: 'pokemonep2img.jpg')
 
 
@@ -349,9 +352,9 @@ champlooep1 = Episode.create(title: 'Tempestuous Temperaments',
     get in trouble with the local magistrate.',
     episode_number: 1,
     show_id: 9)
-champloovid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/SamuraiChamploo01.mkv)
+champloovid1 = open(https://beaucoup-dev.amazonaws.com/SamuraiChamploo01.mkv)
 champlooep1.video.attach(io: champloovid1, filename: 'SamuraiChamploo01.mkv')
-champlooimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/champlooep1img.jpg)
+champlooimg1 = open(https://beaucoup-dev.amazonaws.com/champlooep1img.jpg)
 champlooep1.photo.attach(io: champlooimg1, filename: 'champlooep1img.jpg')
 
 
@@ -360,9 +363,9 @@ champlooep2 = Episode.create(title: 'Redeye Reprisal',
     to extract revenge on him by kidnapping Fuu and kill Mugen and Jin.`,
     episode_number: 2,
     show_id: 9)
-champloovid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/SamuraiChamploo02.mkv)
+champloovid2 = open(https://beaucoup-dev.amazonaws.com/SamuraiChamploo02.mkv)
 champlooep2.video.attach(io: champloovid2, filename: 'SamuraiChamploo02.mkv')
-champlooimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/champlooep2img.jpg)
+champlooimg2 = open(https://beaucoup-dev.amazonaws.com/champlooep2img.jpg)
 champlooep2.photo.attach(io: champlooimg2, filename: 'champlooep2img.jpg')
 
 
@@ -372,9 +375,9 @@ ghoulep1 = Episode.create(title: 'Tragedy',
      he realize that his fate will change overnight.',
     episode_number: 1,
     show_id: 10)
-ghoulvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/TokyoGhoul01.mp4)
+ghoulvid1 = open(https://beaucoup-dev.amazonaws.com/TokyoGhoul01.mp4)
 ghoulep1.video.attach(io: ghoulvid1, filename: 'TokyoGhoul01.mp4')
-ghoulimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/tokyoep1img.jpg)
+ghoulimg1 = open(https://beaucoup-dev.amazonaws.com/tokyoep1img.jpg)
 ghoulep1.photo.attach(io: ghoulimg1, filename: 'tokyoep1img.jpg')
 
 
@@ -384,9 +387,9 @@ ghoulep2 = Episode.create(title: 'Incubation',
      Nagachika and he must fight to protect him.',
     episode_number: 2,
     show_id: 10)
-ghoulvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/TokyoGhoul02.mp4)
+ghoulvid2 = open(https://beaucoup-dev.amazonaws.com/TokyoGhoul02.mp4)
 ghoulep2.video.attach(io: ghoulvid2, filename: 'TokyoGhoul02.mp4')
-ghoulimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/tokyoep2img.jpg)
+ghoulimg2 = open(https://beaucoup-dev.amazonaws.com/tokyoep2img.jpg)
 ghoulep2.photo.attach(io: ghoulimg2, filename: 'tokyoep2img.jpg')
 
 
@@ -396,9 +399,9 @@ neonep1 = Episode.create(title: 'Angel Attack',
     enigmatic father to save the city from an invading creature called an Angel.`,
     episode_number: 1,
     show_id: 11)
-neonvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/NGE-1.mkv)
-neonep1.video.attach(io: neonvid1, filename: 'NGE-1.mkv')
-neonimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/neonep1img.jpg)
+neonvid1 = open(https://beaucoup-dev.amazonaws.com/NGE1.mkv)
+neonep1.video.attach(io: neonvid1, filename: 'NGE1.mkv')
+neonimg1 = open(https://beaucoup-dev.amazonaws.com/neonep1img.jpg)
 neonep1.photo.attach(io: neonimg1, filename: 'neonep1img.jpg')
 
 neonep2 = Episode.create(title: 'The Beast',
@@ -408,7 +411,7 @@ neonep2 = Episode.create(title: 'The Beast',
      of his fight with the Angel.',
     episode_number: 2,
     show_id: 11)
-neonvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/NGE-2.mkv)
-neonep2.video.attach(io: neonvid2, filename: 'NGE-2.mkv')
-neonimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/neeonep2img.jpg)
+neonvid2 = open(https://beaucoup-dev.amazonaws.com/NGE2.mkv)
+neonep2.video.attach(io: neonvid2, filename: 'NGE2.mkv')
+neonimg2 = open(https://beaucoup-dev.amazonaws.com/neeonep2img.jpg)
 neonep2.photo.attach(io: neonimg2, filename: 'neeonep2img.jpg')
