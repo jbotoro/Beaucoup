@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
 User.delete_all
 Movie.destroy_all
 Show.destroy_all
@@ -14,7 +16,8 @@ Episode.destroy_all
 
 demo = User.create!({email:'demo@demo.com', password:'password'})
 
-featured1 = Show.create(title: 'My Hero Academia', 
+featured1 = Show.create!(
+    title: 'My Hero Academia', 
     description: 'A superhero-loving boy without any powers is determined to 
     enroll in a prestigious hero academy and learn what it really means to be a 
     hero.',
@@ -26,7 +29,7 @@ featured1.photo.attach(io: featured1_FeaturePic, filename:'myheroacademiaseason1
 featured1_normalPic = open(https://beaucoup-dev.amazonaws.com/mha1square.jpg)
 featured1.photo.attach(io: featured1_normalPic, filename:'mha1square.jpg')
 
-featured2 = Movie.create(title: 'Cowboy Bebop: The Movie',
+featured2 = Movie.create!(title: 'Cowboy Bebop: The Movie',
     description: `A terrorist explosion releases a deadly virus on the masses, 
     and it's up the bounty-hunting Bebop crew to catch the cold-blooded culprit.`, 
     rating: 7.9,
