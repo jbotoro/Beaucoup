@@ -87,7 +87,7 @@ show3 = Show.create(title:'Naruto',
     Hokage, who is acknowledged as the leader and strongest of all ninja in 
     the village.',
     seasons: 1,
-    year: 2007,
+    year: 2002,
     rating: 8.5)
 show3_pic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/naruto.jpg)
 show3.photo.attach(io: show3_pic, filename: 'naruto.jpg')
@@ -167,6 +167,14 @@ movie3.video.attach(io: movie3_video, filename: 'Pokemon+S01M01+The+First+Movie+
 # myhero
 # death note
 # dragon ball sup
+# attack on Titan
+# hunter x hunter
+# naruto
+# one punch
+# pokemon
+# champloo
+# tokyo ghoul
+# neon genesis
 
 myheroep1 = Episode.create(title:'Izuku Midoriya: Origin',
    description: 'Izuku Midoriya desperately wants to be a hero, but he is one of
@@ -174,10 +182,245 @@ myheroep1 = Episode.create(title:'Izuku Midoriya: Origin',
     hero, All Might, change his fate?',
     episode_number: 1,
     show_id: 1 )
+myhero1_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/My+Hero+Academia+Ep.01.mkv)
+myheroep1.video.attach(io:  myhero1_video, filename: 'My+Hero+Academia+Ep.01.mkv')
+myhero1_img = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/myheroep1img.jpg)
+myheroep1.photo.attach(io: myhero1_img, filename: 'myheroep1img.jpg')
+
+myheroep2 = Episode.create(title:'What It Takes to Be a Hero',
+    description: `Izuku accidentally learns of All Might's secret, but there's 
+    trouble in town again before Izuku has time to process it. Will All Might be
+     able to save the day again?`,
+    episode_number: 2,
+    show_id: 1)
+myhero2_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/My+Hero+Academia+Ep.02.mkv)
+myheroep2.video.attach( io: myhero2_video, filename: 'My+Hero+Academia+Ep.02.mkv')
+myhero2_img = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/myheroep2img.jpg)
+myheroep2.photo.attach(io: myhero2_img, filename: 'myheroep2img.jpg')
+
+deathnoteep1 = Episode.create(title: 'Shinsei',
+    description: 'A brilliant but bored student finds a notebook that can kill 
+    anyone whose name he writes in it.',
+    episode_number: 1,
+    show_id: 2)
+deathnotevid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Death+Note+-+01.mkv)
+deathnoteep1.video.attach(io: deathnotevid1, filename: 'Death+Note+-+01.mkv')
+deathnoteimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnoteep1img.jpg)
+deathnoteep1.photo.attach(io: deathnoteimg1, filename: 'deathnoteep1img.jpg')
+
+
+deathnoteep2 = Episode.create(title: 'Confrontation',
+    description: `While the world's criminals continue to drop dead, L meets by
+     computer with representatives from various nations. He requests that a task
+      force be set up in Japan.`,
+    episode_number: 2,
+    show_id: 2)
+deathnotevid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Death+Note+-+02.mkv)
+deathnoteep2.video.attach(io: deathnotevid2, filename: 'Death+Note+-+02.mkv')
+deathnoteimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnoteep2img.jpg)
+deathnoteep2.photo.attach(io: deathnoteimg2, filename: 'deathnoteep2img.jpg')
+
+
+dragonsuperep1 = Episode.create(title:'A Peacetime Reward: Who Gets the 100,000,000 Zeni?!',
+    description: 'Goku works in his radish field, but wants to go training and 
+    fighting.',
+    episode_number: 1,
+    show_id: 3)
+dragonballvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Dragon+Ball+Super+S01E01.mp4)
+dragonsuperep1.video.attach(io: dragonballvid1, filename: 'Dragon+Ball+Super+S01E01.mp4')
+dragonballimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbsuperep1img.jpg)
+dragonsuperep1.photo.attach(io: dragonballimg1, filename: 'dbsuperep1img.jpg')
+
+
+dragonsuperep2 = Episode.create(title:'To the Promised Resort! Vegeta Takes a Family Trip!',
+    description: 'Vegeta, Bulma and Trunks take a family trip.',
+    episode_number: 2,
+    show_id: 3)
+dragonballvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Dragon+Ball+Super+S01E02.mkv)
+dragonsuperep2.video.attach(io: dragonballvid2, filename: 'Dragon+Ball+Super+S01E02.mkv')
+dragonballimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbsuperep2img.jpg)
+dragonsuperep2.photo.attach(io: dragonballimg2, filename: 'dbsuperep2img.jpg')
+
+
+attackep1 = Episode.create(title: 'To You, in 2000 Years: The Fall of Shiganshina, Part 1',
+    description: 'For over a century, humans have been living in settlements 
+    surrounded by gigantic walls, which prevent the Titans, giant humanoid 
+    creatures who eat humans, from entering. Young Eren Yeager wishes to see the
+     outside world by joining the Recon Corps, as he likens living in the cities
+      to livestock.',
+    episode_number: 1,
+    show_id: 4)
+attackvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Attack+On+Titan+S01e01.mkv)
+attackep1.video.attach(io: attackvid1, filename:'Attack+On+Titan+S01e01.mkv')
+attackimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/attackep1img.jpg)
+attackep1.photo.attach(io: attackimg1, filename: 'attackep1img.jpg')
 
 
 
+attackep2 = Episode.create(title: 'That Day: The Fall of Shiganshina, Part 2',
+    description: 'After the Titans break through the wall, the citizens of 
+    Shiganshina must run for their lives. Those that do make it to safety find 
+        a harsh life waiting for them, however.',
+    episode_number: 2,
+    show_id: 4)
+attackvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Attack+On+Titan+S01e02.mkv)
+attackep2.video.attach(io: attackvid2, filename: 'Attack+On+Titan+S01e02.mkv')
+attackimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/attackep2img.jpg)
+attackep2.photo.attach(io: attackimg2, filename: 'attackep2img.jpg')
 
 
+hunterep1 = Episode.create(title:'Departure x and x Friends',
+    description: `Twelve-year-old Gon Freecss catches Whale Island's monster 
+    fish, the "Master of the Swamp" to gain permission from his Aunt Mito 
+    Freecss to take the Hunter Exam. Aboard the ship going to the location of 
+    the examination, Gon impresses the Captain when he predicts a violent storm 
+    approaching and meets Leorio and Kurapika.`,
+    episode_number: 1,
+    show_id: 5)
+huntervid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/H+x+H+-+01.mp4)
+hunterep1.video.attach(io: huntervid1, filename: 'H+x+H+-+01.mp4')
+hunterimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterep1img.jpg)
+hunterep1.photo.attach(io: hunterimg1, filename: 'hunterep1img.jpg')
 
-episode1_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/My+Hero+Academia+Ep.01.mkv)
+
+hunterep2 = Episode.create(title: 'Test × of × Tests',
+    description: 'Gon, Kurapika and Leorio reach Dolle Harbor and told by the 
+    captain to head for the cedar tree on the hilltop behind the city. The three 
+    are stopped by a group of masked people and an old woman posts a riddle 
+    requiring them to choose between 2 possible answers.',
+    episode_number: 2,
+    show_id: 5)
+huntervid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/H+x+H+-+02.mp4)
+hunterep2.video.attach(io: huntervid2, filename: 'H+x+H+-+02.mp4')
+hunterimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterep2img.jpg)
+hunterep2.photo.attach(io: hunterimg2, filename: 'hunterep2img.jpg')
+
+
+nartuoep1 = Episode.create(title: 'He Appears! Naruto Uzumaki',
+    description: 'Welcome to Konoha, where deadly ninja roam the land and the 
+    mischievous Naruto Uzumaki causes trouble everywhere he goes. But when he 
+    steals the ancient scroll of sealing, he unleashes a rare power rarely 
+    seen in a 12-year-old boy.',
+    episode_number: 1,
+    show_id: 6)
+narutovid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Naruto++001+-+Enter+Naruto+Uzumaki.mkv)
+nartuoep1.video.attach(io: narutovid1, filename: 'Naruto++001+-+Enter+Naruto+Uzumaki.mkv')
+narutoimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/narutoep1img.jpg)
+nartuoep1.photo.attach(io: narutoimg1, filename: 'narutoep1img.jpg')
+
+
+narutoep2 = Episode.create(title: 'My Name is Konohamaru!',
+    description: `Naruto finally graduates from the Ninja Academy and claims to 
+    know it all. Well, at least that's what he tells Konohamaru, Konoha's Hokage 
+    grandson.`,
+    episode_number: 2,
+    show_id: 6)
+narutovid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Naruto++002+-+My+Name+is+Konohamaru.mkv)
+narutoep2.video.attach(io: narutovid2, filename: 'Naruto++002+-+My+Name+is+Konohamaru.mkv')
+narutoimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/narutoep2img.jpg)
+narutoep2.photo.attach(io: narutoimg2, filename:'narutoep2img.jpg')
+
+
+onepunchep1 = Episode.create(title: 'Return of the Hero',
+    description: 'Saitama and Genos are out shopping when they come across G4, 
+    a demonic robot on a mission to eliminate King. Meanwhile, Sitch attempts to 
+    recruit various assassins and villains.',
+    episode_number: 13,
+    show_id: 7)
+onepunchvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/One+Punch+Man+S2+-+01+%5B720p%5D.mp4)
+onepunchep1.video.attach(io: onepunchvid1, filename: 'One+Punch+Man+S2+-+01+%5B720p%5D.mp4')
+onepunchimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/onepunchepimg.jpg)
+onepunchep1.photo.attach(io: onepunchimg1, filename: 'onepunchepimg.jpg')
+
+
+pokemonep1 = Episode.create(title: 'Pokémon, I Choose You!',
+    description: 'Ash starts his Pokémon journey off to a rough start when he 
+    receives his first Pokémon, the reluctant Pikachu.',
+    episode_number: 1,
+    show_id: 8)
+pokemonvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Pokemon+S01E01+Pokemon%2C+I+Choose+You.mp4)
+pokemonep1.video.attach(io: pokemonvid1, filename: 'Pokemon+S01E01+Pokemon%2C+I+Choose+You.mp4')
+pokemonimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemonep1img.jpg)
+pokemonep1.photo.attach(io: pokemonimg1, filename: 'pokemonep1img.jpg')
+
+
+pokemonep2 = Episode.create(title: 'Pokémon Emergency!',
+    description: 'Ash and Pikachu make it to Viridian City. As Pikachu rests in 
+    the Pokemon Center, after being attacked by Spearow, the Center gets 
+    attacked by Pokemon thieves calling themselves, Team Rocket.',
+    episode_number: 2,
+    show_id: 8)
+pokemonvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Pokemon+S01E02+Pokemon+Emergency.mp4)
+pokemonep2.video.attach(io: pokemonvid2, filename: 'Pokemon+S01E02+Pokemon+Emergency.mp4')
+pokemonimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemonep2img.jpg)
+pokemonep2.photo.attach(io: pokemonimg2, filename: 'pokemonep2img.jpg')
+
+
+champlooep1 = Episode.create(title: 'Tempestuous Temperaments',
+    description: 'When two vagrant samurais stumble into waitress Fuu, the three 
+    get in trouble with the local magistrate.',
+    episode_number: 1,
+    show_id: 9)
+champloovid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Samurai+Champloo+-+01.mkv)
+champlooep1.video.attach(io: champloovid1, filename: 'Samurai+Champloo+-+01.mkv')
+champlooimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/champlooep1img.jpg)
+champlooep1.photo.attach(io: champlooimg1, filename: 'champlooep1img.jpg')
+
+
+champlooep2 = Episode.create(title: 'Redeye Reprisal',
+    description: `After Mugen cuts off a former enemy's arm, the enemy sets out 
+    to extract revenge on him by kidnapping Fuu and kill Mugen and Jin.`,
+    episode_number: 2,
+    show_id: 9)
+champloovid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Samurai+Champloo+-+02.mkv)
+champlooep2.video.attach(io: champloovid2, filename: 'Samurai+Champloo+-+02.mkv')
+champlooimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/champlooep2img.jpg)
+champlooep2.photo.attach(io: champlooimg2, filename: 'champlooep2img.jpg')
+
+
+ghoulep1 = Episode.create(title: 'Tragedy',
+    description: 'An ordinary college student named Kaneki encounters Rize, a 
+    girl who is an avid reader like him, at the café he frequents. Little does
+     he realize that his fate will change overnight.',
+    episode_number: 1,
+    show_id: 10)
+ghoulvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Tokyo+Ghoul+-+01.mp4)
+ghoulep1.video.attach(io: ghoulvid1, filename: 'Tokyo+Ghoul+-+01.mp4')
+ghoulimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/tokyoep1img.jpg)
+ghoulep1.photo.attach(io: ghoulimg1, filename: 'tokyoep1img.jpg')
+
+
+ghoulep2 = Episode.create(title: 'Incubation',
+    description: 'Kaneki struggles to adapt to his new nature with no success, 
+    until another ghoul, Nishiki Nishio attempts to prey on his friend Hideyoshi
+     Nagachika and he must fight to protect him.',
+    episode_number: 2,
+    show_id: 10)
+ghoulvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/Tokyo+Ghoul+-+02.mp4)
+ghoulep2.video.attach(io: ghoulvid2, filename: 'Tokyo+Ghoul+-+02.mp4')
+ghoulimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/tokyoep2img.jpg)
+ghoulep2.photo.attach(io: ghoulimg2, filename: 'tokyoep2img.jpg')
+
+
+neonep1 = Episode.create(title: 'Angel Attack',
+    description: `Shinji Ikari, a 14-year-old boy in the city of Tokyo-3, is 
+    delivered to the secret organization NERV, where he is requested by his 
+    enigmatic father to save the city from an invading creature called an Angel.`,
+    episode_number: 1,
+    show_id: 11)
+neonvid1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/NGE-1.mkv)
+neonep1.video.attach(io: neonvid1, filename: 'NGE-1.mkv')
+neonimg1 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/neonep1img.jpg)
+neonep1.photo.attach(io: neonimg1, filename: 'neonep1img.jpg')
+
+neonep2 = Episode.create(title: 'The Beast',
+    description: 'In the wake of the previous battle, Misato hastily decides to 
+    let Shinji have a room in her apartment, where he discovers just what an 
+    irresponsible person his new guardian is. Shinji is also haunted by memories
+     of his fight with the Angel.',
+    episode_number: 2,
+    show_id: 11)
+neonvid2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/NGE-2.mkv)
+neonep2.video.attach(io: neonvid2, filename: 'NGE-2.mkv')
+neonimg2 = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/neeonep2img.jpg)
+neonep2.photo.attach(io: neonimg2, filename: 'neeonep2img.jpg')
