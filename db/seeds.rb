@@ -17,7 +17,7 @@ featured1 = Show.create(title: 'My Hero Academia',
     hero.',
     seasons: '4',
     year: 2016,
-    rating: 8.5, )
+    rating: 8.5)
 featured1_FeaturePic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/my-hero-academia-season-1-tall.jpg)
 featured1.photo.attach(io: featured1_FeaturePic, filename:'my-hero-academia-season-1-tall.jpg' )
 featured1_normalPic = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/mha1square.jpg)
@@ -163,18 +163,6 @@ movie3 = Movie.create(title:"Pokemon: The First Movie",
 movie3_video = open(https://beaucoup-dev.s3-us-west-1.amazonaws.com/PokemonMovie.mp4)
 movie3.video.attach(io: movie3_video, filename: 'PokemonMovie.mp4')
 
-# episodes
-# myhero
-# death note
-# dragon ball sup
-# attack on Titan
-# hunter x hunter
-# naruto
-# one punch
-# pokemon
-# champloo
-# tokyo ghoul
-# neon genesis
 
 myheroep1 = Episode.create(title:'Izuku Midoriya: Origin',
    description: 'Izuku Midoriya desperately wants to be a hero, but he is one of
