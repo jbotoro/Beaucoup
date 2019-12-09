@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_19_222908) do
+ActiveRecord::Schema.define(version: 2019_12_09_020405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,8 +51,6 @@ ActiveRecord::Schema.define(version: 2019_09_19_222908) do
     t.integer "year", null: false
     t.integer "rating", null: false
     t.text "description", null: false
-    t.string "video_url", null: false
-    t.string "image_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title"], name: "index_movies_on_title"
@@ -64,8 +62,6 @@ ActiveRecord::Schema.define(version: 2019_09_19_222908) do
     t.integer "year", null: false
     t.integer "rating", null: false
     t.text "description", null: false
-    t.string "video_url", null: false
-    t.string "image_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title"], name: "index_shows_on_title"
