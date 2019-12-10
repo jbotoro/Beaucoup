@@ -15,18 +15,20 @@
 #
 
 class Show < ApplicationRecord
-    validates :title, :seasons, :year, :rating, :description, :video_url, :image_url, presence: true
+    validates :title, :seasons, :year, :rating, :description, presence: true
     validates :title, uniqueness: true
-
-    has_one_attached :image
-    has_one_attached :video
 
     has_many :episodes,
     foreign_key: :show_id,
     class_name: :Episode
 
-    def self.find_by_title(title)
-        @show = Show.find_by(title: title)
-        return nil unless @show
-    end
+    has_one_attached :photo
+
+    has_one_attached :tall_photo
+
+
+    # def self.find_by_title(title)
+    #     @show = Show.find_by(title: title)
+    #     return nil unless @show
+    # end
 end

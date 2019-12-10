@@ -6,17 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+require 'open-uri'
 
 User.delete_all
-Movie.destroy_all
-Show.destroy_all
-Episode.destroy_all
+Episode.delete_all
+Show.delete_all
+Movie.delete_all
+
 
 
 demo = User.create!({email:'demo@demo.com', password:'password'})
 
-featured1 = Show.create!(
+featured1 = Show.create(
     title: 'My Hero Academia', 
     description: 'A superhero-loving boy without any powers is determined to 
     enroll in a prestigious hero academy and learn what it really means to be a 
@@ -24,22 +25,27 @@ featured1 = Show.create!(
     seasons: 4,
     year: 2016,
     rating: 8.5)
+    puts "show 1"
 featured1_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/myheroacademiaseason1tall.jpg")
+puts "show 2"
 featured1.tall_photo.attach(io: featured1_featurePic, filename:'myheroacademiaseason1tall.jpg' )
+puts "show 3"
 featured1_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/mha1square.jpg")
 featured1.photo.attach(io: featured1_normalPic, filename:'mha1square.jpg')
 
-featured2 = Movie.create!(title: 'Cowboy Bebop: The Movie',
+featured2 = Movie.create(title: 'Cowboy Bebop: The Movie',
     description: `A terrorist explosion releases a deadly virus on the masses, 
     and it's up the bounty-hunting Bebop crew to catch the cold-blooded culprit.`, 
     rating: 7.9,
     year: 2003 )
+    puts "movie 1"
 featured2_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/cowboybebopthemovie.jpg")
 featured2.tall_photo.attach(io: featured2_featurePic, filename: 'cowboybebopthemovie.jpg')
 featured2_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/bebopsquare.jpg")
 featured2.photo.attach(io: featured2_normalPic, filename: 'bebopsquare.jpg')
-featured2_video = open("https://beaucoup-dev.amazonaws.com/CowboyBebopMovie.mp4")
+featured2_video = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/CowboyBebopMovie.mp4")
 featured2.video.attach(io: featured2_video, filename:'CowboyBebopMovie.mp4')
+puts "movie 2"
 
 
 featured3 = Show.create(title: 'Death Note',
