@@ -3,6 +3,7 @@ import { closeModal, openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../login_form/login_form_container';
 import SignupFormContainer from '../login_form/signup_form_container';
+import {removeErrors} from '../../actions/session_actions'
 
 
 // // function Modal({ modal, closeModal }) {
@@ -13,6 +14,14 @@ import SignupFormContainer from '../login_form/signup_form_container';
 class Modal extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleClose = this.handleClose.bind(this)
+    }
+
+    handleClose() {
+        this.props.closeModal()
+        this.props.removeErrors()
+       
     }
 
     render() {
@@ -36,7 +45,7 @@ class Modal extends React.Component {
 
 
         return (
-            <div className="modal-background" onClick={this.props.closeModal}>
+            <div className="modal-background" onClick={this.handleClose}>
                 <div className={modalchild} onClick={e => e.stopPropagation()}>
                     {component}
                 </div>
@@ -58,7 +67,8 @@ const mapDispatchToProps = (dispatch) => {
 
     return ({
         closeModal: () => dispatch(closeModal()),
-        openModal: (modal) => dispatch(openModal(modal))
+        openModal: (modal) => dispatch(openModal(modal)),
+        removeErrors: () => dispatch(removeErrors())
     });
 
 };

@@ -17,7 +17,8 @@ export const receiveErrors = errors => ({
 });
 
 export const removeErrors = () => ({
-    type: REMOVE_ERRORS
+    type: REMOVE_ERRORS,
+    errors: {}
 });
 
 

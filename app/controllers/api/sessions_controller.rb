@@ -5,12 +5,12 @@ class Api::SessionsController < ApplicationController
         params[:user][:email], 
         params[:user][:password]
         )
-        
-        if @user.nil?
-            render json: ["Username or Password incorrect"], status: 401
-        else
+        unless !@user
             login!(@user)
             render "api/users/show"
+            
+        else
+            render json: ["Username or Password incorrect"], status: 401
         end
     end
 

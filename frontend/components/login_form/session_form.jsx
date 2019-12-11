@@ -16,26 +16,24 @@ class SessionForm extends React.Component {
 
     }
 
-    componentWillUnmount(){
-        this.props.removeErrors();
-    }
-
 
 
     handleSubmit(e) {
+       
         e.preventDefault();
 
         let user = merge({}, this.state);
         this.props.processForm(user).then(this.props.closeModal);
-        this.props.removeErrors()
+       
        
     }
 
-    demoUser () {
+    demoUser (e) {
+        e.preventDefault();
         let user = { email:'demo@demo.com' , password:'password' }
         this.props.demoLogin(user)
         .then(this.props.closeModal)
-        .then(this.props.removeErrors)
+        
     }
 
     update(field) {
