@@ -7,12 +7,12 @@ export const FETCH_ERRORS = 'FETCH_ERRORS'
 
 const getEpisode = (episode) => ({
     type: FETCH_EPISODE,
-    episode
+    episode: episode
 });
 
 const getAllEpisodes = (episodes) => ({
     type: FETCH_EPISODES,
-    episodes
+    episodes: episodes
 })
 
 const fetchErrors = (errors) => ({

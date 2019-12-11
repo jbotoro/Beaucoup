@@ -7,3 +7,4 @@ end
 if (@episode.photo.attached?)
     json.photo_url url_for(@episode.photo)
 end
+

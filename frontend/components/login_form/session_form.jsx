@@ -13,10 +13,14 @@ class SessionForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoUser = this.demoUser.bind(this);
+        this.handleClose = this.handleClose.bind(this);
 
     }
 
-
+    handleClose(){
+        this.props.closeModal();
+        this.props.removeErrors()
+    }
 
     handleSubmit(e) {
        
@@ -77,7 +81,9 @@ class SessionForm extends React.Component {
         return (
             <div className='login-form-parent'>
                 <div className="modal-header">
-                    <button className='modal-close-button' onClick={this.props.closeModal}> X </button>
+                    <button className='modal-close-button' onClick={this.handleClose}> 
+                        <i class="material-icons">clear</i>
+                    </button>
                 </div>
                 <form onSubmit={this.handleSubmit} className='login-form'>
                    

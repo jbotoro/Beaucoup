@@ -1,7 +1,7 @@
 import { FETCH_EPISODE, FETCH_EPISODES } from '../actions/episodes_actions';
 import merge from 'lodash.merge';
 
-export const episodesReducer = (state = {}, action) => {
+const episodesReducer = (state = {}, action) => {
     Object.freeze(state);
     
     switch (action.type) {
@@ -14,3 +14,5 @@ export const episodesReducer = (state = {}, action) => {
             return state;
     }
 };
+
+export default episodesReducer

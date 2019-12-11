@@ -6,7 +6,7 @@ class Api::EpisodesController < ApplicationController
     end
 
     def show
-        @episode = Episode.find_by(params[:id])
+        @episode = Episode.find_by(id: params[:id])
         if @episode
             render :show
         else

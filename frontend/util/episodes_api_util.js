@@ -6,8 +6,8 @@ export const fetchEpisode = (id) => (
 );
 
 export const fetchEpisodes = () => (
-        $.ajax({
-            method: "GET",
-            url: `api/episodes`
-        })
+    $.ajax({
+        method: "GET",
+        url: `api/episodes`
+    })
 );
