@@ -5,7 +5,7 @@ class Api::SessionsController < ApplicationController
         params[:user][:email], 
         params[:user][:password]
         )
-       
+        
         if @user.nil?
             render json: ["Username or Password incorrect"], status: 401
         else

@@ -63,6 +63,12 @@
     line-height:18px;
 }
 
+.login-errors-messages-hidden {
+    visibility: hidden;
+    color: red;
+    margin-top: 20px;
+    font-size: 16px;
+}
 .login-errors-messages {
     color: red;
     margin-top: 20px;

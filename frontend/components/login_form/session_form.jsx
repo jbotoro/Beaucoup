@@ -13,19 +13,29 @@ class SessionForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoUser = this.demoUser.bind(this);
-        this.delay = this.delay.bind(this);
+
     }
+
+    componentWillUnmount(){
+        this.props.removeErrors();
+    }
+
 
 
     handleSubmit(e) {
         e.preventDefault();
+
         let user = merge({}, this.state);
         this.props.processForm(user).then(this.props.closeModal);
+        this.props.removeErrors()
+       
     }
 
     demoUser () {
         let user = { email:'demo@demo.com' , password:'password' }
-        this.props.demoLogin(user).then(this.props.closeModal);
+        this.props.demoLogin(user)
+        .then(this.props.closeModal)
+        .then(this.props.removeErrors)
     }
 
     update(field) {
@@ -34,14 +44,16 @@ class SessionForm extends React.Component {
         });
     }
 
-    delay() {
-        setTimeout( () => this.renderErrors(), 3000)
-    }
+    // delay() {
+    //     setTimeout( () => this.renderErrors, 1000)
+    // }
 
     renderErrors() {
+
+
         return (
             <ul>
-                {this.props.errors.map( (error, idx) => (
+                {this.props.errors.map((error, idx) => (
                     <li key={`${idx}`}>
                         {error}
                     </li>
@@ -51,6 +63,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
+
 
         let FormHeader;
         // let OtherFormHeader;
@@ -62,6 +75,7 @@ class SessionForm extends React.Component {
             FormHeader = "Login"
             // OtherFormHeader = "Sign Up" 
         }
+
         return (
             <div className='login-form-parent'>
                 <div className="modal-header">
@@ -100,7 +114,7 @@ class SessionForm extends React.Component {
                                         onChange={this.update('password')}
                                     />
                                 </div>
-    <div className='login-errors-messages'>{this.delay()}</div>
+                                <div className='login-errors-messages'>{this.renderErrors()}</div>
                             
                                 <input className="login-submit-button" type="submit" value={FormHeader} />
                             </div>
