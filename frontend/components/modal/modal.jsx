@@ -13,25 +13,6 @@ import Videoplayer from '../videoplayer/videoplayer';
 class Modal extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            mounted: false
-        };
-    }
-
-
-
-    componentDidUpdate() {
-
-
-        if (this.state.mounted === false && this.props.modal !== null) {
-            setTimeout(() => {
-                this.setState({ mounted: true });
-            }, 200);
-        }
-
-        if (this.props.modal === null && this.state.mounted !== false) {
-            this.setState({ mounted: false })
-        }
     }
 
     render() {
