@@ -1,4 +1,4 @@
-import {fetchShows, fetchShow} from '../util/shows_api_util'
+import {fetchShows, fetchShow} from '../util/shows_api_util';
 
 
 export const FETCH_SHOW = 'FETCH_SHOW';

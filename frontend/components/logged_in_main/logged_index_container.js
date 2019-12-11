@@ -13,7 +13,8 @@ const mapStateToProps = state => {
     return ({
         shows: shows,
         movies: movies,
-        currentUser: state.session
+        currentUser: state.session,
+        state: state
     })
 };
 

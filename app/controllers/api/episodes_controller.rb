@@ -2,7 +2,7 @@ class Api::EpisodesController < ApplicationController
     
     def index
         @episodes = Episode.all
-        render :index
+        render 'api/episodes/index'
     end
 
     def show

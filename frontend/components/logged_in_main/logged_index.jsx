@@ -10,9 +10,9 @@ class loggedInMain extends React.Component {
     }
 
     componentDidMount() {
-        this.props.findEpisodes();
         this.props.findShows();
         this.props.findMovies();
+        // this.props.findEpisodes();
     }
 
     componentDidUpdate(prevProps) {
