@@ -1,9 +1,14 @@
-json.extract! @show :id, :title, :year, :rating, :description, :seasons
-
-if (@show.video.attached?)
-    json.video_url url_for(@show.video)
+json.show do 
+    json.partial! './api/shows/show', show: @show
 end
 
-if (@show.image.attached?)
-    json.image_url url_for(@show.image)
+
+json.set! "episodes" do
+    @show.episodes.each do |episode|
+        json.set! episode.id do
+            json.partial! './api/episodes/episode', episode: episode
+        end
+        
+    end
+    
 end

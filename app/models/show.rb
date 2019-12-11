@@ -26,9 +26,4 @@ class Show < ApplicationRecord
 
     has_one_attached :tall_photo
 
-
-    # def self.find_by_title(title)
-    #     @show = Show.find_by(title: title)
-    #     return nil unless @show
-    # end
 end

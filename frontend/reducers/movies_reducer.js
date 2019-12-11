@@ -7,7 +7,9 @@ export const moviesReducer = (state = {}, action) => {
 
     switch (action.type) {
         case FETCH_MOVIE:
-            return merge({}, state, action.movie)
+            let movie = { [action.movie.id]: action.movie}
+            let nextState = merge({}, state)
+            return merge({}, nextState, movie)
         case FETCH_MOVIES:
             return merge({}, state, action.movies)
         default:

@@ -1,14 +1,14 @@
 class Api::MoviesController < ApplicationController
 
     def index
-        @movies = Movie.all
-        render 'api/movies/index'
+        @movies = Movie.with_attached_photo.with_attached_video.all
+        render :index
     end
 
     def show 
         @movie = Movie.find_by_id(params[:id])
         if @movie
-            render 'api/movies/show'
+            render :show
         else
             render json: 'Movie not found'
         end
@@ -17,6 +17,6 @@ class Api::MoviesController < ApplicationController
     private
 
     def movie_params
-        params.require(:movie).permit(:title,:year,:rating, :description, :video_url, :image_url)
+        params.require(:movie).permit(:title,:year,:rating,:description)
     end
 end

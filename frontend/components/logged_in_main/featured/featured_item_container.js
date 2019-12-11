@@ -1,13 +1,13 @@
-import { connect } from 'react-redux';
-import featuredItem from './featured_item';
+// import { connect } from 'react-redux';
+// import featuredItem from './featured_item';
 
 
-const mapStateToProps = state => ({
-    state: state
-})
+// const mapStateToProps = state => ({
+//     state: state
+// })
 
-const mapDispatchToProps = dispatch => ({
+// const mapDispatchToProps = dispatch => ({
     
-})
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(featuredItem)
+// export default connect(mapStateToProps, mapDispatchToProps)(featuredItem)

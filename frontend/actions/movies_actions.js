@@ -10,7 +10,7 @@ const getMovie = (movie) => ({
     movie
 });
 
-const getMovies = (movies) => ({
+const getAllMovies = (movies) => ({
     type: FETCH_MOVIES,
     movies
 })
@@ -23,7 +23,7 @@ const fetchErrors = (errors) => ({
 
 export const findMovies = () => dispatch => (
     fetchMovies()
-    .then(movies => dispatch(getMovies(movies)))
+    .then(movies => dispatch(getAllMovies(movies)))
     .fail(errors => dispatch(fetchErrors(errors)))
 )
 export const findMovie = (movie) => dispatch => (

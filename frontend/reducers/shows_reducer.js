@@ -7,7 +7,9 @@ export const showsReducer = (state = {}, action) => {
     
     switch (action.type) {
         case FETCH_SHOW:
-           return merge({}, state, action.show) 
+            let show = {[action.show.id]: action.show}
+            let nextState = merge({}, state)
+           return merge({}, nextState, show) 
         case FETCH_SHOWS:
             return merge({}, state, action.shows)
         default:

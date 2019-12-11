@@ -1,13 +1,13 @@
 class Api::ShowsController < ApplicationController
     def index
-        @shows = Show.all
-        render 'api/shows/index'
+        @shows = Show.includes(:episodes).with_attached_photo
+        render :index
     end
 
     def show
-        @show = Show.find_by_id(params[:id])
+        @show = Show.includes(:episodes).with_attached_photo.find(params[:id])
         if @show 
-            render 'api/shows/show'
+            render :show
         else
             render json: "Show not found"
         end
@@ -17,6 +17,6 @@ class Api::ShowsController < ApplicationController
 
     def show_params
         params.require(:show).permit(:title, :seasons, :year,
-         :rating, :description, :video_url, :image_url)
+         :rating, :description)
     end
 end

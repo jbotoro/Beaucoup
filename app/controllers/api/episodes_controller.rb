@@ -1,9 +1,14 @@
 class Api::EpisodesController < ApplicationController
     
+    def index
+        @episodes = Episode.all
+        render :index
+    end
+
     def show
         @episode = Episode.find_by(params[:id])
         if @episode
-            render 'api/episodes/show'
+            render :show
         else
             render json: 'Episode not found'
         end

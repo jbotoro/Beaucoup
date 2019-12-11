@@ -21,8 +21,4 @@ class Movie < ApplicationRecord
     has_one_attached :video
     has_one_attached :tall_photo
 
-    # def self.find_by_title(title)
-    #     @movie = Movie.find_by(title: title)
-    #     return nil unless @movie
-    # end
 end

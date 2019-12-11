@@ -9,6 +9,18 @@ class loggedInMain extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.findEpisodes();
+        this.props.findShows();
+        this.props.findMovies();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (!this.props.currentUser.id) {
+            this.props.history.push("/splash");
+        }
+    }
+
 
     render () {
         return (
