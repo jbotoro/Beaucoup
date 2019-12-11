@@ -35,30 +35,22 @@ class Modal extends React.Component {
     }
 
     render() {
-        let component = null;
-
-        if (Array.isArray(this.props.modal) && this.props.modal[0] === "show") {
-            return <Videoplayer content={this.props.modal} />
-        } else {
-            component;
+            let component;
             switch (this.props.modal) {
                 case 'login':
                     component = <LoginFormContainer />
                     break
                 case 'signup':
-                    component = <SignUpFormContainer />
+                    component = <SignupFormContainer />
                     break
                 default:
 
                     return null;
             }
-        }
+        
 
 
         let modalchild = "modal-child";
-        if (this.state.mounted === true) {
-            modalchild = "modal-child2";
-        }
 
 
 

@@ -1,28 +1,33 @@
-import * as Util from '../util/episodes_api_util';
-export const RECEIVE_EPISODE = "RECEIVE_EPISODE";
-export const RECEIVE_ALL_EPISODES = "RECEIVE_ALL_EPISODES";
+import { fetchEpisode, fetchEpisodes } from '../util/episodes_api_util';
 
 
-const receiveAllEpisodes = (episodes) => {
+export const FETCH_EPISODE = 'FETCH_EPISODE';
+export const FETCH_EPISODES = 'FETCH_EPISODES';
+export const FETCH_ERRORS = 'FETCH_ERRORS'
 
-    return ({
-        type: RECEIVE_ALL_EPISODES,
-        episodes: episodes
-    })
-};
-
-const receiveEpisode = (episode) => ({
-    type: RECEIVE_EPISODE,
-    episode: episode
+const getEpisode = (episode) => ({
+    type: FETCH_EPISODE,
+    episode
 });
 
-export const findEpisode = (id) => (dispatch) => (
-    Util.fetchEpisode(id).then((episode) => dispatch(receiveEpisode(episode)))
-);
+const getAllEpisodes = (episodes) => ({
+    type: FETCH_EPISODES,
+    episodes
+})
 
-export const findEpisodes = () => (dispatch) => {
+const fetchErrors = (errors) => ({
+    type: FETCH_ERRORS,
+    errors: errors.responseJSON
+})
 
-    return (
-        Util.fetchAllEpisodes().then((episodes) => dispatch(receiveAllEpisodes(episodes)))
-    )
-};
+
+export const findEpisodes = () => dispatch => (
+    fetchEpisodes()
+        .then(episodes => dispatch(getAllEpisodes(episodes)))
+        .fail(errors => dispatch(fetchErrors(errors)))
+)
+export const findEpisode = (episode) => dispatch => (
+    fetchEpisode(episode)
+        .then(episode => dispatch(getEpisode(episode)))
+        .fail(errors => dispatch(fetchErrors(errors)))
+)

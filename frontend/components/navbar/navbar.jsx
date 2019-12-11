@@ -17,6 +17,7 @@ class NavBar extends React.Component  {
        
         return (
             <nav className = 'Nav-main-container'>
+                
                 <span className='Nav-logo'> Beaucoup </span>
                 <div className='Nav-main-buttons'>
                     <button 

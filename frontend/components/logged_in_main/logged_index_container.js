@@ -9,19 +9,18 @@ import { closeModal } from "../../actions/modal_actions";
 const mapStateToProps = state => {
     let shows = Object.values(state.entities.shows) || [];
     let movies = Object.values(state.entities.movies) || [];
+    let episodes = Object.values(state.entities.episodes) || [];
     
     return ({
         shows: shows,
         movies: movies,
-        currentUser: state.session,
+        episodes: episodes,
         state: state
     })
 };
 
 const mapDispatchToProps = dispatch => ({
-    // findMovie: (movie) => dispatch(findMovie(movie)),
     findMovies: () => dispatch(findMovies()),
-    // findShow: (show) => dispatch(findShow(show)),
     findShows: () => dispatch(findShows()),
     findEpisodes: () => dispatch(findEpisodes()),
     closeModal: () => dispatch(closeModal())

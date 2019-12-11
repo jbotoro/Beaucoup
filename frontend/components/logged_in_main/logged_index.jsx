@@ -12,14 +12,14 @@ class loggedInMain extends React.Component {
     componentDidMount() {
         this.props.findShows();
         this.props.findMovies();
-        // this.props.findEpisodes();
+        this.props.findEpisodes();
     }
 
-    componentDidUpdate(prevProps) {
-        if (!this.props.currentUser.id) {
-            this.props.history.push("/splash");
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (!this.props.currentUser.id) {
+    //         this.props.history.push("/splash");
+    //     }
+    // }
 
 
     render () {
