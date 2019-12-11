@@ -26,12 +26,12 @@ class loggedInNavBar extends React.Component {
 
         let y_index = window.pageYOffset;
         if (y_index === 0) {
-            console.log( 'we out here')
+            // console.log( 'we out here')
             this.setState({
                 currentNav: 'Nav GlobalNav GlobalNav--masthead GlobalNav--transparent'
             })
         } else {
-            console.log('we in here')
+            // console.log('we in here')
             this.setState ({
                 currentNav: 'Nav GlobalNav GlobalNav--masthead'
             })

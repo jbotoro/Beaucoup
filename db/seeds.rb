@@ -13,6 +13,11 @@ Episode.delete_all
 Show.delete_all
 Movie.delete_all
 
+ActiveRecord::Base.connection.reset_pk_sequence!('users');
+ActiveRecord::Base.connection.reset_pk_sequence!('movies');
+ActiveRecord::Base.connection.reset_pk_sequence!('shows');
+ActiveRecord::Base.connection.reset_pk_sequence!('episodes');
+
 
 
 demo = User.create!({email:'demo@demo.com', password:'password'})
@@ -25,63 +30,64 @@ featured1 = Show.create(
     seasons: 4,
     year: 2016,
     rating: 8.5)
-    puts "show 1"
 featured1_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/myheroacademiaseason1tall.jpg")
-puts "show 2"
+
 featured1.tall_photo.attach(io: featured1_featurePic, filename:'myheroacademiaseason1tall.jpg' )
-puts "show 3"
+
 featured1_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/mha1square.jpg")
 featured1.photo.attach(io: featured1_normalPic, filename:'mha1square.jpg')
 
-featured2 = Movie.create(title: 'Cowboy Bebop: The Movie',
-    description: `A terrorist explosion releases a deadly virus on the masses, 
-    and it's up the bounty-hunting Bebop crew to catch the cold-blooded culprit.`, 
-    rating: 7.9,
-    year: 2003 )
-    puts "movie 1"
-featured2_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/cowboybebopthemovie.jpg")
-featured2.tall_photo.attach(io: featured2_featurePic, filename: 'cowboybebopthemovie.jpg')
-featured2_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/bebopsquare.jpg")
-featured2.photo.attach(io: featured2_normalPic, filename: 'bebopsquare.jpg')
-featured2_video = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/CowboyBebopMovie.mp4")
-featured2.video.attach(io: featured2_video, filename:'CowboyBebopMovie.mp4')
-puts "movie 2"
+# featured2 = Movie.create(title: 'Cowboy Bebop: The Movie',
+#     description: `A terrorist explosion releases a deadly virus on the masses, 
+#     and it's up the bounty-hunting Bebop crew to catch the cold-blooded culprit.`, 
+#     rating: 7.9,
+#     year: 2003 )
+#     puts "movie 1"
+# featured2_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/cowboybebopthemovie.jpg")
+# featured2.tall_photo.attach(io: featured2_featurePic, filename: 'cowboybebopthemovie.jpg')
+# featured2_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/bebopsquare.jpg")
+# featured2.photo.attach(io: featured2_normalPic, filename: 'bebopsquare.jpg')
+# featured2_video = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/CowboyBebopMovie.mp4")
+# featured2.video.attach(io: featured2_video, filename:'CowboyBebopMovie.mp4')
+# puts "movie 2"
 
 
-featured3 = Show.create(title: 'Death Note',
+featured2 = Show.create(title: 'Death Note',
     description:'An intelligent high school student goes on a secret crusade to
      eliminate criminals from the world after discovering a notebook capable of 
      killing anyone whose name is written into it.',
     seasons: 1,
     rating: 9.0,
     year: 2006)
-featured3_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnotetall.jpg")
-featured3.tall_photo.attach(io: featured3_featurePic, filename:'deathnotetall.jpg')
-featured3_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnotesquare.jpg")
-featured3.photo.attach(io: featured3_normalPic, filename: 'deathnotesquare.jpg')
+featured2_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnotetall.jpg")
+featured2.tall_photo.attach(io: featured2_featurePic, filename:'deathnotetall.jpg')
+featured2_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/deathnotesquare.jpg")
+featured2.photo.attach(io: featured2_normalPic, filename: 'deathnotesquare.jpg')
 
 
-featured4 = Show.create(title: 'Dragon Ball Super',
+featured3 = Show.create(title: 'Dragon Ball Super',
     description: 'Six months after the defeat of Majin Buu, The mighty Saiyan 
     Son Goku continues his quest on becoming stronger.',
     seasons: 1,
     rating: 8.4,
     year: 2015)
-featured4_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbzsupertall2.jpg")
-featured4.tall_photo.attach(io: featured4_featurePic, filename:'dbzsupertall2.jpg')
-featured4_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbzsupersquare.jpg")
-featured4.photo.attach(io: featured4_normalPic, filename:'dbzsupersquare.jpg')
+featured3_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbzsupertall2.jpg")
+featured3.tall_photo.attach(io: featured3_featurePic, filename:'dbzsupertall2.jpg')
+featured3_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbzsupersquare.jpg")
+featured3.photo.attach(io: featured3_normalPic, filename:'dbzsupersquare.jpg')
 
 
-show1 = Show.create(title: 'Attack on Titan',
+featured4 = Show.create(title: 'Attack on Titan',
     description: 'After his hometown is destroyed and his mother is killed, 
     young Eren Yeager vows to cleanse the earth of the giant humanoid Titans 
     that have brought humanity to the brink of extinction.',
     seasons: 4,
     rating: 8.8,
     year: 2013)
-show1_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/attackontitan.jpg")
-show1.photo.attach(io: show1_pic, filename: 'attackontitan.jpg')
+featured4_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/attackontitan.jpg")
+featured4.photo.attach(io: featured4_pic, filename: 'attackontitan.jpg')
+featured4_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/attacktallimg.jpeg")
+featured4.tall_photo.attach(io: featured4_featurePic, filename: 'attacktallimg.jpeg')
 
 show2 = Show.create(title:'Hunter x Hunter',
     description:'Gon Freecss aspires to become a Hunter, an exceptional being 
@@ -151,21 +157,21 @@ show8 = Show.create(title: 'Neon Genesis Evangelion',
 show8_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/neongenesis.jpg")
 show8.photo.attach(io: show8_pic, filename:"neongenesis.jpg")
 
-movie1 = Movie.create(title:'Digimon: The Movie',
-    description:'Three different stories involving digital creatures collide 
-    together.',
-    rating:6.1,
-    year: 2000)
-movie1_video = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/DigimonTheMovie.mkv")
-movie1.video.attach(io: movie1_video, filename:'DigimonTheMovie.mkv')
+# movie1 = Movie.create(title:'Digimon: The Movie',
+#     description:'Three different stories involving digital creatures collide 
+#     together.',
+#     rating:6.1,
+#     year: 2000)
+# movie1_video = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/DigimonTheMovie.mkv")
+# movie1.video.attach(io: movie1_video, filename:'DigimonTheMovie.mkv')
 
-movie2 = Movie.create(title: 'Your Name',
-    description:'Two strangers find themselves linked in a bizarre way. When a 
-    connection forms, will distance be the only thing to keep them apart?',
-    rating: 8.4,
-    year: 2017)
-movie2_video = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/yourname.mp4")
-movie2.video.attach(io: movie2_video, filename:'yourname.mp4')
+# movie2 = Movie.create(title: 'Your Name',
+#     description:'Two strangers find themselves linked in a bizarre way. When a 
+#     connection forms, will distance be the only thing to keep them apart?',
+#     rating: 8.4,
+#     year: 2017)
+# movie2_video = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/yourname.mp4")
+# movie2.video.attach(io: movie2_video, filename:'yourname.mp4')
 
 movie3 = Movie.create(title:"Pokemon: The First Movie",
     description:'Scientists genetically create a new Pokémon, Mewtwo, but the 
