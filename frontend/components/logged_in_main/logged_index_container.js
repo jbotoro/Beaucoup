@@ -1,12 +1,13 @@
 import {connect} from 'react-redux';
 import { findMovies, findMovie} from '../../actions/movies_actions'
 import {findShows, findShow} from '../../actions/shows_actions';
-import loggedInMain from './logged_index';
+import LoggedInMain from './logged_index';
 import { findEpisodes } from '../../actions/episodes_actions';
 import { closeModal } from "../../actions/modal_actions";
 
 
 const mapStateToProps = state => {
+ 
     let shows = Object.values(state.entities.shows) || [];
     let movies = Object.values(state.entities.movies) || [];
     let episodes = Object.values(state.entities.episodes) || [];
@@ -26,4 +27,4 @@ const mapDispatchToProps = dispatch => ({
     closeModal: () => dispatch(closeModal())
 })
 
-export default connect(mapStateToProps,mapDispatchToProps)(loggedInMain);
+export default connect(mapStateToProps,mapDispatchToProps)(LoggedInMain);

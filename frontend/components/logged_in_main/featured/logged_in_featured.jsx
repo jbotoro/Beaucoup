@@ -3,15 +3,19 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 
-class featuredList extends React.Component {
+class FeaturedList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             play: null,
             hover: false,
             hovervid: 'material-icons fr-1'
-
         }
+        this.videostart = this.videostart.bind(this);
+        // this.handleMouseEffect = this.handleMouseEffect.bind(this);
+        // this.handleMouseEffectEnd = this.handleMouseEffectEnd.bind(this)
+        // this.handleMouseEnter = this.handleMouseEnter.bind(this)
+        // this.handleMouseLeave = this.handleMouseLeave.bind(this)
     }
 
     videostart() {
@@ -27,36 +31,36 @@ class featuredList extends React.Component {
         }
     }
     
-    handleMouseEffect() {
-        setTimeout(() => {
-            if (this.state.playhover === "material-icons fr-2") {
-                this.setState({ playhover: "material-icons fr-3" });
-            }
-        }, 100);
+    // handleMouseEffect() {
+    //     setTimeout(() => {
+    //         if (this.state.playhover === "material-icons fr-2") {
+    //             this.setState({ playhover: "material-icons fr-3" });
+    //         }
+    //     }, 100);
 
-    }
+    // }
 
-    handleHover() {
-        this.setState({ playhover: "material-icons fr-3" });
-    }
+    // handleHover() {
+    //     this.setState({ playhover: "material-icons fr-3" });
+    // }
 
-    handleMouseEffectEnd() {
-        this.setState({ playhover: "material-icons fr-2" });
+    // handleMouseEffectEnd() {
+    //     this.setState({ playhover: "material-icons fr-2" });
 
-    }
+    // }
 
-    handleMouseEnter() {
-        this.setState({ firsthover: true })
-        setTimeout(() => {
-            if (this.state.firsthover) {
-                this.setState({ hover: true, playhover: "material-icons fr-2" });
-            }
-        }, 200);
-    }
+    // handleMouseEnter() {
+    //     this.setState({ firsthover: true })
+    //     setTimeout(() => {
+    //         if (this.state.firsthover) {
+    //             this.setState({ hover: true, playhover: "material-icons fr-2" });
+    //         }
+    //     }, 200);
+    // }
 
-    handleMouseLeave() {
-        this.setState({ firsthover: false, hover: false, play: null, playhover: "material-icons fr-1" });
-    }
+    // handleMouseLeave() {
+    //     this.setState({ firsthover: false, hover: false, play: null, playhover: "material-icons fr-1" });
+    // }
 
     render() {
         let rowcontainer = "firstrowcontainer";
@@ -78,7 +82,6 @@ class featuredList extends React.Component {
         }
 
         let firstrowpic = "firstrowpic";
-        let firstrowcontainer = "firstrowcontainer";
         let firstTall = "firstTall";
         let tallimage = "tall_image";
         let firstrowtitle = "firstrowtitle";
@@ -109,7 +112,7 @@ class featuredList extends React.Component {
                 <img className={tallimage} src={this.props.show.tall_photoUrl} />
                 <div onClick={this.playvideo} onMouseEnter={this.handleMousePictureenter} onMouseLeave={this.handleMousePictureleave} className="secondrowcontainer">
                     <img className={firstrowpic} src={this.props.show.photoUrl} />
-                    <i className={this.state.playhover}>play_arrow</i>
+                    {/* <i className={this.state.playhover}>play_arrow</i> */}
                 </div>
 
                 <div className="firstinfocontainer">
@@ -168,4 +171,4 @@ const mapDispatchToProps = (dispatch) => {
 
 }
 
-export default connect(null, mapDispatchToProps)(featuredList);
+export default connect(null, mapDispatchToProps)(FeaturedList);

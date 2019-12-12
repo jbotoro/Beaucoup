@@ -1,35 +1,47 @@
 import React from 'react';
-import FeaturedList from './featured/featured_container';
+import FeaturedList from './featured/logged_in_featured'
+import FeaturedSecondRow from './featured/featuredrow2'
+import Masthead from './featured/logged_in_masthead'
 import MovieList from './movies/movies_container';
 import ShowList from './shows/shows_container';
 
 
-class loggedInMain extends React.Component {
+class LoggedInMain extends React.Component {
     constructor(props){
         super(props)
+        this.state = {
+            episodes: [],
+            movies: [],
+            shows: []
+        }
+       this.giveMedia = this.giveMedia.bind(this)
     }
 
     componentDidMount() {
         this.props.findShows();
         this.props.findMovies();
         this.props.findEpisodes();
+
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (!this.props.currentUser.id) {
-    //         this.props.history.push("/splash");
-    //     }
-    // }
+    
+
+
 
 
     render () {
+        // let shows;
+
+        // shows = this.props.shows.map(() =>)
+        // console.log(this.props)
+        
         return (
             <div className="loggedin-main-hub">
                 <div className="masthead-main">
                     <div className="masthead-details">
-                        {/* <div className="thumbnail-details-title">{this.state.headline.title}</div>
-                        <div className="thumbnail-details-info">{this.state.headline.info}</div>
-                        <div className="thumbnail-details-description">{this.state.headline.description}</div> */}
+                        {/* <div className="thumbnail-details-title">{this.props.state.entities.shows::1.title}</div>
+                        <div className="thumbnail-details-info">{this.props.state.entities.shows::1.year}</div>
+                        <div className="thumbnail-details-description">{this.props.state.entities.shows.1.description}</div> */}
                         <div className="masthead-details-links">
                         </div>
                     </div>
@@ -39,37 +51,24 @@ class loggedInMain extends React.Component {
                         <div className="featured-hub-1">
                             <div className="featured-hub-1-info">
                                 <div className='featured-hub-1-extra'>
-                                    {/* <div className="slider-1-title">{this.state.example1.title}</div>
-                                    <div className="slider-1-info-li">{this.state.example1.year}</div>
-                                    <div className="slider-1-description">{this.state.example1.description}</div> */}
                                 </div>
-
                             </div>
                         </div>
                         <div className="featured-hub-2-container">
                              <div className="featured-hub-2">
                                 <div className="featured-hub-2-info">
-                                    {/* <div className="slider-2-title">{this.state.example2.title}</div>
-                                    <div className="slider-2-info-li">{this.state.example2.year}</div>
-                                    <div className="slider-2-description">{this.state.example2.description}</div> */}
                                 </div>
                             </div>
                         </div>
                         <div className="featured-hub-3-container">
                             <div className="featured-hub-3">
                                 <div className="featured-hub-3-info">
-                                    {/* <div className="slider-3-title">{this.state.example3.title}</div>
-                                    <div className="slider-3-info-li">{this.state.example3.year}</div>
-                                    <div className="slider-3-description">{this.state.example1.description}</div> */}
                                 </div>
                             </div>
                         </div>
                         <div className="featured-hub-4-container">
                             <div className="featured-hub-4">
                                 <div className="featured-hub-4-info">
-                                    {/* <div className="slider-4-title">{this.state.example4.title}</div>
-                                    <div className="slider-4-info-li">{this.state.example4.year}</div>
-                                    <div className="slider-4-description">{this.state.example4.description}</div> */}
                                 </div>
                             </div>
                         </div>
@@ -88,5 +87,4 @@ class loggedInMain extends React.Component {
         )
     }
 }
-
-export default loggedInMain;
+export default LoggedInMain;

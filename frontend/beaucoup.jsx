@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
     //     }
     // })
-    
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} /> , root);
 });
