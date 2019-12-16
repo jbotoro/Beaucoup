@@ -14,8 +14,7 @@ class LoggedInMain extends React.Component {
             movies: [],
             shows: []
         }
-       this.giveMedia = this.giveMedia.bind(this)
-    }
+   }
 
     componentDidMount() {
         this.props.findShows();
