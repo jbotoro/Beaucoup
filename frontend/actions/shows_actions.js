@@ -5,6 +5,9 @@ export const FETCH_SHOW = 'FETCH_SHOW';
 export const FETCH_SHOWS = 'FETCH_SHOWS';
 export const FETCH_ERRORS = 'FETCH_ERRORS'
 
+
+
+
 const getShow = (show) => ({
     type: FETCH_SHOW,
     show
@@ -28,6 +31,6 @@ export const findShows = () => dispatch => (
 )
 export const findShow = (show) => dispatch => (
     fetchShow(show)
-        .then(show => dispatch(getShow(show)))
+        .then( show =>dispatch(getShow(show)))
         .fail(errors => dispatch(fetchErrors(errors)))
 )

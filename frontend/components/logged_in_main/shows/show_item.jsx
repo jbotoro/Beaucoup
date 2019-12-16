@@ -8,18 +8,35 @@ class showItem extends React.Component {
         this.handlePlayShow = this.handlePlayShow.bind(this);
     }
 
+    componentDidMount() {
+        this.props.getShow(this.props.key)
+            .then(() => {
+                this.setState({
+                    episodes: this.props.show.episodes.map(episodes => { episodes })
+                })
+            })
+    }
+
     handlePlayShow(e) {
         e.preventDefault();
-        this.props.history.push(`/videos/shows/${this.props.show.id}`)
+        this.props.history.push(`/shows/${this.props.show.id}`)
     }
 
     render() {
+
+        const mapAllEpisodes = this.props.show.episode_id.map(show => {
+            return (
+                <ShowItemContainer show={show} key={show.id} />
+            )
+        });
+
+        
         return (
             <div className='simple-show-item-container'>
                 <div className='simple-show-item'>
                     <button onClick={() => this.handlePlayShow} className='simple-show-item-play-button'>
-                        <video src={this.props.show.video_url}></video>
-                        <img src={this.props.show.image_url} />
+                        <video src={this.props.show.episode.video}></video>
+                        <img src={this.props.show.episode.photo} />
                     </button>
                 </div>
             </div>

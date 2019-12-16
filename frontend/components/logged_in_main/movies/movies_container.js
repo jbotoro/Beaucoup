@@ -3,7 +3,7 @@ import { findMovie, findMovies } from '../../../actions/movies_actions';
 import loggedInMovies from './logged_in_movies';
 
 const mapStateToProps = state => ({
-    movies: Object.values(state.entities.videos.movies)
+    movies: Object.values(state.entities.movies)
 });
 
 

@@ -1,9 +1,5 @@
 import React from 'react';
-import FeaturedList from './featured/logged_in_featured'
-import FeaturedSecondRow from './featured/featuredrow2'
-import Masthead from './featured/logged_in_masthead'
-import MovieList from './movies/movies_container';
-import ShowList from './shows/shows_container';
+import LoggedInMovies from './movies/movies_container'
 
 
 class LoggedInMain extends React.Component {
@@ -29,10 +25,8 @@ class LoggedInMain extends React.Component {
 
 
     render () {
-        // let shows;
-
-        // shows = this.props.shows.map(() =>)
-        // console.log(this.props)
+        
+       
         
         return (
             <div className="loggedin-main-hub">
@@ -46,7 +40,7 @@ class LoggedInMain extends React.Component {
                     </div>
                 </div>
                 <div className="postmasthead-hub-container">
-                    <div className="featured-hub-container">
+                    {/* <div className="featured-hub-container">
                         <div className="featured-hub-1">
                             <div className="featured-hub-1-info">
                                 <div className='featured-hub-1-extra'>
@@ -71,14 +65,17 @@ class LoggedInMain extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <h2 className="shows-collection-container-header">TV Collection</h2>
                     <div className="shows-collection-container"> 
                         <div className="shows-slider-container"></div>
                     </div>
                     <h2 className="movies-collection-container-header">Movies Collection</h2>
                     <div className="shows-collection-container">
-                        <div className="movies-slider-container"></div>
+                        <div className="movies-slider-container">
+                            <LoggedInMovies />
+                        </div>
+
                     </div>
                 </div>
             </div>

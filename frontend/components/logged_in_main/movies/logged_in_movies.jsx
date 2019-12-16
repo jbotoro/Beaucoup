@@ -16,6 +16,8 @@ class loggedInMovies extends React.Component {
                     movies: this.props.movies.map(movie => { movie })
                 })
             })
+
+            debugger
     }
 
     render () {
@@ -24,8 +26,9 @@ class loggedInMovies extends React.Component {
             return (
                 <MovieItemContainer movie={movie} key={movie.id}/>
             )
+            debugger
         });
-        const displayedMovies = mapAllMovies.splice(Math.floor(Math.random() * mapAllMovies.length), 4);
+        const displayedMovies = mapAllMovies;
 
         return (
             <div className='logged-movies-main-wrapper'>

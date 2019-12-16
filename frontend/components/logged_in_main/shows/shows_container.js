@@ -3,7 +3,7 @@ import {findShow, findShows} from '../../../actions/shows_actions';
 import loggedInShows from './logged_in_shows';
 
 const mapStateToProps = state => ({
-    shows: Object.values(state.entities.videos.shows)
+    shows: Object.values(state.entities.shows)
 });
 
 
