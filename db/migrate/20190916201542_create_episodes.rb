@@ -7,6 +7,8 @@ class CreateEpisodes < ActiveRecord::Migration[5.2]
       t.integer :show_id, null: false
       t.timestamps
       t.index :show_id
+
+      
     end
   end
 end
