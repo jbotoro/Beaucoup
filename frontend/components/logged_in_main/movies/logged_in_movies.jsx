@@ -17,7 +17,7 @@ class loggedInMovies extends React.Component {
                 })
             })
 
-            debugger
+            // debugger
     }
 
     render () {
@@ -26,7 +26,7 @@ class loggedInMovies extends React.Component {
             return (
                 <MovieItemContainer movie={movie} key={movie.id}/>
             )
-            debugger
+            // debugger
         });
         const displayedMovies = mapAllMovies;
 
