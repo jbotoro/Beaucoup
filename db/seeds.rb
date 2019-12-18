@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 
 require 'open-uri'
 
@@ -28,12 +22,12 @@ featured1 = Show.create(
     enroll in a prestigious hero academy and learn what it really means to be a 
     hero.',
     seasons: 4,
-    year: 2016,
+    year: 2016, 
     rating: 8.5)
 featured1_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/myheroacademiaseason1tall.jpg")
 puts" this works"
 
-featured1.tall_photo.attach(io: featured1_featurePic, filename: "myheroacademiaseason1tall.jpg")
+featured1.tall_photo.attach(io: File.open(featured1_featurePic), filename: "myheroacademiaseason1tall.jpg")
 puts "this works again"
 featured1_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/mha1square.jpg")
 featured1.photo.attach(io: featured1_normalPic, filename:'mha1square.jpg')

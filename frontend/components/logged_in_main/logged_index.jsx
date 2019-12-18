@@ -1,5 +1,6 @@
 import React from 'react';
-import LoggedInMovies from './movies/movies_container'
+import LoggedInMovies from './movies/movies_container';
+import LoggedInShows from './shows/shows_container';
 
 
 class LoggedInMain extends React.Component {
@@ -69,6 +70,7 @@ class LoggedInMain extends React.Component {
                     <h2 className="shows-collection-container-header">TV Collection</h2>
                     <div className="shows-collection-container"> 
                         <div className="shows-slider-container"></div>
+                            <LoggedInShows />
                     </div>
                     <h2 className="movies-collection-container-header">Movies Collection</h2>
                     <div className="shows-collection-container">
