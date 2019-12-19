@@ -23,17 +23,17 @@ class LoggedInMain extends React.Component {
 
 
     render () {
-        debugger
+      
         let shows;
         shows = this.props.shows;
         let loggedShows
         let episodeslist;
         episodeslist = this.props.episodes;
-        if( shows.length  && episodeslist.length > 0) {
-            debugger
+        if( shows.length && episodeslist.length > 0) {
+            
            loggedShows = shows.map((show) => {
                 console.log(show)
-                debugger
+                
                 let content
                 console.log(content)
                 content = episodeslist.filter(episode => show.id === episode.show_id)
