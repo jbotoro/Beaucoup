@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
-import showItem from './show_item';
-import {findShow, findShows} from '../../../actions/shows_actions'
+import ShowItem from './show_item';
+import {findShow} from '../../../actions/shows_actions'
+import {findEpisode, findEpisodes} from '../../../actions/episodes_actions'
 
 
 const mapStateToProps = state => ({
@@ -9,7 +10,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
  // add openvideoplayer ??
-    findShow: () => findShow()
+    findShow: () => dispatch(findShow()),
+    findEpisodes: () => dispatch(findEpisodes()),
+    findEpisode: (id) => dispatch(findEpisode(id))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(showItem)
+export default connect(mapStateToProps, mapDispatchToProps)(ShowItem)

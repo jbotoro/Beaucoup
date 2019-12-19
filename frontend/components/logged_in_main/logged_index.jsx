@@ -1,15 +1,12 @@
 import React from 'react';
-import LoggedInMovies from './movies/movies_container';
-import LoggedInShows from './shows/shows_container';
+import ShowItem from './shows/show_item_container'
 
 
 class LoggedInMain extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            episodes: [],
-            movies: [],
-            shows: []
+     
         }
    }
 
@@ -26,6 +23,25 @@ class LoggedInMain extends React.Component {
 
 
     render () {
+        debugger
+        let shows;
+        shows = this.props.shows;
+        let loggedShows
+        let episodeslist;
+        episodeslist = this.props.episodes;
+        if( shows.length  && episodeslist.length > 0) {
+            debugger
+           loggedShows = shows.map((show) => {
+                console.log(show)
+                debugger
+                let content
+                console.log(content)
+                content = episodeslist.filter(episode => show.id === episode.show_id)
+                console.log(content)
+                return (<li><ShowItem show={show} episodes={content} key={show.id} /></li>
+                )
+            })
+        }
         
        
         
@@ -69,13 +85,17 @@ class LoggedInMain extends React.Component {
                     </div> */}
                     <h2 className="shows-collection-container-header">TV Collection</h2>
                     <div className="shows-collection-container"> 
-                        <div className="shows-slider-container"></div>
-                            <LoggedInShows />
+                        <div className="shows-slider-container">
+                            <ul className = 'logged-shows-ul'>
+                                {loggedShows}
+                            </ul>
+                        </div>
+                          
                     </div>
                     <h2 className="movies-collection-container-header">Movies Collection</h2>
                     <div className="shows-collection-container">
                         <div className="movies-slider-container">
-                            <LoggedInMovies />
+        
                         </div>
 
                     </div>

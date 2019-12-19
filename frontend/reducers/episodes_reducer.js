@@ -9,7 +9,8 @@ const episodesReducer = (state = {}, action) => {
             return merge({}, state, action.episodes);
         case FETCH_EPISODE:
             let episode = { [action.episode.id]: action.episode };
-            return merge({}, state, episode);
+            let newState = merge({}, state)
+            return merge({}, newState, episode);
         default: 
             return state;
     }

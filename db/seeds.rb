@@ -271,11 +271,11 @@ attackep1.photo.attach(io: attackimg1, filename: 'attackep1img.jpg')
 
 
 hunterep1 = Episode.create(title:'Departure x and x Friends',
-    description: `Twelve-year-old Gon Freecss catches Whale Island's monster 
-    fish, the "Master of the Swamp" to gain permission from his Aunt Mito 
+    description: "Twelve-year-old Gon Freecss catches Whale Island's monster 
+    fish, the 'Master of the Swamp' to gain permission from his Aunt Mito 
     Freecss to take the Hunter Exam. Aboard the ship going to the location of 
     the examination, Gon impresses the Captain when he predicts a violent storm 
-    approaching and meets Leorio and Kurapika.`,
+    approaching and meets Leorio and Kurapika.",
     episode_number: 1,
     show_id: 5)
 huntervid1 = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/HxH01.mp4")
