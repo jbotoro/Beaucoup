@@ -1,23 +1,191 @@
 // Place all the styles related to the api::shows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.logged-shows-main-wrapper {
-
-}
-
-.logged-shows-main-container {
+.row1-shows-container{
 
 }
 
-.logged-shows-main-items-container {
+.logged-shows-ul {
+    // position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    top: 180%;
+    left:5%;
+    overflow: hidden;
+}
+
+.logged-shows-ul2{
+    //  position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    top: 250%;
+    left:5%;
+    overflow: hidden;
+}
+
+.logged-shows-header {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0,0,0,0.8);
+}
+
+.row1-shows-wrap {
+    position: relative;
+    left: 0%;
+    top: 35px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: all 2s;
+}
+
+.row1-shows-wrap li {
+    position: relative;
+    width: 33%;
+    height: 100%
+}
+
+.row2-shows-wrap {
+    position: relative;
+    left: 0%;
+    top: 35px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: all 2s;
+}
+
+.row2-shows-wrap li {
+    position: relative;
+    width: 33%;
+    height: 100%
+}
+
+.loggedshow-li{
 
 }
 
 .simple-show-item-container {
-
+    position: relative;
 }
 
 .simple-show-item {
-    
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.simple-show-item-expandable {
+    position: relative;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // width: 300px;
+    height: 310px;
+    background:white;
+}
+
+.simple-show-image-container {
+    height: 50%;
+    // width: 100%;
+    overflow: hidden;
+}
+
+.simple-show-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.simple-show-playbutton-container{
+    position: relative;
+    top: -25%;
+    z-index: 2;
+    opacity: 0;
+}
+
+
+
+.material-icons.ds-1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    z-index: 150;
+    color: white;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: .5px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1
+}
+
+.material-icons.ds-2{
+   position: absolute;
+   top:20%;
+   left:50%;
+   transform: translate(-50%, -50%);
+    font-size: 50px;
+    z-index: 150;
+    color: white;
+    border: 3px solid rgb(255, 255, 255);
+   border-radius: 50%;
+   padding: .5px;
+   background-color: rgba(0, 0, 0, .5);
+   transition: font-size .25s;
+}
+
+.material-icons.ds-3{
+   position: absolute;
+   top:20%;
+   left:50%;
+   transform: translate(-50%, -50%);
+    font-size: 55px;
+    z-index: 150;
+    color: white;
+    border: 3px solid rgb(255, 255, 255);
+   border-radius: 50%;
+   padding: .5px;
+   background-color: rgba(0, 0, 0, .5);
+    transition: font-size .25s;
+}
+
+.simple-show-display-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-top: 14px;
+}
+
+.simple-show-display-info {
+   position: relative;
+   left: -70%;
+}
+
+.simple-show-episode-num {
+    color: rgba(0,0,0,0.5);
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-size:13px;
+    line-height: normal;
+    font-family: system-ui;
+}
+
+.simple-show-episode-title {
+
+}
+
+.simple-show-episode-description {
+
 }
