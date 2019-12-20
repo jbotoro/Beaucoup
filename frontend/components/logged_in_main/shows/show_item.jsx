@@ -27,8 +27,14 @@ class ShowItem extends React.Component {
         eppic = this.props.episodes[0].photo_url
         let showpic;
         showpic = this.props.show.photo_url
+        let epnum
+        epnum = this.props.episodes[0].episode_number
+        let eptitle
+        eptitle = this.props.episodes[0].title
+        let epdescrip;
+        epdescrip = this.props.show.description
+        console.log(epnum)
       
-        if (vid.endsWith)
         return (
             <div className='simple-show-item-container'>
                 <div className='simple-show-item'>
@@ -44,13 +50,15 @@ class ShowItem extends React.Component {
                         <div className='simple-show-display-container'>
                             <div className='simple-show-display-info'>
                                 <div className='simple-show-episode-num'>
-
+                                    Episode: {epnum}
                                 </div>
+                                <br/>
                                 <div className='simple-show-episode-title'>
-
+                                    {eptitle}
                                 </div>
+                                <br/>
                                 <div className='simple-show-episode-description'>
-
+                                    {epdescrip}
                                 </div>
                             </div>
                         </div>
