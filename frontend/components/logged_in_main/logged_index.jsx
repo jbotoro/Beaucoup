@@ -1,6 +1,7 @@
 import React from 'react';
 import ShowItem from './shows/show_item_container'
 import FeaturedShow from './featured/featured_show_container';
+import MastheadShow from './shows/masthead_show'
 
 
 class LoggedInMain extends React.Component {
@@ -36,11 +37,14 @@ class LoggedInMain extends React.Component {
         let row2;
        
         // row2 = this.props.shows
+
+        let masthead
        
         let featuredShows;
         let row1Shows;
         let row2Shows;
         let episodeslist;
+        let mastheadShow;
         episodeslist = this.props.episodes;
         if( shows.length && episodeslist.length > 0) {
             featured = this.props.shows.slice(0,4)
@@ -75,6 +79,13 @@ class LoggedInMain extends React.Component {
                     </li>
                 )
             })
+            masthead = this.props.shows[10]
+            mastheadShow = <MastheadShow show={masthead} />
+                
+    
+    
+           
+          
         }
 
         
@@ -84,9 +95,7 @@ class LoggedInMain extends React.Component {
             <div className="loggedin-main-hub">
                 <div className="masthead-main">
                     <div className="masthead-details">
-                        {/* <div className="thumbnail-details-title">{this.props.state.entities.shows::1.title}</div>
-                        <div className="thumbnail-details-info">{this.props.state.entities.shows::1.year}</div>
-                        <div className="thumbnail-details-description">{this.props.state.entities.shows.1.description}</div> */}
+                        {mastheadShow}
                         <div className="masthead-details-links">
                         </div>
                     </div>

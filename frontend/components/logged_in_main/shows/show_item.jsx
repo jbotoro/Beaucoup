@@ -52,11 +52,11 @@ class ShowItem extends React.Component {
                                 <div className='simple-show-episode-num'>
                                     Episode: {epnum}
                                 </div>
-                                <br/>
+                            
                                 <div className='simple-show-episode-title'>
                                     {eptitle}
                                 </div>
-                                <br/>
+                            
                                 <div className='simple-show-episode-description'>
                                     {epdescrip}
                                 </div>
