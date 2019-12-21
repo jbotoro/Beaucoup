@@ -40,7 +40,7 @@ class MyStuffButton extends React.Component {
         }
         return(
             <div className={details_button_container}>
-                <div className={icon_class} onMouseLeave={this.handleMouseLeave} onMouseEnter={this.handleMouseEnter}></div>
+                <div className={icon_class} onMouseLeave={this.handleMouseLeave} onMouseEnter={this.handleMouseEnter}> add</div>
                 <div className={load_details}>
                     <div className='text-details-container'>
                         <div className='details-text'>

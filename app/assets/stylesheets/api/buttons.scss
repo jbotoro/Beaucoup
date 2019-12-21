@@ -90,3 +90,26 @@
     left: 19%;
     bottom: 0;
 }
+
+.material-icons.bt-2{
+   font-size: 50px;
+   border: 2px solid rgba(255, 255, 255, .5);
+   border-radius: 50%;
+   padding: .5px;
+}
+
+.material-icons.bt-3{
+   font-size: 40px;
+   border: 2px solid rgba(255, 255, 255, .5);
+   border-radius: 50%;
+   padding: .5px;
+}
+
+.details-button-container-showitem {
+    position: absolute;
+    display: flex;
+    bottom: -60px;
+    left: -10px;
+    padding: 3%;
+    z-index: 5;
+}

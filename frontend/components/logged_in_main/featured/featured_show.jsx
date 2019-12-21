@@ -89,15 +89,14 @@ class FeaturedShow extends React.Component {
         let featured_tall_photo = 'featured-tall-photo'
         let featured_photo = 'featured-photo';
         let featured_show_item_container = 'featured-show-item-container'
-        let featured_info_container = 'featured-info-container'
+
         let featured_title = 'featured-title'
         let featured_description = 'featured-description'
         let footer
          if(this.state.hover === true) {
-             featured_photo = 'featured-photo-2'
-             featured_tall_photo = 'featured-tall-photo-2'
-             featured_show_item_container = 'featured-show-item-container-2'
-            //  featured_info_container = 'featured-info-container-2'
+            featured_photo = 'featured-photo-2'
+            featured_tall_photo = 'featured-tall-photo-2'
+            featured_show_item_container = 'featured-show-item-container-2'
             featured_show_item = `${featured_show_item}${2}`
             featured_title = 'featured-title-2'
             featured_description = 'featured-description-2'

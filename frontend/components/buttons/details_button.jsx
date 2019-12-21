@@ -44,7 +44,7 @@ class DetailsButton extends React.Component {
 
         return(
             <div className={details_button_container}>
-                <div className ={icon_class} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}></div>
+                <div className ={icon_class} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}> arrow_forward</div>
                 <div className={load_details}>
                     <div className='text-details-container'>
                         <div className='details-text'>
