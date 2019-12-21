@@ -2,6 +2,8 @@ import React from 'react';
 import ShowItem from './shows/show_item_container'
 import FeaturedShow from './featured/featured_show_container';
 import MastheadShow from './shows/masthead_show'
+// import MyStuffButton from '../buttons/mystuff_button_container';
+// import DetailsButton from '../buttons/details_button_container';
 
 
 class LoggedInMain extends React.Component {

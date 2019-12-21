@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import SearchIcon from "@material-ui/icons/Search";
 
 const browseCategories = ['Action', 'Adventure', 'Cartoons','Classics','Comedy',
-'Drama', 'Family', 'Horror', 'Kids','Late Night','New Anime','Old Anime','Romance','Science Fiction','Teen','Thriller'
+'Drama', 'Family', 'Horror', 'Kids','Late Night','New School','Old School','Romance','Science Fiction','Teen','Thriller'
 ]
 
 class loggedInNavBar extends React.Component {

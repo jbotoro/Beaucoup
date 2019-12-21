@@ -19,7 +19,7 @@ class MastheadShow extends React.Component {
                          <h3>{this.props.show.title}</h3>
                     </li>
                     <li>
-                        <h5>1995  ·  Old School</h5>
+                        <h5>1995  ·  Old School  /  Action</h5>
                     </li>   
                     <li className='masthead-show-description'>
                         <h4>{this.props.show.description}</h4>
