@@ -88,6 +88,7 @@ class ShowItem extends React.Component {
 
             eptitlevar = eptitle
             showtitle = null
+            showpic = eppic
         }
 
         if (this.state.photohover) {
