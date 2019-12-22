@@ -51,9 +51,9 @@ class DetailsButton extends React.Component {
                             GO TO DETAILS PAGE
                         </div>
                     </div>
-                    <div className='material-icons downarrowcontainer'> 
+                    {/* <div className='material-icons downarrowcontainer'> 
                         <div className='material-icons downarrow'> arrow_drop_down</div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

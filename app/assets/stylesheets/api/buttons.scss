@@ -22,6 +22,7 @@
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 50%;
     padding: .5px;
+    z-index: 5;
 }
 .material-icons.details-2 {
     position: absolute;
@@ -34,6 +35,7 @@
     border-radius: 50%;
     padding: .5px;
     cursor: pointer;
+    z-index: 5;
 }
 .load-details-container {
     position: absolute;
@@ -112,4 +114,36 @@
     left: -10px;
     padding: 3%;
     z-index: 5;
+}
+
+.Masthead-Play-Button-Container{
+   position: relative;
+   width: 50px;
+   height: 50px;
+}
+
+
+
+.material-icons.pl-1{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 62px;
+    color: white;
+    border-radius: 50%;
+    padding: .5px;
+}
+
+.material-icons.pl-2{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: white;
+    border-radius: 50%;
+    padding: .5px;
+    transition: all .25s;
+    cursor: pointer;
 }

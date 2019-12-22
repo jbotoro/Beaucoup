@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import DetailsButton from '../../buttons/details_button_container'
 import MyStuffButton from '../../buttons/mystuff_button_container'
+import {openModal} from '../../../actions/modal_actions'
 
 
 
@@ -17,6 +18,7 @@ class ShowItem extends React.Component {
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
         this.handlePhotoHover = this.handlePhotoHover.bind(this);
         this.handlePhotoLeave = this.handlePhotoLeave.bind(this);
+        this.handlePlayVideo = this.handlePlayVideo.bind(this);
 
     }
 
@@ -46,6 +48,18 @@ class ShowItem extends React.Component {
         this.setState({
             photohover: false
         })
+    }
+
+    handlePlayVideo(){
+        
+        let epinfo = ["episode", this.props.episodes[0].video_url]
+
+        this.props.openModal(epinfo)
+    }
+
+    handleOpenShow(){
+        let showinfo = ["show", this.props.show.id]
+        this.props.openModal(showinfo)
     }
 
 
@@ -108,7 +122,7 @@ class ShowItem extends React.Component {
                         <div className ='simple-show-image-container' onMouseEnter={this.handlePhotoHover} onMouseLeave={this.handlePhotoLeave}>
                             <img className='simple-show-image' src={showpic}/>
                         </div>
-                        <div className ={simpleplaycontainer}>
+                        <div className ={simpleplaycontainer} onClick={this.handlePlayVideo}>
                             <div>
                                 <i className={iconname}> play_arrow </i>
                             </div>

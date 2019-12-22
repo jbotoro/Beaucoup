@@ -14,8 +14,25 @@ import {removeErrors} from '../../actions/session_actions'
 class Modal extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            content: false
+        }
 
         this.handleClose = this.handleClose.bind(this)
+    }
+
+    componentDidUpdate() {
+
+
+        if (this.state.content === false && this.props.modal !== null) {
+            setTimeout(() => {
+                this.setState({ content: true });
+            }, 200);
+        }
+
+        if (this.props.modal === null && this.state.content !== false) {
+            this.setState({ content: false })
+        }
     }
 
     handleClose() {
@@ -25,8 +42,14 @@ class Modal extends React.Component {
     }
 
     render() {
-            let component;
-            switch (this.props.modal) {
+            let component = null;
+            
+            
+            if(Array.isArray(this.props.modal) && this.props.modal[0] ==='episode'){
+                console.log('we have content')
+            } else {
+                component;
+                switch (this.props.modal) {
                 case 'login':
                     component = <LoginFormContainer />
                     break
@@ -36,12 +59,15 @@ class Modal extends React.Component {
                 default:
 
                     return null;
+                }
             }
         
 
 
         let modalchild = "modal-child";
-
+        if (this.state.content === true) {
+            modalchild = "modal-child2";
+        }
 
 
         return (

@@ -13,23 +13,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-//   overflow-y: scroll;
 }
-// form {
-//     width: 416px;
-// }
+.modal-child-2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s;
+    opacity: 1;
 
-// .login-form-parent {
-//     width: 416px;
-//     margin: 100px 160px 70px 160px;
-//     display: flex;
-//     color: black;
-//     background-color: white;
-//     position: relative;
-//     border: 1px solid (0,0,0,0.2);
-//     font-weight: 400;
-//     height: 531px;
-// }
+}
+
 
 .login-form-parent {
     background-color: white;

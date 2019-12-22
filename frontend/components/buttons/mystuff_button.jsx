@@ -44,12 +44,12 @@ class MyStuffButton extends React.Component {
                 <div className={load_details}>
                     <div className='text-details-container'>
                         <div className='details-text'>
-                            Add to MyStuff
+                            ADD TO MYSTUFF
                         </div>
                     </div>
-                    <div className='material-icons downarrowcontainer'>
+                    {/* <div className='material-icons downarrowcontainer'>
                         <div className='material-icons downarrow'> arrow_drop_down</div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

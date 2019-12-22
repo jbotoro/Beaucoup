@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import DetailsButton from '../../buttons/details_button_container';
-import MyStuffButton from '../../buttons/mystuff_button_container'
+import MyStuffButton from '../../buttons/mystuff_button_container';
 
 
 class FeaturedShow extends React.Component {
@@ -18,6 +18,7 @@ class FeaturedShow extends React.Component {
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
         this.handleVidPicEnter = this.handleVidPicEnter.bind(this);
         this.handleVidPicLeave = this.handleVidPicLeave.bind(this);
+        this.handlePlayVideo = this.handlePlayVideo.bind(this);
 
     }
 
@@ -55,6 +56,17 @@ class FeaturedShow extends React.Component {
             play: null, 
             playhover: "material-icons fr-1" 
         });
+    }
+
+    handlePlayVideo(){
+        let epinfo = ["episode", this.props.episodes[0].video_url]
+
+        this.props.openModal(epinfo)
+    }
+
+    handleOpenShow() {
+        let showinfo = ["show", this.props.show.id]
+        this.props.openModal(showinfo)
     }
 
     render() {
@@ -116,7 +128,7 @@ class FeaturedShow extends React.Component {
 
                     </div>
                     <img className= {featured_tall_photo} src={tallpic} alt=""/>
-                    <div className ='featured-second-row' onMouseEnter ={this.handleVidPicEnter} onMouseLeave={this.handleVidPicLeave}>
+                    <div className ='featured-second-row' onClick={this.handlePlayVideo} onMouseEnter ={this.handleVidPicEnter} onMouseLeave={this.handleVidPicLeave}>
                         <img  className={featured_photo}src={pic}alt=""/>
                         <i className ={this.state.playhover}> play_arrow </i>
                         <video src={vid} type='video/mp4'></video>

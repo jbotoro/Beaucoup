@@ -1,4 +1,8 @@
 import React from 'React';
+import DetailsButton from '../../buttons/details_button_container'
+import MyStuffButton from '../../buttons/mystuff_button_container'
+import MastheadPlayButton from '../../buttons/masthead_play_button'
+
 
 
 class MastheadShow extends React.Component {
@@ -8,7 +12,7 @@ class MastheadShow extends React.Component {
 
 
     render() {
-
+        // debugger
         return (
             <div className='masthead-details-container'>
                 <ul className='masthead-show'>
@@ -25,7 +29,20 @@ class MastheadShow extends React.Component {
                         <h4>{this.props.show.description}</h4>
                     </li>
                     <li className='masthead-details-buttons'>
-
+                        <ul className='masthead-details-buttons-list'>
+                            <li>
+                                <MastheadPlayButton video = {this.props.episode.video_url}/>
+                            </li>
+                            <li>
+                                START WATCHING
+                            </li>
+                            <li>
+                                <DetailsButton />
+                            </li>
+                            <li>   
+                                <MyStuffButton />
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -33,4 +50,5 @@ class MastheadShow extends React.Component {
     }
 }
 
-export default MastheadShow
+
+export default MastheadShow 
