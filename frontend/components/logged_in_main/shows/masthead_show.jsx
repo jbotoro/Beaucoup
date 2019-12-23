@@ -31,7 +31,7 @@ class MastheadShow extends React.Component {
                     <li className='masthead-details-buttons'>
                         <ul className='masthead-details-buttons-list'>
                             <li>
-                                <MastheadPlayButton video = {this.props.episode.video_url}/>
+                                <MastheadPlayButton video = {this.props.episode}/>
                             </li>
                             <li>
                                 START WATCHING

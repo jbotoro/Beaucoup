@@ -52,7 +52,7 @@ class ShowItem extends React.Component {
 
     handlePlayVideo(){
         
-        let epinfo = ["episode", this.props.episodes[0].video_url]
+        let epinfo = ["episode", this.props.episodes[0]]
 
         this.props.openModal(epinfo)
     }

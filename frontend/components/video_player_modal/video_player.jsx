@@ -6,12 +6,16 @@ import {connect} from 'react-redux'
 class VideoPlayer extends React.Component {
     constructor(props){
         super(props)
+        this.state ={
+            fullscreen: false
+        }
 
         this.handlePlayPause = this.handlePlayPause.bind(this);
         this.handleSkipBack = this.handleSkipBack.bind(this);
         this.handleSkipForward = this.handleSkipForward.bind(this);
         this.handleTimeUpdate = this.handleTimeUpdate.bind(this);
         this.handleProgress = this.handleProgress.bind(this);
+        this.handleFullscreen = this.handleFullscreen.bind(this);
 
     }
 
@@ -38,6 +42,14 @@ class VideoPlayer extends React.Component {
 
     handleSkipForward () {
         this.vid.currentTime += 10;
+    }
+
+    handleFullscreen() {
+        if (!this.state.fullscreen) {
+            this.setState({ fullscreen: true });
+        } else {
+            this.setState({ fullscreen: false });
+        }
     }
 
     handleTimeUpdate() {
@@ -67,14 +79,23 @@ class VideoPlayer extends React.Component {
             playPause = "play_arrow";
         }
 
-        let videoplayercontainer = 'video-player-container'
-        let videomodalbackground = 'video-player-modal-container-background'
-        let videomodalcontainer = 'video-player-modal-container'
-
+        let videoplayercontainer = 'video-player-container';
+        let videomodalbackground = 'video-player-modal-container-background';
+        let videomodalcontainer = 'video-player-modal-container';
+        let fullscreenicon = <i className="material-icons FS2"> fullscreen_exit </i> 
+        let fullscreencontainer = 'fullscreen-container'
         let video = null;
         if (this.props.video) {
             let src = `${this.props.video.video_url}`;
             video = <video id="video" onTimeUpdate={this.handleTimeUpdate} className={videoplayercontainer} src={src} autoPlay />;
+        }
+
+        if(this.state.fullscreen) {
+            videoplayercontainer = 'video-player-container-2';
+            videomodalbackground = 'video-player-modal-container-background-2';
+            videomodalcontainer = 'video-player-modal-container-2';
+            fullscreenicon = <i className="material-icons FS2">fullscreen</i> 
+            fullscreencontainer = 'fullscreen-container-2'
         }
 
         return(
@@ -83,7 +104,7 @@ class VideoPlayer extends React.Component {
                     {video}
                     <div>
                         <button className='video-player-modal-closebtn' onClick={() => this.props.closeModal()}>
-                            <i class="material-icons">clear</i>
+                            <i className="material-icons">clear</i>
                         </button>
                     </div>
                     <div className='video-player-modal-controlbar'>
@@ -98,6 +119,9 @@ class VideoPlayer extends React.Component {
                             <span className='progress-bar-slash'> / </span>
                             <span className='end-time' id='end-time'>00:00</span>
                         </div>
+                        <div className={fullscreencontainer} onClick={this.handleFullscreen}>
+                            {fullscreenicon}
+                        </div>
 
                     </div>
                 </div>
@@ -108,8 +132,6 @@ class VideoPlayer extends React.Component {
     
 }
 
-const mapDispatchToProps = dispatch => {
-    closeModal: () => dispatch(closeModal())
-}
 
-export default VideoPlayer = withRouter(connect(null,mapDispatchToProps)(VideoPlayer))
+
+export default VideoPlayer 
