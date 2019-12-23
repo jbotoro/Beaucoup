@@ -2,6 +2,8 @@
     position: absolute;
     max-height: 100%;
     max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
@@ -29,7 +31,7 @@
     bottom: 14px;
     right: 20px;
     width: 600px;
-    background-color: blue;
+    background-color: black;
     height: 330px;
     z-index: 100000;
 }
@@ -71,7 +73,22 @@
     top: 90%;
     height: 10%;
     width: 100%;
+    cursor: pointer;
 }
+
+.video-player-modal-controlbar-2{
+    position: absolute;
+    top: 110%;
+    height: 10%;
+    width: 100%;
+    visibility: hidden;
+    cursor: none
+}
+
+.video-player-modal-controlbar-2 * {
+    visibility: hidden;
+}
+
 
 .video-player-modal-controlbar * {
     color: rgba(255, 255, 255, .5);
