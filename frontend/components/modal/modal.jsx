@@ -47,10 +47,12 @@ class Modal extends React.Component {
             
             
             if(Array.isArray(this.props.modal) && this.props.modal[0] ==='episode'){
-                // console.log('we have content')
-                // console.log(this.props.modal[1])
                 return(
                     <VideoPlayer video={this.props.modal[1]}/>
+                )
+            } else if (Array.isArray(this.props.modal) && this.props.modal[0] === 'showdetails') {
+                return(
+                    <DetailsPage show={this.props.modal[1]}/>
                 )
             } else {
                 component;

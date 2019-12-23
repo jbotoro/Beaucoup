@@ -101,7 +101,10 @@ class FeaturedShow extends React.Component {
         let featured_tall_photo = 'featured-tall-photo'
         let featured_photo = 'featured-photo';
         let featured_show_item_container = 'featured-show-item-container'
-
+        let showinfo;
+        showinfo = this.props.show
+        let epdetailsinfo;
+        epdetailsinfo = this.props.episodes[0]
         let featured_title = 'featured-title'
         let featured_description = 'featured-description'
         let footer
@@ -114,7 +117,7 @@ class FeaturedShow extends React.Component {
             featured_description = 'featured-description-2'
             footer = <div className ='details-buttons-container-featured'> 
                 <div>
-                    <DetailsButton />
+                    <DetailsButton show={showinfo} episode={epdetailsinfo}/>
                 </div>
                 <div>
                     <MyStuffButton />

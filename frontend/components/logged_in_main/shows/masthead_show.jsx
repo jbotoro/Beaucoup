@@ -13,6 +13,12 @@ class MastheadShow extends React.Component {
 
     render() {
         // debugger
+
+        let showinfo
+        if(this.props.show){
+            showinfo = this.props.show
+            epinfo = this.props.episode
+        } 
         return (
             <div className='masthead-details-container'>
                 <ul className='masthead-show'>
@@ -37,7 +43,7 @@ class MastheadShow extends React.Component {
                                 START WATCHING
                             </li>
                             <li>
-                                <DetailsButton />
+                                <DetailsButton show={showinfo} episode={epinfo} />
                             </li>
                             <li>   
                                 <MyStuffButton />

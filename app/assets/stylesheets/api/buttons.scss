@@ -37,6 +37,56 @@
     cursor: pointer;
     z-index: 5;
 }
+.material-icons.details.white {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    padding: .5px;
+    z-index: 5;
+}
+.material-icons.details-2.white {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: inherit;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: .5px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.material-icons.details.black{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: black;
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    padding: .5px;
+}
+
+.material-icons.details-2.black{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: black;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: .5px;
+    cursor: pointer;
+}
 .load-details-container {
     position: absolute;
     width: 200px;
@@ -62,7 +112,7 @@
 .details-text {
     position: absolute;
     bottom: 14px;
-    left: 10px;
+    left: 18px;
     background-color: rgb(51, 48, 48);
     color: white;
     padding: 3px;
@@ -111,7 +161,7 @@
     position: absolute;
     display: flex;
     bottom: -60px;
-    left: -10px;
+    left: -15px;
     padding: 3%;
     z-index: 5;
 }

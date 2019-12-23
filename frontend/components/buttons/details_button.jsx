@@ -26,20 +26,30 @@ class DetailsButton extends React.Component {
     }
 
     clickHandler(){
-        //  logic to send show page to modal
+        let info = ['showdetails', this.props.show, this.props.episode]
+        this.props.openModal(info)
     }
 
     render(){
-
+        let icon_color = 'white'
+        if (this.props.color) {
+            icon_color = 'black'
+        }
         let details_button_container = 'detailsbutton-container'
-        let icon_class = 'material-icons details'
+        let icon_class = `material-icons details ${icon_color}`
         let load_details = 'load-details-container'
+        
+
+       
+        
 
         if (this.state.detail_button_hover) {
             details_button_container = 'detailsbutton-container-2'
-            icon_class = 'material-icons details-2'
+            icon_class = `material-icons details-2 ${icon_color}`
             load_details = 'load-details-container-2'
         }
+
+       
 
 
         return(
@@ -60,4 +70,4 @@ class DetailsButton extends React.Component {
     }
 }
 
-export default withRouter(DetailsButton)
+export default DetailsButton

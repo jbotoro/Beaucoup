@@ -28,14 +28,17 @@ class MyStuffButton extends React.Component {
 
 
     render(){
-        
+        let icon_color = 'white'
+        if(this.props.color){
+            icon_color = 'black'
+        }
         let details_button_container = 'detailsbutton-container'
-        let icon_class = 'material-icons details'
+        let icon_class = `material-icons details ${icon_color}`
         let load_details = 'load-details-container'
 
         if(this.state.detail_button_hover){
             details_button_container = 'detailsbutton-container-2'
-            icon_class = 'material-icons details-2'
+            icon_class = `material-icons details-2 ${icon_color}`
             load_details = 'load-details-container-2'
         }
         return(

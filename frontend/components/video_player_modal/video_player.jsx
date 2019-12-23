@@ -80,6 +80,7 @@ class VideoPlayer extends React.Component {
         this.vid.currentTime = progress;
     }
 
+
     handleControlEnter(){
        this.setState({
             hover: true
@@ -103,15 +104,33 @@ class VideoPlayer extends React.Component {
 
     decrementTimer() {
         // debugger
-        this.setState({
-            timer: this.state.timer - 1
-        })
+        if(this.state.timer){
+            this.setState({
+                timer: this.state.timer - 1
+            })
+        }
+       
     }
 
     handleNoMouseMove() {
         this.handleControlEnter();
-        this.resetTimer()
-       
+        this.resetTimer();
+        
+      
+        setTimeout(() => {
+            if (this.state.timer > 0) {
+                this.decrementTimer()
+                // console.log(this.state.timer)
+            }
+        }, 1000);
+        setTimeout(() => {
+            if(this.state.timer === 0) {
+                // console.log('should reset')
+                this.setState({hover: false})
+                // console.log(this.state.hover)
+            }
+        }, 5000)
+
         
     }
 
@@ -150,12 +169,12 @@ class VideoPlayer extends React.Component {
             fullscreenicon = <i className="material-icons FS2">fullscreen</i> 
             fullscreencontainer = 'fullscreen-container-2'
         }
-
+      
         
 
         return(
             <div className={videomodalbackground} onMouseMove={this.handleNoMouseMove} >
-                <div className={videomodalcontainer} >
+                <div className={videomodalcontainer} onMouseMove={this.handleNoMouseMove}>
                     {video}
                     <div>
                         <button className='video-player-modal-closebtn' onClick={() => this.props.closeModal()}>

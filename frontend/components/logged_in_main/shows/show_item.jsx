@@ -78,6 +78,9 @@ class ShowItem extends React.Component {
         eptitle = this.props.episodes[0].title
         let epdescrip;
         epdescrip = this.props.show.description
+        let showinfo = this.props.show
+        console.log(showinfo)
+        let epdetailsinfo = this.props.episodes[0]
   
         let simpleshow = 'simple-show-item'
         let simpleshowexpandable = 'simple-show-item-expandable'
@@ -88,10 +91,8 @@ class ShowItem extends React.Component {
         let buttons = null;
         let eptitlevar= null;
         let showtitle = this.props.show.title;
-        buttons = <div className="details-button-container-showitem">
-            <div><DetailsButton /></div>
-            <div><MyStuffButton /></div>
-        </div>
+      
+       
 
         if (this.state.hover) {
             simpleshow = "simple-show-item-2";
@@ -103,6 +104,10 @@ class ShowItem extends React.Component {
             eptitlevar = eptitle
             showtitle = null
             showpic = eppic
+            buttons = <div className="details-button-container-showitem">
+                <div><DetailsButton color='black' show= {showinfo} episode={epdetailsinfo}/></div>
+                <div><MyStuffButton color='black' show= {showinfo}/></div>
+            </div>
         }
 
         if (this.state.photohover) {

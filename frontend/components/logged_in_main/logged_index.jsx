@@ -16,7 +16,7 @@ class LoggedInMain extends React.Component {
 
     componentDidMount() {
         this.props.findShows();
-        this.props.findMovies();
+        // this.props.findMovies();
         this.props.findEpisodes();
 
     }
@@ -48,7 +48,7 @@ class LoggedInMain extends React.Component {
         let episodeslist;
         let mastheadShow;
         episodeslist = this.props.episodes;
-        if( shows.length && episodeslist.length > 0) {
+        if( shows.length && episodeslist.length > 0 && !row1Shows && !featuredShows && !row2Shows) {
             featured = this.props.shows.slice(0,4)
             // console.log(featured)
             featuredShows = featured.map((show) => {
