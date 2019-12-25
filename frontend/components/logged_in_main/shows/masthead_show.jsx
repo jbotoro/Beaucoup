@@ -15,7 +15,8 @@ class MastheadShow extends React.Component {
         // debugger
 
         let showinfo
-        if(this.props.show){
+        let epinfo;
+        if(this.props.show && this.props.episode){
             showinfo = this.props.show
             epinfo = this.props.episode
         } 
@@ -37,7 +38,7 @@ class MastheadShow extends React.Component {
                     <li className='masthead-details-buttons'>
                         <ul className='masthead-details-buttons-list'>
                             <li>
-                                <MastheadPlayButton video = {this.props.episode}/>
+                                <MastheadPlayButton video = {epinfo}/>
                             </li>
                             <li>
                                 START WATCHING
