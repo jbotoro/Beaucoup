@@ -1,18 +1,18 @@
-export const addMyStuff = (show) => {
+export const addMyStuff = (show_id) => {
 
     return (
 
         $.ajax({
             method: "POST",
             url: `/api/userstuff`,
-            data: { show }
+            data: { show_id }
         })
     )
 }
 
-export const removeMyStuff = (show) => (
+export const removeMyStuff = (show_id) => (
     $.ajax({
         method: "DELETE",
-        url: `/api/userstuff/${show}`
+        url: `/api/userstuff/${show_id}`
     })
 )

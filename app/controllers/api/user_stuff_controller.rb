@@ -1,8 +1,8 @@
-class Api::UserstuffController < ApplicationController
+class Api::UserStuffController < ApplicationController
     def create
      
         @current_user = current_user
-        @user_stuff = Userstuff.create(user_id: current_user[:id],show_id: params[:show_id])
+        @user_stuff = UserStuff.create(user_id: current_user[:id],show_id: params[:show_id])
         if @user_stuff.save
             render :show
         else
@@ -13,7 +13,7 @@ class Api::UserstuffController < ApplicationController
 
     def destroy
         @current_user = current_user
-        @user_stuff = Userstuff.where("user_id = ? AND show_id = ?", current_user.id, params[:id]).first
+        @user_stuff = UserStuff.where("user_id = ? AND show_id = ?", current_user.id, params[:id]).first
       
         if @user_stuff
             @user_stuff.destroy

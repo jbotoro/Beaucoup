@@ -19,7 +19,7 @@ class Show < ApplicationRecord
     validates :title, uniqueness: true
 
     has_many :user_stuff
-    has_many :users, through: :user_stuff
+    has_many :users, through: :users_stuff
 
     has_many :episodes,
     foreign_key: :show_id,

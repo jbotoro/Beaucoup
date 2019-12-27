@@ -103,6 +103,8 @@ class FeaturedShow extends React.Component {
         let featured_show_item_container = 'featured-show-item-container'
         let showinfo;
         showinfo = this.props.show
+        let showid;
+        showid = this.props.show.id
         let epdetailsinfo;
         epdetailsinfo = this.props.episodes[0]
         let featured_title = 'featured-title'
@@ -120,7 +122,7 @@ class FeaturedShow extends React.Component {
                     <DetailsButton show={showinfo} episode={epdetailsinfo}/>
                 </div>
                 <div>
-                    <MyStuffButton />
+                    <MyStuffButton show={showid}/>
                 </div>
             </div>
          }

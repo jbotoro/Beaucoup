@@ -81,6 +81,8 @@ class ShowItem extends React.Component {
         let showinfo = this.props.show
         // console.log(showinfo)
         let epdetailsinfo = this.props.episodes[0]
+        let showid;
+        showid = this.props.show.id
   
         let simpleshow = 'simple-show-item'
         let simpleshowexpandable = 'simple-show-item-expandable'
@@ -106,7 +108,7 @@ class ShowItem extends React.Component {
             showpic = eppic
             buttons = <div className="details-button-container-showitem">
                 <div><DetailsButton color='black' show= {showinfo} episode={epdetailsinfo}/></div>
-                <div><MyStuffButton color='black' show= {showinfo}/></div>
+                <div><MyStuffButton color='black' show= {showid}/></div>
             </div>
         }
 

@@ -20,6 +20,6 @@ export const createUserStuff = (show_id) => dispatch => {
     )
 }
 
-export const deleteUserStuff = (show-Id) => dispatch => (
+export const deleteUserStuff = (show_id) => dispatch => (
     Util.removeMyStuff(show_id).then((show) => dispatch(removeUserStuff(show)))
 )

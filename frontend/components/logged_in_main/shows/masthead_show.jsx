@@ -17,9 +17,11 @@ class MastheadShow extends React.Component {
 
         let showinfo
         let epinfo;
+        let showid
         if(this.props.show && this.props.episode){
             showinfo = this.props.show
             epinfo = this.props.episode
+            showid = this.props.show.id
         } 
         return (
             <div className='masthead-details-container'>
@@ -48,7 +50,7 @@ class MastheadShow extends React.Component {
                                 <DetailsButton show={showinfo} episode={epinfo} />
                             </li>
                             <li>   
-                                <MyStuffButton />
+                                <MyStuffButton show={showid}/>
                             </li>
                         </ul>
                     </li>

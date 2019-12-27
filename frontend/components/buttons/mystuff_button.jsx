@@ -10,6 +10,8 @@ class MyStuffButton extends React.Component {
 
         this.handleMouseEnter = this.handleMouseEnter.bind(this);
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
+        this.addMyStuff = this.addMyStuff.bind(this);
+        this.deleteMyStuff = this.deleteMyStuff.bind(this);
     }
 
     handleMouseEnter() {
@@ -22,6 +24,14 @@ class MyStuffButton extends React.Component {
         this.setState({
             detail_button_hover: false
         })
+    }
+
+    addMyStuff() {
+        this.props.createUserShow(this.props.show)
+    }
+
+    deleteMyStuff() {
+        this.props.deleteUserShow(this.props.show)
     }
 
    
@@ -41,21 +51,35 @@ class MyStuffButton extends React.Component {
             icon_class = `material-icons details-2 ${icon_color}`
             load_details = 'load-details-container-2'
         }
-        return(
-            <div className={details_button_container}>
-                <div className={icon_class} onMouseLeave={this.handleMouseLeave} onMouseEnter={this.handleMouseEnter}> add</div>
-                <div className={load_details}>
-                    <div className='text-details-container'>
-                        <div className='details-text'>
-                            ADD TO MYSTUFF
+
+        if(!this.props.user_stuff.includes(this.props.show)){
+            return (
+                <div className={details_button_container}>
+                    <div className={icon_class} onClick={this.addMyStuff} onMouseLeave={this.handleMouseLeave} onMouseEnter={this.handleMouseEnter}> add</div>
+                    <div className={load_details}>
+                        <div className='text-details-container'>
+                            <div className='details-text'>
+                                ADD TO MYSTUFF
+                        </div>
                         </div>
                     </div>
-                    {/* <div className='material-icons downarrowcontainer'>
-                        <div className='material-icons downarrow'> arrow_drop_down</div>
-                    </div> */}
                 </div>
-            </div>
-        )
+            )
+        } else {
+            return (
+                <div className={details_button_container}>
+                    <div className={icon_class} onClick={this.deleteMyStuff} onMouseLeave={this.handleMouseLeave} onMouseEnter={this.handleMouseEnter}> add</div>
+                    <div className={load_details}>
+                        <div className='text-details-container'>
+                            <div className='details-text'>
+                                REMOVE FROM MYSTUFF
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+      
     }
 }
 
