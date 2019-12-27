@@ -64,12 +64,10 @@ class ShowDetails extends React.Component {
                     <div className='show-details-modal-header'>
                         <div className ='show-details-modal-header-image-container'>
                             <div className ='show-details-image-mid-container'>
-                                <div className ='show-details-header-image'>
-                                    <img className='show-details-img'src={eppic} alt=""/>
-                                </div>
-                                {/* <div className='show-details-image-background'>
+                                <div className = 'show-details-img-background'>
 
-                                </div> */}
+                                </div>
+                                <img className='show-details-img'src={eppic} alt=""/>
                             </div>
                             <div className ='show-details-header-info'>
                                 <div className='show-details-tall-photo-container'>
