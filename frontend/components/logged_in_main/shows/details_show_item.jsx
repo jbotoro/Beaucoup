@@ -124,7 +124,7 @@ class DetailsShowItem extends React.Component{
                             <div className='simple-show-display-info-details'>
                                 {episode_num}
 
-                                <div className='simple-show-episode-title'>
+                                <div className='simple-show-episode-title-details'>
                                     {eptitle}
                                 </div>
 
