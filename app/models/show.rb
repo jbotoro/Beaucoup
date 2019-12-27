@@ -18,6 +18,9 @@ class Show < ApplicationRecord
     validates :title, :seasons, :year, :rating, :description, presence: true
     validates :title, uniqueness: true
 
+    has_many :user_stuff
+    has_many :users, through: :user_stuff
+
     has_many :episodes,
     foreign_key: :show_id,
     class_name: :Episode

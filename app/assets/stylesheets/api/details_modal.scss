@@ -274,6 +274,13 @@
 .show-details-additional-info-start {
     position: relative;
     top: -10%;
+    font-weight: 500;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.375em;
+    font-family: 'Graphik', Arial, Helvetica, sans-serif;
 }
 
 .show-details-additional-info-mystuff {

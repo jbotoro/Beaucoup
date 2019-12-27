@@ -76,6 +76,8 @@ show2 = Show.create(title:'Hunter x Hunter',
     year:2011)
 show2_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterxhunter.jpg")
 show2.photo.attach(io: show2_pic, filename: 'hunterxhunter.jpg')
+show2_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterxhuntertall.jpg')
+show2.tall_photo.attach(io: show2_featurePic, filename: 'hunterxhuntertall.jpg')
 
 show3 = Show.create(title:'Naruto',
     description:'Naruto Uzumaki, is a loud, hyperactive, adolescent ninja who 
@@ -87,6 +89,8 @@ show3 = Show.create(title:'Naruto',
     rating: 8.5)
 show3_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/naruto.jpg")
 show3.photo.attach(io: show3_pic, filename: 'naruto.jpg')
+show3_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/narutotall.jpg')
+show3.tall_photo.attach(io: show3_featurePic, filename: 'narutotall.jpg')
 
 show4 = Show.create(title: 'One Punch Man',
     description:'The story of Saitama, a hero that does it just for fun & can 
@@ -96,6 +100,8 @@ show4 = Show.create(title: 'One Punch Man',
     year: 2015)
 show4_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/onepunch.jpg")
 show4.photo.attach(io: show4_pic, filename:"onepunch.jpg")
+show4_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/onepunchtall.jpg')
+show4.tall_photo.attach(io: show4_featurePic, filename: 'onepunchtall.jpg')
 
 show5 = Show.create(title:'Pokemon',
     description:'Follows the adventure of Ash with his Pokemon, Pikachu and his 
@@ -105,6 +111,8 @@ show5 = Show.create(title:'Pokemon',
     rating: 7.4)
 show5_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemon.jpg")
 show5.photo.attach(io: show5_pic, filename: 'pokemon.jpg')
+show5_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemontall.jpg')
+show5.tall_photo.attach(io: show5_featurePic, filename: 'pokemontall.jpg')
 
 show6 = Show.create(title: 'Samurai Champloo',
     description: 'Fuu, a waitress who works in a teahouse, rescues two master 
@@ -113,8 +121,11 @@ show6 = Show.create(title: 'Samurai Champloo',
     seasons: 1,
     rating: 8.5,
     year: 2004)
-show6_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/champloo.jpg")
-show6.photo.attach(io: show6_pic, filename: 'champloo.jpg')
+show6_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/champloo.jpg")
+
+show6_pic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/champloonormal.jpg')
+show6.photo.attach(io: show6_pic, filename: 'champloonormal.jpg')
+show6.tall_photo.attach(io: show6_featurePic, filename: 'champloo.jpg')
 
 show7 = Show.create(title: 'Tokyo Ghoul',
     description:'A Tokyo college student is attacked by a ghoul, a superpowered 
@@ -125,6 +136,8 @@ show7 = Show.create(title: 'Tokyo Ghoul',
     year: 2014)
 show7_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/tokyoghoul.jpg")
 show7.photo.attach(io: show7_pic, filename: 'tokyoghoul.jpg')
+show7_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/tokyoghoultall.jpg')
+show7.tall_photo.attach(io: show7_featurePic, filename: 'tokyoghoultall.jpg')
 
 show8 = Show.create(title: 'Neon Genesis Evangelion',
     description:"A teenage boy finds himself recruited as a member of an elite 
@@ -132,8 +145,10 @@ show8 = Show.create(title: 'Neon Genesis Evangelion',
     seasons: 1,
     rating: 8.5,
     year: 1995)
-show8_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/neongenesis.jpg")
-show8.photo.attach(io: show8_pic, filename:"neongenesis.jpg")
+show8_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/ngenormal.jpg")
+show8.photo.attach(io: show8_pic, filename:"ngenormal.jpg")
+show8_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/ngetall.jpg')
+show8.tall_photo.attach(io: show8_featurePic, filename: 'ngetall.jpg')
 
 
 myheroep1 = Episode.create(title:'Izuku Midoriya: Origin',

@@ -105,22 +105,16 @@ class loggedInNavBar extends React.Component {
                         <div className="loggedin-navbar-browse-menu-items">
                           <ul className="loggedin-navbar-browse-menu-hubs">
                             <li className="loggedin-navbar-browse-menu-hubs-item">
-                              <Link
-                                className="browse-menu-hub-links"
-                                to="/videos/movies"
-                              >
+                              <div className="browse-menu-hub-links">
                                 {" "}
                                 Movies{" "}
-                              </Link>
+                              </div>
                             </li>
                             <li className="loggedin-navbar-browse-menu-hubs-item">
-                              <Link
-                                className="browse-menu-hub-links"
-                                to="/videos/shows"
-                              >
+                              <div className="browse-menu-hub-links">
                                 {" "}
                                 Shows{" "}
-                              </Link>
+                             </div>
                             </li>
                           </ul>
                           <ul className="loggedin-navbar-browse-menu-categories">
