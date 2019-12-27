@@ -57,7 +57,7 @@ class ShowDetails extends React.Component {
                         {title}
                     </div>
                     <div className='show-details-modal-header-close'>
-                        <i onClick={this.closeModal}className="material-icons">clear</i>
+                        <i onClick={this.closeModal}className="material-icons  close-1">clear</i>
                     </div>
                 </div>
                 <div className='show-details-modal-main-container'>

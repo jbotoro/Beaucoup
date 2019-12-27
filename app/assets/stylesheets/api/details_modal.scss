@@ -23,7 +23,7 @@
     left: 6%;
     width: 87%;
     height: 50px;
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
     z-index: 1;
     color: white;
     z-index: 2000;
@@ -163,9 +163,9 @@
     height: 60%;
 }
 
-.show-details-header-info > div {
-    margin: 10px;
-}
+// .show-details-header-info  div {
+//     margin: 10px;
+// }
 
 .show-details-tall-photo-container {
    
@@ -210,37 +210,40 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.show-details-additional-info-header > li {
-    margin: 10px;
-}
+// .show-details-additional-info-header  li {
+//     margin: 10px;
+// }
 
-.show-details-additional-info-header > h2{
+.show-details-additional-info-header h2{
    font-size: 13px;
 }
 
-.show-details-additional-info-header > h3{
-   font-size:calc(30px + 1vw);
-   font-weight: bold;
-   padding-bottom: 12px;
+.show-details-additional-info-header  h3{
+  font-weight: 300;
+  font-size: 40px;
+  margin: 16px 0 12px;
+  line-height: 1.2em;
+  padding-bottom: 4px;
 }
 
-.show-details-additional-info-header > h5{
+.show-details-additional-info-header  h5{
 //    font: 400 18px system-ui;
-   white-space: pre;
+    white-space: pre;
     font-style: normal;
     font-variant-ligatures: normal;
     font-variant-caps: normal;
     font-variant-numeric: normal;
     font-variant-east-asian: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-stretch: normal;
-    font-size: 18px;
-    line-height: normal;
+    font-size: 16px;
+    line-height: 1.5em;
     font-family: system-ui;
+    margin-bottom: 8px;
    
 }
 
-.show-details-additional-info-header > h4 {
+.show-details-additional-info-header  h4 {
    font-size: 120%;
    line-height: 1.5;
    max-height: 90px;
@@ -271,7 +274,7 @@
 }
 
 .show-details-additional-info-mystuff {
-
+    // overflow: normal;
 }
 
 .show-details-modal-episodelist-container {
@@ -388,4 +391,8 @@ position: relative;
     bottom: -2px;
     left: -2px;
     background-color: rgb(51, 111, 153);
+} 
+
+.material-icons.close-1 {
+    font-size: 28px;
 }
