@@ -81,14 +81,14 @@ class LoggedInMain extends React.Component {
                     </li>
                 )
             })
-            // debugger
+            // 
             let mastheadep
             masthead = this.props.shows[10]
             if(this.props.episodes) {
                 mastheadep = this.props.episodes[10]
             }
          
-            // debugger
+            // 
             // console.log(mastheadep)
             mastheadShow = <MastheadShow show={masthead} episode={mastheadep} />
                 

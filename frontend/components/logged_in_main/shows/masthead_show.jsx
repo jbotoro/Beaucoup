@@ -11,8 +11,9 @@ class MastheadShow extends React.Component {
     }
 
 
+
     render() {
-        // debugger
+        
 
         let showinfo
         let epinfo;

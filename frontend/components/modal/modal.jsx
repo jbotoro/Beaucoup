@@ -5,6 +5,7 @@ import LoginFormContainer from '../login_form/login_form_container';
 import SignupFormContainer from '../login_form/signup_form_container';
 import {removeErrors} from '../../actions/session_actions'
 import VideoPlayer from '../video_player_modal/video_player_container';
+import DetailsPage from '../show_details/show_details_container'
 
 
 // // function Modal({ modal, closeModal }) {
@@ -52,7 +53,7 @@ class Modal extends React.Component {
                 )
             } else if (Array.isArray(this.props.modal) && this.props.modal[0] === 'showdetails') {
                 return(
-                    <DetailsPage show={this.props.modal[1]}/>
+                    <DetailsPage show={this.props.modal[1]} episode={this.props.modal[2]}/>
                 )
             } else {
                 component;

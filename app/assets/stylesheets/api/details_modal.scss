@@ -1,0 +1,345 @@
+.show-details-modal-background {
+    position: fixed; 
+    overflow-y: scroll;
+    top: 0; left: 0; right: 0; bottom: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(12, 11, 11, 0.7);
+    z-index: 200;
+
+}
+
+.show-details-modal-vid-height {
+    height: 110%;
+}
+
+.show-details-modal-headline {
+    position: fixed;
+    top: 4%;
+    left: 6%;
+    width: 87%;
+    height: 50px;
+    // border-bottom: 1px solid rgba(255, 255, 255, .5);
+    z-index: 1;
+    color: white;
+    z-index: 2000;
+}
+
+.show-details-modal-header-title {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.show-details-modal-header-close {
+    position: absolute;
+    top: 2px;
+    right: 2%;
+    background: none;
+    background:none;
+    color:inherit;
+    border:none; 
+    cursor: pointer;
+    font-size: 25px;
+    margin: 10px;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 100;
+    font-stretch: normal;
+    color: #f3f3f3
+}
+
+.show-details-modal-main-container {
+    min-width: 937px;
+    min-height: 800px;
+    position: absolute;
+    background-color:white;
+    height: 95%;
+    width: 88%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+
+.show-details-modal-header {
+    width: 100%;
+    height: 71%;
+    min-height: 500px;
+}
+
+.show-details-modal-header-image-container{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(13, 243, 186);
+    border: 1px solid rgb(13, 243, 186);
+}
+
+.show-details-image-mid-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+}
+
+.show-details-header-image {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.show-details-header-image::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(to left, transparent 0%,rgb(13, 178, 243) 100%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.show-details-img {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.show-details-image-background {
+
+}
+
+.show-details-header-info {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    display: flex;
+    align-items: flex-end;
+    width: 80%;
+    height: 60%;
+}
+
+.show-details-header-info > div {
+    margin: 10px;
+}
+
+.show-details-tall-photo-container {
+   
+    position: relative;
+    height: 100%;
+    width: auto ;
+}
+
+.show-details-tall-photo {
+    object-fit: contain;
+    height: 100%;
+    width: auto
+}
+
+.show-details-additional-info-container {
+    position: relative;
+    height: 100%;
+    width: auto;
+    z-index: 5;
+}
+
+.show-details-additional-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.show-details-additional-info-header {
+    position: relative;
+    top: 37%;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.show-details-additional-info-header > li {
+    margin: 10px;
+}
+
+.show-details-additional-info-header > h2{
+   font-size: 13px;
+}
+
+.show-details-additional-info-header > h3{
+   font-size:calc(30px + 1vw);
+   font-weight: bold;
+   padding-bottom: 12px;
+}
+
+.show-details-additional-info-header > h5{
+//    font: 400 18px system-ui;
+   white-space: pre;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 18px;
+    line-height: normal;
+    font-family: system-ui;
+   
+}
+
+.show-details-additional-info-header > h4 {
+   font-size: 120%;
+   line-height: 1.5;
+   max-height: 90px;
+   overflow: hidden;
+}
+
+.show-details-additional-info-buttons {
+    margin-top: 12px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: visible;
+    align-items: center;
+}
+
+.show-details-additional-info-buttons li {
+    margin: 10px;
+}
+
+.show-details-additional-info-playbutton {
+    position: relative;
+    top: -10px;
+}
+
+.show-details-additional-info-start {
+    position: relative;
+    top: -10%;
+}
+
+.show-details-additional-info-mystuff {
+
+}
+
+.show-details-modal-episodelist-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.show-details-modal-episodelist-container li {
+    margin-bottom: 10px;
+    width: 40%;
+    margin: 3px;
+}
+
+.simple-show-item-expandable-2-details {
+    position: relative; 
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 295px;
+    height: 290px;
+    background: white;
+    transition: all .5s;
+    // overflow: hidden;
+}
+.simple-show-item-expandable-details {
+     position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 300px;
+    background:white;
+}
+
+.simple-show-item-details {
+ width: 100%;
+    height: 310px;
+    overflow: hidden;
+    z-index: 10;
+}
+.simple-show-item-2-details {
+position: relative; 
+    width: 100%;
+    height: 310px;
+    z-index: 15;
+}
+
+.simple-show-playbutton-container-details{
+ position: relative;
+    top: -25%;
+    z-index: 2;
+    opacity: 0;
+}
+.simple-show-playbutton-container-2-details{
+ position: relative;
+    top: -25%;
+    z-index: 2;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.simple-show-episode-description-details{
+    width: 300px;
+    height: 75px;
+    padding-top: 10px;
+    color: transparent;
+    overflow: hidden;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-size:12px;
+    line-height: normal;
+    font-family: system-ui;
+}
+.simple-show-episode-description-2-details{
+   width: 300px;
+    height: 75px;
+    padding-top: 10px;
+    color: rgba(0,0,0,0.4);
+    overflow: hidden;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-size:12px;
+    line-height: normal;
+    font-family: system-ui;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.simple-show-item-container-details {
+    position: relative;
+    width: 345px;
+}
+
+.simple-show-display-info-details {
+    position: relative;
+   left: -45%;
+}

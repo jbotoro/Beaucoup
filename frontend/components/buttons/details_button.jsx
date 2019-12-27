@@ -10,7 +10,7 @@ class DetailsButton extends React.Component {
 
         this.handleMouseEnter = this.handleMouseEnter.bind(this);
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
-        // this.clickHandler = this.clickHandler.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
     }
 
     handleMouseEnter(){
@@ -54,7 +54,7 @@ class DetailsButton extends React.Component {
 
         return(
             <div className={details_button_container}>
-                <div className ={icon_class} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}> arrow_forward</div>
+                <div className ={icon_class} onClick={this.clickHandler} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}> arrow_forward</div>
                 <div className={load_details}>
                     <div className='text-details-container'>
                         <div className='details-text'>

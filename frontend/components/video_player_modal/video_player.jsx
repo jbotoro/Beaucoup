@@ -103,7 +103,7 @@ class VideoPlayer extends React.Component {
     }
 
     decrementTimer() {
-        // debugger
+        
         if(this.state.timer){
             this.setState({
                 timer: this.state.timer - 1

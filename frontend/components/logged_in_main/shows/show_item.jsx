@@ -57,10 +57,10 @@ class ShowItem extends React.Component {
         this.props.openModal(epinfo)
     }
 
-    handleOpenShow(){
-        let showinfo = ["show", this.props.show.id]
-        this.props.openModal(showinfo)
-    }
+    // handleOpenShow(){
+    //     let showinfo = ["showdetails", this.props.show.id]
+    //     this.props.openModal(showinfo)
+    // }
 
 
 
@@ -79,7 +79,7 @@ class ShowItem extends React.Component {
         let epdescrip;
         epdescrip = this.props.show.description
         let showinfo = this.props.show
-        console.log(showinfo)
+        // console.log(showinfo)
         let epdetailsinfo = this.props.episodes[0]
   
         let simpleshow = 'simple-show-item'

@@ -26,6 +26,27 @@ class ShowDetails extends React.Component {
 
 
     render() {
+        
+        let epinfo;
+        let showinfo;
+        let description;
+        let title;
+        let tallpic;
+        let eppic;
+        let year;
+        let showid;
+
+        if(this.props.episode && this.props.show){
+            epinfo = this.props.episode;
+            showinfo = this.props.show;
+            eppic = this.props.episode.photo_url
+            year = this.props.show.year
+            title = this.props.show.title
+            description = this.props.show.description
+            showid = this.props.show.id
+        }
+       
+
         return(
             <div className ='show-details-modal-background'>
                 <div className='show-details-modal-vid-height'>
@@ -33,10 +54,10 @@ class ShowDetails extends React.Component {
                 </div>
                 <div className='show-details-modal-headline'>
                     <div className='show-details-modal-header-title'>
-
+                        {title}
                     </div>
                     <div className='show-details-modal-header-close'>
-                        <i className="material-icons">clear</i>
+                        <i onClick={this.closeModal}className="material-icons">clear</i>
                     </div>
                 </div>
                 <div className='show-details-modal-main-container'>
@@ -44,32 +65,33 @@ class ShowDetails extends React.Component {
                         <div className ='show-details-modal-header-image-container'>
                             <div className ='show-details-image-mid-container'>
                                 <div className ='show-details-header-image'>
-                                    <img clasName='show-details-img'src={this.props.episode.photo_url} alt=""/>
+                                    <img className='show-details-img'src={eppic} alt=""/>
                                 </div>
-                                <div className='show-details-image-background'>
+                                {/* <div className='show-details-image-background'>
 
-                                </div>
+                                </div> */}
                             </div>
                             <div className ='show-details-header-info'>
                                 <div className='show-details-tall-photo-container'>
-                                    {/* <img className='show-details-tall-photo' src={this.props.episode.tallphoto_url} alt=""/> */}
+                                    <img className='show-details-tall-photo' src={eppic} alt=""/>
+                                    {/* {should be tall photo url instead but still need to attach a tall photo to all shows} */}
                                 </div>
                                 <div className='show-details-additional-info-container'>
                                     <div className='show-details-additional-info'>
                                         <ul className='show-details-additional-info-header'>
                                             <li>
-                                                <h3>{this.props.show.title}</h3>
+                                                <h3>{title}</h3>
                                             </li>
                                             <li>
-                                                <h5>{this.props.show.year}</h5>
+                                                <h5>{year}</h5>
                                             </li>
                                             <li>
-                                                <h4> {this.props.show.description} </h4>
+                                                <h4> {description} </h4>
                                             </li>
                                             <li>
                                                 <ul className='show-details-additional-info-buttons'>
                                                     <li className='show-details-additonal-info-playbutton'>
-                                                        <MastheadPlayButton video={this.props.episode}/>
+                                                        <MastheadPlayButton video={epinfo}/>
                                                     </li>
                                                     <li>
                                                         <div className='show-details-additional-info-start'>
@@ -78,7 +100,7 @@ class ShowDetails extends React.Component {
                                                     </li>
                                                     <li>
                                                         <div className='show-details-additional-info-mystuff'>
-                                                            <MyStuffButton show={this.props.show.id} />
+                                                            <MyStuffButton show={showid} />
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -91,7 +113,7 @@ class ShowDetails extends React.Component {
                     </div>
                     <ul className='show-details-modal-episodelist-container'>
                         <li>
-                            <DetailsShowItem show={this.props.show} episodes={this.props.episode} key={this.props.show.id} />
+                            <DetailsShowItem show={showinfo} episodes={epinfo} key={showid} />
                         </li>
                     </ul>
                 </div>
@@ -105,4 +127,4 @@ class ShowDetails extends React.Component {
 
 }
 
-export default ShowDetails
+export default ShowDetails;

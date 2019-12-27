@@ -64,10 +64,10 @@ class FeaturedShow extends React.Component {
         this.props.openModal(epinfo)
     }
 
-    handleOpenShow() {
-        let showinfo = ["show", this.props.show.id]
-        this.props.openModal(showinfo)
-    }
+    // handleOpenShow() {
+    //     let showinfo = ["showdetails", this.props.show.id]
+    //     this.props.openModal(showinfo)
+    // }
 
     render() {
         let featured_show_item = "featured-show-item";
