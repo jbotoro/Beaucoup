@@ -8,6 +8,6 @@ if (@show.photo.attached?)
     json.photo_url url_for(@show.photo)
 end
 
-if (@show.tall_photo.atttached?)
-    json.talliphoto_url url_for(@show.tall_photo)
+if (@show.tall_photo.attached?)
+    json.tallphoto_url url_for(@show.tall_photo)
 end

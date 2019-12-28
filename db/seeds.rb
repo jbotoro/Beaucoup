@@ -5,11 +5,13 @@ require 'open-uri'
 User.delete_all
 Episode.delete_all
 Show.delete_all
+Genre.delete_all
 
 
 ActiveRecord::Base.connection.reset_pk_sequence!('users');
 ActiveRecord::Base.connection.reset_pk_sequence!('shows');
 ActiveRecord::Base.connection.reset_pk_sequence!('episodes');
+ActiveRecord::Base.connection.reset_pk_sequence!('genres');
 
 
 
@@ -293,3 +295,47 @@ neonep1.video.attach(io: neonvid1, filename: 'NGE1.m4v')
 neonimg1 = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/neonep1img.jpg")
 neonep1.photo.attach(io: neonimg1, filename: 'neonep1img.jpg')
 
+Genre.create(genre_type: "Action") 
+Genre.create(genre_type: "Adventure") 
+Genre.create(genre_type: "Cartoons") 
+Genre.create(genre_type: "Comedy")
+Genre.create(genre_type: "Classics")
+Genre.create(genre_type: "Drama")
+Genre.create(genre_type: "Family")
+Genre.create(genre_type: "Kids")
+Genre.create(genre_type: "Horror")
+Genre.create(genre_type: "New School")
+Genre.create(genre_type: "Old School")
+Genre.create(genre_type: "Science Fiction")
+Genre.create(genre_type: "Thriller")
+
+GenresJoin.create(show_id: 1, genre_id: 4 )
+GenresJoin.create(show_id: 1, genre_id: 10)
+GenresJoin.create(show_id: 2, genre_id: 5 )
+GenresJoin.create(show_id: 2, genre_id: 10)
+GenresJoin.create(show_id: 2, genre_id: 13)
+GenresJoin.create(show_id: 3, genre_id: 1)
+GenresJoin.create(show_id: 3, genre_id: 2)
+GenresJoin.create(show_id: 3, genre_id: 5)
+GenresJoin.create(show_id: 3, genre_id: 11)
+GenresJoin.create(show_id: 4, genre_id: 6)
+GenresJoin.create(show_id: 4, genre_id: 10)
+GenresJoin.create(show_id: 5, genre_id: 1)
+GenresJoin.create(show_id: 5, genre_id: 2)
+GenresJoin.create(show_id: 6, genre_id: 2)
+GenresJoin.create(show_id: 6, genre_id: 5)
+GenresJoin.create(show_id: 7, genre_id: 4)
+GenresJoin.create(show_id: 7, genre_id: 10)
+GenresJoin.create(show_id: 7, genre_id: 12)
+GenresJoin.create(show_id: 8, genre_id: 2)
+GenresJoin.create(show_id: 8, genre_id: 3)
+GenresJoin.create(show_id: 8, genre_id: 7)
+GenresJoin.create(show_id: 8, genre_id: 8)
+GenresJoin.create(show_id: 9, genre_id: 1)
+GenresJoin.create(show_id: 9, genre_id: 5)
+GenresJoin.create(show_id: 10, genre_id: 6)
+GenresJoin.create(show_id: 10, genre_id: 9)
+GenresJoin.create(show_id: 11, genre_id: 1)
+GenresJoin.create(show_id: 11, genre_id: 5)
+GenresJoin.create(show_id: 11, genre_id: 11)
+GenresJoin.create(show_id: 11, genre_id: 12)
