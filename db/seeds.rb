@@ -15,7 +15,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('genres');
 
 
 
-demo = User.create!({email:'demo@demo.com', password:'password'})
+demo = User.create({email:'demo@demo.com', password:'password'})
 
 featured1 = Show.create(
     title: 'My Hero Academia', 
@@ -29,6 +29,8 @@ featured1_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/myh
 featured1.tall_photo.attach(io: featured1_featurePic, filename: "myheroacademiaseason1tall.jpg")
 featured1_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/mha1square.jpg")
 featured1.photo.attach(io: featured1_normalPic, filename:'mha1square.jpg')
+featured1_detailsPic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/myherodark.jpg')
+featured1.details_photo.attach(io: featured1_detailsPic, filename: 'myherodark.jpg')
 
 
 
@@ -55,6 +57,8 @@ featured3_featurePic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbz
 featured3.tall_photo.attach(io: featured3_featurePic, filename:'dbzsupertall2.jpg')
 featured3_normalPic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/dbzsupersquare.jpg")
 featured3.photo.attach(io: featured3_normalPic, filename:'dbzsupersquare.jpg')
+featured3_detailsPic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/dragondark.jpeg')
+featured3.details_photo.attach(io: featured3_detailsPic, filename: 'dragondark.jpeg')
 
 
 featured4 = Show.create(title: 'Attack on Titan',
@@ -80,6 +84,8 @@ show2_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterxhunter.
 show2.photo.attach(io: show2_pic, filename: 'hunterxhunter.jpg')
 show2_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterxhuntertall.jpg')
 show2.tall_photo.attach(io: show2_featurePic, filename: 'hunterxhuntertall.jpg')
+show2_detailsPic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/hunterxhunterdark.jpg')
+show2.details_photo.attach(io: show2_detailsPic, filename: 'hunterxhunterdark.jpg')
 
 show3 = Show.create(title:'Naruto',
     description:'Naruto Uzumaki, is a loud, hyperactive, adolescent ninja who 
@@ -93,6 +99,8 @@ show3_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/naruto.jpg")
 show3.photo.attach(io: show3_pic, filename: 'naruto.jpg')
 show3_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/narutotall.jpg')
 show3.tall_photo.attach(io: show3_featurePic, filename: 'narutotall.jpg')
+show3_detailsPic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/narutodark.jpg')
+show3.details_photo.attach(io: show3_detailsPic, filename: 'narutodark.jpg')
 
 show4 = Show.create(title: 'One Punch Man',
     description:'The story of Saitama, a hero that does it just for fun & can 
@@ -104,6 +112,8 @@ show4_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/onepunch.jpg")
 show4.photo.attach(io: show4_pic, filename:"onepunch.jpg")
 show4_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/onepunchtall.jpg')
 show4.tall_photo.attach(io: show4_featurePic, filename: 'onepunchtall.jpg')
+show4_detailsPic = open( 'https://beaucoup-dev.s3-us-west-1.amazonaws.com/darkonepunch.png')
+show4.details_photo.attach(io: show4_detailsPic, filename: 'darkonepunch.png')
 
 show5 = Show.create(title:'Pokemon',
     description:'Follows the adventure of Ash with his Pokemon, Pikachu and his 
@@ -115,6 +125,8 @@ show5_pic = open("https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemon.jpg")
 show5.photo.attach(io: show5_pic, filename: 'pokemon.jpg')
 show5_featurePic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemontall.jpg')
 show5.tall_photo.attach(io: show5_featurePic, filename: 'pokemontall.jpg')
+show5_detailsPic = open('https://beaucoup-dev.s3-us-west-1.amazonaws.com/pokemondark.jpg')
+show5.details_photo.attach(io: show5_detailsPic, filename: 'pokemondark.jpg')
 
 show6 = Show.create(title: 'Samurai Champloo',
     description: 'Fuu, a waitress who works in a teahouse, rescues two master 

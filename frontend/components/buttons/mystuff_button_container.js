@@ -4,10 +4,10 @@ import {createUserStuff, deleteUserStuff} from '../../actions/userstuff_actions'
 
 const mapStateToProps = (state) => {
     let user_stuff;
-    if (state.entities.users[Object.keys(state.entities.users)[1]].show_ids) {
-        user_stuff = state.entities.users[Object.keys(state.entities.users)[1]].show_ids
+    if (state.entities.users[Object.keys(state.entities.users)[0]].show_ids) {
+        user_stuff = state.entities.users[Object.keys(state.entities.users)[0]].show_ids
     }
-    debugger
+  
     return ({
         user_stuff: user_stuff
     })

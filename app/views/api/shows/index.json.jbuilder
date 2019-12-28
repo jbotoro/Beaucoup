@@ -9,5 +9,8 @@
         if(show.tall_photo.attached?)
             json.tallphoto_url url_for(show.tall_photo)
         end
+        if(show.details_photo.attached?)
+            json.detailsphoto_url url_for(show.details_photo)
+        end
     end
 end

@@ -8,8 +8,9 @@ Rails.application.routes.draw do
     resources :shows, only: [:index, :show]
     resources :episodes, only: [:show, :index]
     resources :movies, only: [:index, :show]
-    resources :user_stuff, only: [:create, :destroy]
     resources :genres, only: [:index, :show]
+    resources :usershows, only: [:create, :destroy]
+  
   end
 
  

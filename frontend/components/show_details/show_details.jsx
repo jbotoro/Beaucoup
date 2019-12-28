@@ -32,18 +32,24 @@ class ShowDetails extends React.Component {
         let description;
         let title;
         let tallpic;
-        let eppic;
+        let showpic;
         let year;
         let showid;
+        debugger
 
         if(this.props.episode && this.props.show){
             epinfo = this.props.episode;
             showinfo = this.props.show;
-            eppic = this.props.episode.photo_url
+            showpic = this.props.show.photo_url
             year = this.props.show.year
             title = this.props.show.title
             description = this.props.show.description
             showid = this.props.show.id
+            tallpic = this.props.show.tallphoto_url
+        }
+
+        if(this.props.show.detailsphoto_url){
+            showpic = this.props.show.detailsphoto_url
         }
        
 
@@ -67,11 +73,11 @@ class ShowDetails extends React.Component {
                                 <div className = 'show-details-img-background'>
 
                                 </div>
-                                <img className='show-details-img'src={eppic} alt=""/>
+                                <img className='show-details-img'src={showpic} alt=""/>
                             </div>
                             <div className ='show-details-header-info'>
                                 <div className='show-details-tall-photo-container'>
-                                    <img className='show-details-tall-photo' src={eppic} alt=""/>
+                                    <img className='show-details-tall-photo' src={tallpic} alt=""/>
                                     {/* {should be tall photo url instead but still need to attach a tall photo to all shows} */}
                                 </div>
                                 <div className='show-details-additional-info-container'>

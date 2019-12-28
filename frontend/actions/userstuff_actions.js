@@ -4,22 +4,22 @@ import * as Util from '../util/mystuff_api_util';
 export const ADD_USER_STUFF = 'ADD_USER_STUFF';
 export const REMOVE_USER_STUFF = "REMOVE_USER_STUFF";
 
-const receiveUserStuff = (show) => ({
+const receiveUserStuff = (my_show) => ({
     type: ADD_USER_STUFF,
-    show: show
+    my_show: my_show
 })
 
-const removeUserStuff = (show) => ({
+const removeUserStuff = (my_show) => ({
     type: REMOVE_USER_STUFF,
-    show: show
+    my_show: my_show
 })
 
 export const createUserStuff = (show_id) => dispatch => {
     return (
-        Util.addMyStuff(show_id).then((show) => dispatch(receiveUserStuff(show)))
+        Util.addMyStuff(show_id).then((my_show) => dispatch(receiveUserStuff(my_show)))
     )
 }
 
 export const deleteUserStuff = (show_id) => dispatch => (
-    Util.removeMyStuff(show_id).then((show) => dispatch(removeUserStuff(show)))
+    Util.removeMyStuff(show_id).then((my_show) => dispatch(removeUserStuff(my_show)))
 )

@@ -12,12 +12,12 @@ const usersReducer = (state = {}, action) => {
             )
         case ADD_USER_STUFF:
             let addState = merge({}, state)
-            addState[Object.keys(action.show)].show_ids.push(action.show[Object.keys(action.show)].show_id)
+            addState[Object.keys(action.my_show)].show_ids.push(action.my_show[Object.keys(action.my_show)].show_id)
             return merge( {}, addState)
         case REMOVE_USER_STUFF:
             let removeState = merge({}, state)
-            let stuffArray = removeState[Object.keys(action.show)[0]].show_ids.filter((nums) => nums !== (action.show[1].show_id))
-            removeState[Object.keys(action.show)[0]].show_ids = stuffArray
+            let stuffArray = removeState[Object.keys(action.my_show)[0]].show_ids.filter((nums) => nums !== (action.my_show[1].show_id))
+            removeState[Object.keys(action.my_show)[0]].show_ids = stuffArray
             return merge({}, removeState)
         default:
             return state;

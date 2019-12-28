@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_28_011403) do
+ActiveRecord::Schema.define(version: 2019_12_28_034646) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2019_12_28_011403) do
     t.index ["title"], name: "index_shows_on_title"
   end
 
-  create_table "user_stuff", force: :cascade do |t|
+  create_table "user_shows", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "show_id", null: false
     t.datetime "created_at", null: false

@@ -18,8 +18,11 @@ class Show < ApplicationRecord
     validates :title, :seasons, :year, :rating, :description, presence: true
     validates :title, uniqueness: true
 
-    has_many :user_stuff
-    has_many :users, through: :user_stuff
+    has_many :user_shows
+    has_many :users, through: :users_shows
+
+    has_many :genres_joins
+    has_many :genres, through: :genres_joins
 
     has_many :episodes,
     foreign_key: :show_id,
@@ -28,5 +31,7 @@ class Show < ApplicationRecord
     has_one_attached :photo
 
     has_one_attached :tall_photo
+
+    has_one_attached :details_photo
 
 end

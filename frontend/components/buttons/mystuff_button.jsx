@@ -27,11 +27,11 @@ class MyStuffButton extends React.Component {
     }
 
     addMyStuff() {
-        this.props.createUserShow(this.props.show)
+        this.props.createUserStuff(this.props.show)
     }
 
     deleteMyStuff() {
-        this.props.deleteUserShow(this.props.show)
+        this.props.deleteUserStuff(this.props.show)
     }
 
    
