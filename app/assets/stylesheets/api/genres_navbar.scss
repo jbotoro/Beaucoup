@@ -1,0 +1,107 @@
+.navbar-link-logo-genres{
+    display: flex;
+    padding: 0 20px;
+    color: currentColor;
+    margin-left: 20px;
+    // margin: 25px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    align-items: center !important;
+    letter-spacing: normal;
+    transition: opacity 0.3s ease;
+    align-self: stretch;
+    width: 100%;
+    position: relative;
+    background: none;
+    border: 0;
+    text-decoration: none;
+    color: var(--text--primary);
+}
+
+.loggedin-navbar-browse-label-genres{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text--primary)
+}
+
+.material-icons.mdbl-1{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: black
+}
+
+.loggedin-navbar-myStuff-icon-wrap-genres{
+    position: relative;
+    border: 1px solid var(--text--primary);
+    align-content: center;
+    padding: 1px 5px 1px 5px;
+    cursor: pointer;
+}
+
+.navbar-link-genres{
+display: flex;
+    padding: 0 20px;
+    color: var(--text--primary);
+    cursor: pointer;
+    align-items: center !important;
+    letter-spacing: normal;
+    transition: opacity 0.3s ease;
+    align-self: stretch;
+    width: 100%;
+    position: relative;
+    background: none;
+    border: 0;
+    text-decoration: none;
+}
+
+.material-icons.srbl-1 {
+    color: black
+}
+
+.loggedin-navbar-search-label-genres{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text--primary);
+    cursor: pointer;
+}
+
+.loggedin-profile-name-label-genres {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text--primary);
+    cursor: pointer;
+}
+
+.loggedin-profile-icon-genres{
+    color: var(--background--icon);
+    background-color: var(--text--primary);
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    letter-spacing: normal;
+    padding: 1px 0 0 1px;
+    text-transform: uppercase;
+}
+
+.material-icons.menubl {
+    color: var(--text--primary)
+}

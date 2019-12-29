@@ -97,10 +97,11 @@ body {
 
 .Nav {
     font-weight: 500;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
     height: 72px;
-    z-index: 10;
+    z-index: 12;
     font-size: 14px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -267,6 +268,7 @@ ul, ol {
     width: 100%;
     letter-spacing: 0;
     font-weight: normal;
+    cursor: pointer;
 }
 
 .loggedin-navbar-item-myStuff {

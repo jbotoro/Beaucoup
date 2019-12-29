@@ -35,7 +35,7 @@ class ShowDetails extends React.Component {
         let showpic;
         let year;
         let showid;
-        debugger
+       
 
         if(this.props.episode && this.props.show){
             epinfo = this.props.episode;
@@ -55,7 +55,7 @@ class ShowDetails extends React.Component {
 
         return(
             <div className ='show-details-modal-background'>
-                <div className='show-details-modal-vid-height'>
+                <div className='show-details-modal-vid-height' onClick={this.closeModal}>
 
                 </div>
                 <div className='show-details-modal-headline'>

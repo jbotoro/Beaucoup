@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 
-const browseCategories = ['Action', 'Adventure', 'Cartoons','Classics','Comedy',
-'Drama', 'Family', 'Horror', 'Kids','New School','Old School','Science Fiction','Thriller'
-]
+// const browseCategories = ['Action', 'Adventure', 'Cartoons','Classics','Comedy',
+// 'Drama', 'Family', 'Horror', 'Kids','New School','Old School','Science Fiction','Thriller'
+// ]
 
 class loggedInNavBar extends React.Component {
     constructor(props){
@@ -14,18 +14,21 @@ class loggedInNavBar extends React.Component {
         };
         this.handleLogout = this.handleLogout.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
+        this.handleClickBrowse = this.handleClickBrowse.bind(this);
     }
 
     componentDidMount() {
         this.handleScroll();
         window.addEventListener('scroll', this.handleScroll);
+        this.props.findGenres();
+        // debugger
     }
 
     handleScroll () {
         
 
         let y_index = window.pageYOffset;
-        if (y_index === 0) {
+        if (y_index < 100) {
             // console.log( 'we out here')
             this.setState({
                 currentNav: 'Nav GlobalNav GlobalNav--masthead GlobalNav--transparent'
@@ -40,18 +43,31 @@ class loggedInNavBar extends React.Component {
 
     }
 
+  handleClickBrowse(id) {
+    debugger
+    this.props.history.push(`/videos/genres/${id}`)
+  }
+
    
     
     
-    categories () {
-        return (
-            <ul className='browse-menu-genres'>
-                {browseCategories.map((category, idx) =>
-                    <li className='browse-menu-genres-item' key={idx}> {category}</li>
-                    )}
-            </ul>
-        )
-    }
+    // categories () {
+    //   // debugger
+    //   if(this.props.genres) {
+    //     return (
+    //       <ul className='browse-menu-genres'>
+    //         {this.props.genres.map((genre) =>
+    //           <li className='browse-menu-genres-item' onClick={this.handleClickBrowse(genre.id)}key={genre.id}> {genre.genre_type}</li>
+    //         )}
+    //       </ul>
+    //     )
+    //   } else {
+    //     return (
+    //       <div></div>
+    //     )
+    //   }
+      
+    // }
 
     handleLogout() {
         this.props.logout().then(this.props.history.push('/'))
@@ -72,6 +88,41 @@ class loggedInNavBar extends React.Component {
     }
     
     render () {
+
+        let genreslist;
+        let icons;
+        let browselabel;
+        let doneicon;
+        let donewrap;
+        let searchlabel;
+        let profileicon;
+        let profilelabel;
+
+        icons = 'material-icons'
+        browselabel = 'loggedin-navbar-browse-label'
+        doneicon = "material-icons md-1"
+        donewrap = 'loggedin-navbar-myStuff-icon-wrap'
+        searchlabel = "loggedin-navbar-search-label"
+        profileicon = 'loggedin-profile-icon'
+        profilelabel = 'loggedin-profile-name-label'
+
+      if (this.state.currentNav === 'Nav GlobalNav GlobalNav--masthead'){
+        icons = 'material-icons srbl-1'
+        browselabel = 'loggedin-navbar-browse-label-genres'
+        doneicon = "material-icons mdbl-1"
+        donewrap = 'loggedin-navbar-myStuff-icon-wrap-genres'
+        searchlabel = "loggedin-navbar-search-label-genres"
+        profileicon = 'loggedin-profile-icon-genres'
+        profilelabel = 'loggedin-profile-name-label-genres'
+      }
+
+        if(this.props.genres) {
+          genreslist = this.props.genres.map((genre) => {
+            return (
+              <li className='browse-menu-genres-item' onClick={() => this.handleClickBrowse(genre.id)} key={genre.id}> {genre.genre_type}</li>
+            )
+          })
+        }
     
         return (
           <header className={this.state.currentNav}>
@@ -91,9 +142,9 @@ class loggedInNavBar extends React.Component {
                 >
                   <div className="loggedin-navbar-browse-item">
                     <button className="loggedin-navbar-browse-button">
-                      <i class="material-icons"> menu </i>
+                      <i class={icons}> menu </i>
                       {/* <img src={SearchIcon} className='loggedin-navbar-browse-button-icon'/> */}
-                      <span className="loggedin-navbar-browse-label">
+                      <span className={browselabel}>
                         {" "}
                         Browse
                       </span>
@@ -118,7 +169,10 @@ class loggedInNavBar extends React.Component {
                             </li>
                           </ul>
                           <ul className="loggedin-navbar-browse-menu-categories">
-                            {this.categories()}
+                            <ul className ='browse-menu-genres'>
+                                {genreslist}
+                            </ul>
+                            {/* {this.categories()} */}
                           </ul>
                         </div>
                       </div>
@@ -126,8 +180,8 @@ class loggedInNavBar extends React.Component {
                   </div>
                 </div>
                 <div className="loggedin-navbar-item-myStuff">
-                  <div className='loggedin-navbar-myStuff-icon-wrap'>
-                    <i class="material-icons md-1">done</i>
+                  <div className={donewrap}>
+                    <i class={doneicon}>done</i>
                   </div>
                   <Link className="navbar-link" to="/my-stuff">
                     My Stuff
@@ -141,9 +195,9 @@ class loggedInNavBar extends React.Component {
                   <div className="loggedin-navbar-profile-item">
                     <button className="loggedin-search-btn">
                       <Link className="navbar-link" to="/search">
-                        <i class="material-icons"> search </i>
+                        <i class={icons}> search </i>
                         {/* <img src={SearchIcon} className='loggedin-navbar-search-icon' /> */}
-                        <span className="loggedin-navbar-search-label">
+                        <span className={searchlabel}>
                           {" "}
                           Search
                         </span>
@@ -165,8 +219,8 @@ class loggedInNavBar extends React.Component {
                 >
                   <div className="loggedin-navbar-profile-item">
                     <button className="loggedin-navbar-profile-dropdown-button">
-                      <div className="loggedin-profile-icon"> D </div>
-                      <span className="loggedin-profile-name-label">
+                      <div className={profileicon}> D </div>
+                      <span className={profilelabel}>
                         {" "}
                         Demo User
                       </span>
