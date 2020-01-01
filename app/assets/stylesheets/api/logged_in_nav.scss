@@ -88,11 +88,13 @@ body {
 
 .GlobalNav--masthead {
     margin-bottom: -72px;
+    box-shadow: 0 1px 0 0 var(--accent--nav)
 }
 .GlobalNav--transparent {
     box-shadow: none;
     background: none;
     color: var(--white);
+    border-bottom: none;
 }
 
 .Nav {
@@ -105,6 +107,7 @@ body {
     font-size: 14px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+   
 }
 
 .loggedin-navbar-header-main-container {
@@ -118,6 +121,7 @@ body {
     height: 72px;
     display: flex;
     align-content: stretch;
+    
 }
 
 .loggedin-navbar-item-logo {
@@ -167,6 +171,9 @@ body {
     margin-left: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Graphik' Arial, Helvetica, sans-serif;
 }
 
 .loggedin-navbar-browse-menu {

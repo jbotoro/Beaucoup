@@ -2,28 +2,48 @@ import {connect} from 'react-redux'
 import Genres from './genres';
 import {findGenre} from '../../actions/genres_actions';
 import {findEpisodes} from '../../actions/episodes_actions'
+import {withRouter} from 'react-router-dom';
+import {findShows} from '../../actions/shows_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
     let genreID = ownProps.match.params.genreId
     let genre = state.entities.genres[genreID]
-
-    let shows = []
-
-    if (genre && genre.show_ids.length > 0 && 
-        Object.keys(state.entities.shows).length > 0) {
-
+    let showlist = Object.values(state.entities.shows)
+    let episodes = Object.values(state.entities.episodes)
+    let shows = Object.values(state.entities.shows)
+    let chosenshows = [];
+    let x = 1
+    
+    // 
+    if (genre && genre.show_ids.length > 0 && Object.keys(showlist).length > 0 && x === 1) {
+        
+        console.log('1st IF')
         genre.show_ids.forEach((id) => {
-            if(state.entities.shows[id] !== undefined) {
-                shows.push(state.entities.shows[id])
+            // 
+            if (chosenshows.includes(showlist[id - 1]) || showlist[id - 1] === undefined) {
+                //  
+                console.log('2nd IF FAIL')
+            }  else if (!chosenshows.includes(showlist[id - 1])) {
+                // 
+                console.log('pushing 3rd IF')
+                chosenshows.push(showlist[id - 1]);
+            } else {
+                console.log('4th FAIL')
             }
-        })
+            
+
+        });
+        x += 1
+        // 
     }
 
+    return ({
+        genre: genre,
+        shows: chosenshows,
+        state: state,
+        episodes: episodes
 
-    return({
-        shows: shows,
-        genre: genre
     })
 }
 
@@ -31,7 +51,8 @@ const mapDispatchToProps = (dispatch) => {
 
     return ({
         findGenre: (genre) => dispatch(findGenre(genre)),
-        findEpisodes: () => dispatch(findEpisodes())
+        // findEpisodes: () => dispatch(findEpisodes()),
+        // findShows: () => dispatch(findShows())
     })
 
 }

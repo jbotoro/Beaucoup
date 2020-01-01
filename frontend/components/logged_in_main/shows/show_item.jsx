@@ -65,7 +65,7 @@ class ShowItem extends React.Component {
 
 
     render() {
-        
+        // debugger
         let vid;
         vid = this.props.episodes[0].video_url
         let eppic;
@@ -120,6 +120,18 @@ class ShowItem extends React.Component {
             episode_num =<div className="episode-num-container-showitem">EPISODE {epnum}</div>
             
            
+        }
+
+        if (this.props.genrespage) {
+            simpleshow = "simple-show-item-genre";
+            simpleshowexpandable = 'simple-show-item-expandable-genre'
+            description_container = 'simple-show-episode-description-genre'
+        }
+
+        if (this.props.genrespage && this.state.hover) {
+            simpleshow = "simple-show-item-genre-2";
+            simpleshowexpandable = 'simple-show-item-expandable-genre-2'
+            description_container = 'simple-show-episode-description-genre-2'
         }
       
         return (

@@ -44,7 +44,7 @@ class GenreNavBar extends React.Component {
     }
 
     handleClickBrowse(id) {
-        debugger
+        // debugger
         this.props.history.push(`/videos/genres/${id}`)
     }
 
@@ -102,7 +102,7 @@ class GenreNavBar extends React.Component {
         return (
             <header className={this.state.currentNav}>
                 <div className="loggedin-navbar-header-main-container">
-                    <div className="loggedin-navbar">
+                    <div className="loggedin-navbar-genres">
                         <div className="loggedin-navbar-item-logo">
                             <Link className="navbar-link-logo-genres" to="/videos">
                                 {" "}

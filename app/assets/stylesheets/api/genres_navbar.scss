@@ -105,3 +105,10 @@ display: flex;
 .material-icons.menubl {
     color: var(--text--primary)
 }
+
+.loggedin-navbar-genres {
+    height: 72px;
+    display: flex;
+    align-content: stretch;
+    box-shadow: 0 1px 0 0 var(--accent--nav)
+}
