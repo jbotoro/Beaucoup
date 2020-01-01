@@ -16,7 +16,6 @@
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
-    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8"
@@ -41,6 +40,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "redux-logger": "^3.0.6",
     "@babel/plugin-proposal-class-properties": "^7.5.5"
   }
 }

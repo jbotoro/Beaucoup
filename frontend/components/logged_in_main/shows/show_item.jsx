@@ -89,7 +89,7 @@ class ShowItem extends React.Component {
          
             epdescrip = this.props.show.description
             
-            // console.log(showinfo)
+          
             
             showid = this.props.show.id
             

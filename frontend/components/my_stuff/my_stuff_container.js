@@ -14,15 +14,14 @@ const mapStateToProps = (state) => {
         myStuff = shows.filter(show => userstuff.show_ids.includes(show.id))
         
         let myStuffids = myStuff.map( show => show.id)
-        console.log(myStuffids)
-        console.log(myStuff)
+        
         
         episodes = episodes.filter(episode => myStuffids.includes(episode.show_id))
         
     }
     
   
-    console.log(myStuff)
+   
     return (
         {
             myStuff: myStuff,

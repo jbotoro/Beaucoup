@@ -50,7 +50,7 @@ class LoggedInMain extends React.Component {
         episodeslist = this.props.episodes;
         if( shows.length && episodeslist.length > 0 && !row1Shows && !featuredShows && !row2Shows) {
             featured = this.props.shows.slice(0,4)
-            // console.log(featured)
+           
             featuredShows = featured.map((show) => {
               
                 let content
@@ -60,7 +60,7 @@ class LoggedInMain extends React.Component {
             
             })
             row1 = this.props.shows.slice(4, 7)
-            // console.log(row1)
+          
             row1Shows = row1.map((show) => {
                 let row1content;
                 row1content = episodeslist.filter(episode => show.id === episode.show_id)
@@ -71,7 +71,7 @@ class LoggedInMain extends React.Component {
                 )
             })
             row2 = this.props.shows.slice(7, 10);
-            // console.log(row2)
+           
             row2Shows = row2.map((show) => {
                 let row2content;
                 row2content = episodeslist.filter(episode => show.id === episode.show_id)
@@ -81,15 +81,15 @@ class LoggedInMain extends React.Component {
                     </li>
                 )
             })
-            // 
+         
             let mastheadep
             masthead = this.props.shows[10]
             if(this.props.episodes) {
                 mastheadep = this.props.episodes[10]
             }
          
-            // 
-            // console.log(mastheadep)
+         
+           
             mastheadShow = <MastheadShow show={masthead} episode={mastheadep} />
                 
     

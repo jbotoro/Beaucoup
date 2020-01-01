@@ -120,14 +120,14 @@ class VideoPlayer extends React.Component {
         setTimeout(() => {
             if (this.state.timer > 0) {
                 this.decrementTimer()
-                // console.log(this.state.timer)
+               
             }
         }, 1000);
         setTimeout(() => {
             if(this.state.timer === 0) {
-                // console.log('should reset')
+           
                 this.setState({hover: false})
-                // console.log(this.state.hover)
+          
             }
         }, 5000)
 

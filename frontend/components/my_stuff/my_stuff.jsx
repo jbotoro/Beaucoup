@@ -26,7 +26,7 @@ class MyStuff extends React.Component {
                 row1Shows = firstrow.map(show => {
                     
                     let episodes = stuffepisodes.filter(episode => show.id === episode.show_id)
-                    console.log(episodes)
+                    
                     
                     return (<li className='genres-shows-listitem'>
                         <ShowItem show={show} episodes={episodes} key={show.id} />

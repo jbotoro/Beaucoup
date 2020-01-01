@@ -21,7 +21,7 @@ class GenreNavBar extends React.Component {
         this.handleScroll();
         window.addEventListener('scroll', this.handleScroll);
         this.props.findGenres();
-        // debugger
+   
     }
 
     handleScroll() {
@@ -29,12 +29,12 @@ class GenreNavBar extends React.Component {
 
         let y_index = window.pageYOffset;
         if (y_index === 0) {
-            // console.log( 'we out here')
+          
             this.setState({
                 currentNav: 'Nav GlobalNav GlobalNav--masthead GlobalNav--transparent'
             })
         } else {
-            // console.log('we in here')
+          
             this.setState({
                 currentNav: 'Nav GlobalNav GlobalNav--masthead'
             })
@@ -44,30 +44,14 @@ class GenreNavBar extends React.Component {
     }
 
     handleClickBrowse(id) {
-        // debugger
+ 
         this.props.history.push(`/videos/genres/${id}`)
     }
 
 
 
 
-    // categories () {
-    //   // debugger
-    //   if(this.props.genres) {
-    //     return (
-    //       <ul className='browse-menu-genres'>
-    //         {this.props.genres.map((genre) =>
-    //           <li className='browse-menu-genres-item' onClick={this.handleClickBrowse(genre.id)}key={genre.id}> {genre.genre_type}</li>
-    //         )}
-    //       </ul>
-    //     )
-    //   } else {
-    //     return (
-    //       <div></div>
-    //     )
-    //   }
-
-    // }
+  
 
     handleLogout() {
         this.props.logout().then(this.props.history.push('/'))

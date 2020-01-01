@@ -64,15 +64,14 @@ class SearchBar extends React.Component {
                     let title = show.title.split(' ')
                     let result = false
                     let query = title.filter(word => {
-                        // debugger
+                        
                         for (let i = 0; i < currentSearch.length && i < word.length; i++) {
-                            // debugger  
+                              
                             if (currentSearch[i].toLowerCase() !== word[i].toLowerCase()) {
-                                // debugger
-                                console.log('false')
+                                
+                              
                                 return false
-                                break
-
+                    
                             } 
                            
                         }
@@ -80,60 +79,29 @@ class SearchBar extends React.Component {
                             return false
                         }
                         return true
-                        console.log('true')
+                       
                         
                         
                     })
                     if (query.length > 0) {
-                        // debugger
-                        console.log(query)
-                        console.log(show)
+                        
+                     
                         searchResShows.push(show)
-                        console.log(searchResShows)
-                        console.log(query)
-                        console.log(show)
-                        // debugger
+                       
+                       
 
                     }
-                    // debugger
+                   
                 })
             
-            
-            // episodeslist.forEach( episode => {
-            //     let title = episode.title.split(' ')
-            //     let query = title.filter(word => {
-            //         for( let i = 0; i < currentSearch.length && i < word.length; i++) {
-            //             if(currentSearch[i].toLowerCase() !== word[i].toLowerCase()){
-            //                 return false
-            //             }
-            //         }
-            //         return true
-            //     })
-            //     if(query.length > 0){
-            //         searchResEpisodes.push(episode)
-            //     }
-            // })
-            // genrelist.forEach( genre => {
-            //     let genretype = genre.genre_type.split(' ')
-            //     let query = genretype.filter(word => {
-            //         for( let i = 0; i < currentSearch.length && i < word.length; i++) {
-            //             if(currentSearch[i].toLowerCase() !== word[i].toLowerCase()){
-            //                 return false
-            //             }
-            //         }
-            //         return true
-            //     })
-            //     if(query.length > 0){
-            //         searchResGenres.push(genre)
-            //     }
-            // })
+           
         }
 
         if(this.state.searching) {
           displayedShows = searchResShows
         }
         if( displayedShows && displayedShows.length > 0) {
-            debugger
+            
             let firstthree = displayedShows.slice(0,3)
             let secondthree = displayedShows.slice(3,6)
             let thirdthree = displayedShows.slice(6,9)
@@ -174,7 +142,7 @@ class SearchBar extends React.Component {
        
 
         if (this.state.searchinput.length > 0  && (!displayedShows || displayedShows.length ===0)) {
-            debugger
+            
             if (displayedShows.length === 0 || !displayedShows) {
                 searchErrors = <div className="search-bar-noresults-container">
                     <div className="search-bar-fail">0 results matching your search were found.</div>
@@ -203,7 +171,7 @@ class SearchBar extends React.Component {
         let searchclear ='search-bar-clear--hidden'
 
         if(this.state.searchinput.length > 0 && this.state.searching){
-            debugger
+            
             searchingForContainer = <div className='searching-for-container'>
                 <i className='material-icons searching-1'>
                     search
@@ -222,7 +190,7 @@ class SearchBar extends React.Component {
        
         
         
-        debugger
+        
 
         return(
             <div className='genres-main-container'>

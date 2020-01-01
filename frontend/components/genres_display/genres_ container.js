@@ -15,27 +15,26 @@ const mapStateToProps = (state, ownProps) => {
     let chosenshows = [];
     let x = 1
     
-    // 
+    
     if (genre && genre.show_ids.length > 0 && Object.keys(showlist).length > 0 && x === 1) {
         
-        console.log('1st IF')
+        
         genre.show_ids.forEach((id) => {
-            // 
+            
             if (chosenshows.includes(showlist[id - 1]) || showlist[id - 1] === undefined) {
-                //  
-                console.log('2nd IF FAIL')
+                
+                
             }  else if (!chosenshows.includes(showlist[id - 1])) {
-                // 
-                console.log('pushing 3rd IF')
+                
                 chosenshows.push(showlist[id - 1]);
             } else {
-                console.log('4th FAIL')
+            
             }
             
 
         });
         x += 1
-        // 
+        
     }
 
     return ({
