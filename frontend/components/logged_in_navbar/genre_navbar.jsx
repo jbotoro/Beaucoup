@@ -158,7 +158,7 @@ class GenreNavBar extends React.Component {
                             <div className='loggedin-navbar-myStuff-icon-wrap-genres'>
                                 <i class="material-icons mdbl-1">done</i>
                             </div>
-                            <Link className="navbar-link-genres" to="/my-stuff">
+                            <Link className="navbar-link-genres" to="/videos/my-stuff">
                                 My Stuff
                   </Link>
                         </div>
@@ -169,7 +169,7 @@ class GenreNavBar extends React.Component {
                         >
                             <div className="loggedin-navbar-profile-item">
                                 <button className="loggedin-search-btn">
-                                    <Link className="navbar-link" to="/search">
+                                    <Link className="navbar-link" to="/videos/search">
                                         <i class="material-icons srbl-1"> search </i>
                                         {/* <img src={SearchIcon} className='loggedin-navbar-search-icon' /> */}
                                         <span className="loggedin-navbar-search-label-genres">

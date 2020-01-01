@@ -15,6 +15,7 @@ import loggedInMain from './logged_in_main/logged_index_container';
 import {removeErrors} from '../actions/session_actions'
 import Genres from './genres_display/genres_ container';
 import genreNavBar from './logged_in_navbar/genre_navbar_container';
+import myStuff from './my_stuff/my_stuff_container';
 
 
 
@@ -27,9 +28,11 @@ const App = () => (
                 {/* <ProtectedRoute path='/videos/videoplayer/:videoId' component={VideoPlayer} /> */}
                 <ProtectedRoute exact path='/videos' component={loggedInNavBar} />
                 <ProtectedRoute path='/videos/genres/:genreId' component={genreNavBar} />
+                <ProtectedRoute path='/videos/my-stuff' component={genreNavBar} />
             </Switch>
             <ProtectedRoute exact path ='/videos' component={loggedInMain} />
             <ProtectedRoute  path ='/videos/genres/:genreId' component ={Genres} />
+            <ProtectedRoute exact path = '/videos/my-stuff' component ={myStuff} />
            
         </header>
         <Route exact path='/' component={Splash} />

@@ -35,7 +35,7 @@ class Genres extends React.Component {
         if (this.props.shows && this.props.episodes && this.props.genre && x === 1) {   
             
             
-            debugger
+            // debugger
             episodeslist = this.props.episodes;
             let showslist = this.props.shows;
             let firstthree = showslist.slice(0,3)
@@ -43,7 +43,7 @@ class Genres extends React.Component {
             let secondthree = showslist.slice(3)
             console.log(secondthree)
             showsnums = this.props.genre.show_ids
-            debugger
+            // debugger
 
             row1Shows = firstthree.map((show) => {
                 
@@ -56,7 +56,7 @@ class Genres extends React.Component {
                     console.log('should return show item')
                     
                     return (<li className='genres-shows-listitem'>
-                        <ShowItem show={show} episodes={genreepisodes} genrespage={true} key={show.id} />
+                        <ShowItem show={show} episodes={genreepisodes} key={show.id} />
                     </li>
                     ) 
                 } else {

@@ -15,6 +15,7 @@ class loggedInNavBar extends React.Component {
         this.handleLogout = this.handleLogout.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleClickBrowse = this.handleClickBrowse.bind(this);
+        this.handleMyStuff = this.handleMyStuff.bind(this)
     }
 
     componentDidMount() {
@@ -46,6 +47,12 @@ class loggedInNavBar extends React.Component {
   handleClickBrowse(id) {
     // debugger
     this.props.history.push(`/videos/genres/${id}`)
+  }
+
+  handleMyStuff() {
+    debugger
+    this.props.history.push('/videos/my-stuff')
+    debugger
   }
 
    
@@ -183,7 +190,7 @@ class loggedInNavBar extends React.Component {
                   <div className={donewrap}>
                     <i class={doneicon}>done</i>
                   </div>
-                  <Link className="navbar-link" to="/my-stuff">
+                  <Link className="navbar-link" to="/videos/my-stuff">
                     My Stuff
                   </Link>
                 </div>
@@ -194,7 +201,7 @@ class loggedInNavBar extends React.Component {
                 >
                   <div className="loggedin-navbar-profile-item">
                     <button className="loggedin-search-btn">
-                      <Link className="navbar-link" to="/search">
+                      <Link className="navbar-link" to="/videos/search">
                         <i class={icons}> search </i>
                         {/* <img src={SearchIcon} className='loggedin-navbar-search-icon' /> */}
                         <span className={searchlabel}>

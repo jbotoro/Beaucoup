@@ -68,7 +68,7 @@ class MyStuffButton extends React.Component {
         } else {
             return (
                 <div className={details_button_container}>
-                    <div className={icon_class} onClick={this.deleteMyStuff} onMouseLeave={this.handleMouseLeave} onMouseEnter={this.handleMouseEnter}> add</div>
+                    <div className={icon_class} onClick={this.deleteMyStuff} onMouseLeave={this.handleMouseLeave} onMouseEnter={this.handleMouseEnter}> check</div>
                     <div className={load_details}>
                         <div className='text-details-container'>
                             <div className='details-text'>

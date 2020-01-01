@@ -65,24 +65,36 @@ class ShowItem extends React.Component {
 
 
     render() {
-        // debugger
+        
         let vid;
-        vid = this.props.episodes[0].video_url
         let eppic;
-        eppic = this.props.episodes[0].photo_url
         let showpic;
-        showpic = this.props.show.photo_url
         let epnum
-        epnum = this.props.episodes[0].episode_number
         let eptitle
-        eptitle = this.props.episodes[0].title
         let epdescrip;
-        epdescrip = this.props.show.description
         let showinfo = this.props.show
-        // console.log(showinfo)
         let epdetailsinfo = this.props.episodes[0]
         let showid;
-        showid = this.props.show.id
+        if(this.props.episodes && this.props.show) {
+            
+            vid = this.props.episodes[0].video_url
+           
+            eppic = this.props.episodes[0].photo_url
+            
+            showpic = this.props.show.photo_url
+         
+            epnum = this.props.episodes[0].episode_number
+           
+            eptitle = this.props.episodes[0].title
+         
+            epdescrip = this.props.show.description
+            
+            // console.log(showinfo)
+            
+            showid = this.props.show.id
+            
+        }
+      
   
         let simpleshow = 'simple-show-item'
         let simpleshowexpandable = 'simple-show-item-expandable'
