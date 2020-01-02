@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 import ShowItem from '../logged_in_main/shows/show_item_container';
 
 class Genres extends React.Component {

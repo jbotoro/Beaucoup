@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import DetailsButton from '../../buttons/details_button';
 import MyStuffButton from '../../buttons/mystuff_button_container'
 

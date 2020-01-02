@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {openModal} from '../../actions/modal_actions'

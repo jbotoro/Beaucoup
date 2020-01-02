@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import DetailsShowItem from '../logged_in_main/shows/details_show_item_container';
 import MastheadPlayButton from '../buttons/masthead_play_button';
 import MyStuffButton from '../buttons/mystuff_button_container';
