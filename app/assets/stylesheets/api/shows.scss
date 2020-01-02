@@ -15,6 +15,16 @@
     left:5%;
     overflow: hidden;
 }
+.logged-shows-ul--hidden {
+    // position: absolute;
+    display: none;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    top: 180%;
+    left:5%;
+    overflow: hidden;
+}
 
 .logged-shows-ul2{
     //  position: absolute;
@@ -26,6 +36,57 @@
     left:5%;
     overflow: hidden;
 }
+.logged-shows-ul2--hidden{
+    //  position: absolute;
+    display: none;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    top: 250%;
+    left:5%;
+    overflow: hidden;
+}
+.logged-shows-ul3{
+    //  position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    top: 250%;
+    left:5%;
+    overflow: hidden;
+}
+.logged-shows-ul3--hidden{
+    //  position: absolute;
+    display: none;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    top: 250%;
+    left:5%;
+    overflow: hidden;
+}
+.logged-shows-ul4{
+    //  position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    top: 250%;
+    left:5%;
+    overflow: hidden;
+}
+.logged-shows-ul4--hidden{
+    //  position: absolute;
+    display: none;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    top: 250%;
+    left:5%;
+    overflow: hidden;
+}
+
 
 .logged-shows-header {
     font-size: 30px;

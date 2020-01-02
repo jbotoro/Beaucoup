@@ -13,6 +13,10 @@ class MyStuff extends React.Component {
         let row2Shows;
         let row3Shows;
         let row4Shows;
+        let ul1 = 'logged-shows-ul'
+        let ul2 = 'logged-shows-ul-2'
+        let ul3 = 'logged-shows-ul-3'
+        let ul4 = 'logged-shows-ul-4'
         if(this.props.myStuff && this.props.episodes) {
             let stuff = this.props.myStuff;
             let firstrow = stuff.slice(0, 3)
@@ -35,6 +39,7 @@ class MyStuff extends React.Component {
                 })
             } else {
                 row1Shows = null
+                ul1 = 'logged-shows-ul--hidden'
             }
             if (secondrow.length > 0) {
                 row2Shows = secondrow.map(show => {
@@ -46,6 +51,7 @@ class MyStuff extends React.Component {
                 })
             } else {
                 row2Shows = null;
+                ul2 = 'logged-shows-ul-2--hidden'
             }
             if(thirdrow.length > 0) {
                 row3Shows = thirdrow.map(show => {
@@ -57,6 +63,7 @@ class MyStuff extends React.Component {
                 })
             } else {
                 row3Shows = null;
+                ul3 = 'logged-shows-ul-3--hidden'
             }
             if(fourthrow.length > 0) {
                 row4Shows = fourthrow.map(show => {
@@ -68,12 +75,14 @@ class MyStuff extends React.Component {
                 })
             } else {
                 row4Shows = null
+                ul4 = 'logged-shows-ul-4--hidden'
             }
             
         }
+
        
 
-        // row1Shows = firstrow.map(show => )
+       
 
 
 
@@ -103,23 +112,23 @@ class MyStuff extends React.Component {
                         </div>
                         <div className='genres-shows-list-container'>
                             <div className='genres-shows-list'>
-                                <ul className='logged-shows-ul'>
+                                <ul className={ul1}>
                                     <div className='row1-shows-wrap'>
                                         {row1Shows}
                                     </div>
 
                                 </ul>
-                                <ul className='logged-shows-ul2'>
+                                <ul className={ul2}>
                                     <div className='row2-shows-wrap'>
                                         {row2Shows}
                                     </div>
                                 </ul>
-                                <ul className='logged-shows-ul2'>
+                                <ul className={ul3}>
                                     <div className='row2-shows-wrap'>
                                         {row3Shows}
                                     </div>
                                 </ul>
-                                <ul className='logged-shows-ul2'>
+                                <ul className={ul4}>
                                     <div className='row2-shows-wrap'>
                                         {row4Shows}
                                     </div>
