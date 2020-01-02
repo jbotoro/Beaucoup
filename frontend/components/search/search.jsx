@@ -42,6 +42,7 @@ class SearchBar extends React.Component {
         let ul2 = 'logged-shows-ul-2';
         let ul3 = 'logged-shows-ul-2';
         let ul4 = 'logged-shows-ul-2';
+        let noresults = false;
         
         let searchResShows = [];
         
@@ -144,12 +145,14 @@ class SearchBar extends React.Component {
         if (this.state.searchinput.length > 0  && (!displayedShows || displayedShows.length ===0)) {
             
             if (displayedShows.length === 0 || !displayedShows) {
+                noresults = true
                 searchErrors = <div className="search-bar-noresults-container">
                     <div className="search-bar-fail">0 results matching your search were found.</div>
                     <div className="search-bar-fail-2">Check your spelling or try another term.</div>
                 </div>
             } else {
                 searchErrors = <div></div>
+                noresults = false
             }
             
                 
@@ -187,6 +190,35 @@ class SearchBar extends React.Component {
             searchclear = 'search-bar-clear--hidden'
         }
 
+        let showscontainer = null
+
+        if(noresults === false){
+            showscontainer = 
+              <div className="search-shows-container">
+                <div className="genres-shows-list-container">
+                  <div className="search-shows-list-title">
+                    <h2 className="genres-shows-title">search results</h2>
+                  </div>
+                  <div className="search-shows-list-container">
+                    <div className="genres-shows-list">
+                      <ul className={ul1}>
+                        <div className="row1-shows-wrap">{row1Results}</div>
+                      </ul>
+                      <ul className={ul2}>
+                        <div className="row2-shows-wrap">{row2Results}</div>
+                      </ul>
+                      <ul className={ul3}>
+                        <div className="row2-shows-wrap">{row3Results}</div>
+                      </ul>
+                      <ul className={ul4}>
+                        <div className="row2-shows-wrap">{row4Results}</div>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        }
+
        
         
         
@@ -215,45 +247,7 @@ class SearchBar extends React.Component {
 
                 </div>
                 {searchErrors}
-                <div className='search-shows-container'>
-                    <div className='genres-shows-list-container'>
-                        <div className='search-shows-list-title'>
-                            <h2 className='genres-shows-title'>
-                                search results
-                            </h2>
-
-                        </div>
-                        <div className='genres-shows-list-container'>
-                            <div className='genres-shows-list'>
-                                <ul className={ul1}>
-                                    <div className='row1-shows-wrap'>
-                                        {row1Results}
-                                    </div>
-
-                                </ul>
-                                <ul className={ul2}>
-                                    <div className='row2-shows-wrap'>
-                                        {row2Results}
-                                    </div>
-                                </ul>
-                                <ul className={ul3}>
-                                    <div className='row2-shows-wrap'>
-                                        {row3Results}
-                                    </div>
-                                </ul>
-                                <ul className={ul4}>
-                                    <div className='row2-shows-wrap'>
-                                        {row4Results}
-                                    </div>
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                {showscontainer}
             </div>
         )
         
