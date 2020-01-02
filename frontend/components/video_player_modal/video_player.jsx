@@ -62,8 +62,12 @@ class VideoPlayer extends React.Component {
     handleTimeUpdate() {
    
         let updatedTime = this.vid.currentTime * (100 / this.vid.duration);
-        
+       
         this.progressbar.value = updatedTime;
+        this.setState({
+
+            vidprogress: updatedTime
+        })
         
 
         let currentMins = Math.floor(this.vid.currentTime / 60);
@@ -89,9 +93,8 @@ class VideoPlayer extends React.Component {
       
         let progress = this.vid.duration * (this.progressbar.value / 100);
         this.vid.currentTime = progress;
-        this.setState({
-            progress: progress
-        })
+        
+       
     }
 
 
@@ -202,7 +205,7 @@ class VideoPlayer extends React.Component {
                         <button className='material-icons Rewind1' onClick={this.handleSkipBack}> replay_10</button>
 
                         <div className='video-player-modal-progressbar'>
-                            <input className='progress-bar' onChange={this.handleProgress} type="range" min='0' max='100' value={this.state.progress} step='1' name="" id="progress-bar"/>
+                            <input className='progress-bar' onChange={this.handleProgress} type="range" min='0' max='100' value={this.state.vidprogress} step='1' name="" id="progress-bar"/>
                             
                             <div className='current-time' id='current-time'> 00:00</div>
                             <span className='progress-bar-slash'> / </span>
