@@ -26,7 +26,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    font-family: "Proza", sans-serif;
+    // font-family: "Proza", sans-serif;
     height: 400px;
     padding: 40px 80px;
     // top: 100px;
@@ -61,11 +61,13 @@
 .main-masthead-header {
     font-size: 56px;
     line-height: 56px;
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 0;
     letter-spacing: -0.5px;
     width: 570px;
     height: auto;
+    // font-family: 'Graphik' Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .masthead-content-1 {
@@ -75,6 +77,7 @@
     font-weight: 300;
     width: 570px;
     height: auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .masthead-content-2 {
@@ -84,6 +87,7 @@
     font-weight: normal;
     width: 570px;
     height: auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .masthead-free-trail-container {

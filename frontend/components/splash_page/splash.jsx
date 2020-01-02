@@ -14,13 +14,13 @@ class Splash extends React.Component {
                     <h2> Watch thousands of shows and movies, with plans starting <br /> at $5.99/month. </h2>
                     <h3> HBO®, SHOWTIME®, CINEMAX®, and STARZ® available as add-ons.</h3> */}
                     <div className='masthead-header-container'>
-                        <h1 className='main-masthead-header'> All Your TV In One Place</h1>
+                        <h1 className='main-masthead-header'> All Your Anime In One Place</h1>
                     </div>
                     <div className='masthead-content-1'>
-                        Watch thousands of shows and movies, with plans starting <br/> at $5.99/month.
+                        Watch a fair share of shows and movies(coming soon), with plans starting <br/> at FREE 99/month.
                     </div>
                     <div className='masthead-content-2'>
-                        HBO®, SHOWTIME®, CINEMAX®, and STARZ® available as add-ons.
+                        ADVENTURE®, ACTION®, THRILLER®, and HORROR® available .
                     </div>
                     <div className='masthead-free-trail-container'>
                         <button 
