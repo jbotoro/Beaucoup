@@ -1,14 +1,14 @@
 import React from 'react'
-import {withRouter} from 'react-router-dom'
-import {closeModal} from '../../actions/modal_actions';
-import {connect} from 'react-redux'
+
 
 class VideoPlayer extends React.Component {
     constructor(props){
         super(props)
         this.state ={
             fullscreen: false,
-            timer: 5
+            timer: 5,
+            vidprogress: 0
+
 
         }
 
@@ -60,24 +60,38 @@ class VideoPlayer extends React.Component {
     }
 
     handleTimeUpdate() {
+   
         let updatedTime = this.vid.currentTime * (100 / this.vid.duration);
+        
         this.progressbar.value = updatedTime;
+        
 
         let currentMins = Math.floor(this.vid.currentTime / 60);
+      
         let currentSecs = Math.floor(this.vid.currentTime - currentMins * 60);
+   
         let totalMins = Math.floor(this.vid.duration / 60);
+     
         let totalSecs = Math.floor(this.vid.duration - totalMins * 60);
+       
+        
         if (currentSecs < 10) { currentSecs = "0" + currentSecs; }
         if (currentMins < 10) { currentMins = "0" + currentMins; }
         if (totalSecs < 10) { totalSecs = "0" + totalSecs; }
         if (totalMins < 10) { totalMins = "0" + totalMins; }
         this.fulltime.innerHTML = totalMins + ":" + totalSecs;
         this.currenttime.innerHTML = currentMins + ":" + currentSecs;
+        
     }
 
+
     handleProgress() {
+      
         let progress = this.vid.duration * (this.progressbar.value / 100);
         this.vid.currentTime = progress;
+        this.setState({
+            progress: progress
+        })
     }
 
 
@@ -97,6 +111,7 @@ class VideoPlayer extends React.Component {
     }
 
     resetTimer(){
+      
         this.setState({
             timer: 5
         })
@@ -120,14 +135,14 @@ class VideoPlayer extends React.Component {
         setTimeout(() => {
             if (this.state.timer > 0) {
                 this.decrementTimer()
-               
+          
             }
         }, 1000);
         setTimeout(() => {
             if(this.state.timer === 0) {
-           
+                
                 this.setState({hover: false})
-          
+             
             }
         }, 5000)
 
@@ -187,7 +202,7 @@ class VideoPlayer extends React.Component {
                         <button className='material-icons Rewind1' onClick={this.handleSkipBack}> replay_10</button>
 
                         <div className='video-player-modal-progressbar'>
-                            <input className='progress-bar' onChange={this.handleProgress} type="range" min='0' max='100' value='' step='1' name="" id="progress-bar"/>
+                            <input className='progress-bar' onChange={this.handleProgress} type="range" min='0' max='100' value={this.state.progress} step='1' name="" id="progress-bar"/>
                             
                             <div className='current-time' id='current-time'> 00:00</div>
                             <span className='progress-bar-slash'> / </span>
