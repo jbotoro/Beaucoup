@@ -63,40 +63,22 @@ class SearchBar extends React.Component {
                 showslist.forEach(show => {
                     
                     let title = show.title.split(' ')
-                    let result = false
                     let query = title.filter(word => {
-                        
                         for (let i = 0; i < currentSearch.length && i < word.length; i++) {
-                              
                             if (currentSearch[i].toLowerCase() !== word[i].toLowerCase()) {
-                                
-                              
                                 return false
-                    
                             } 
-                           
                         }
                         if(currentSearch.length === 0) {
                             return false
                         }
                         return true
-                       
-                        
-                        
                     })
                     if (query.length > 0) {
-                        
-                     
                         searchResShows.push(show)
-                       
-                       
-
-                    }
-                   
-                })
-            
-           
-        }
+                       }
+                   })
+                }
 
         if(this.state.searching) {
           displayedShows = searchResShows
