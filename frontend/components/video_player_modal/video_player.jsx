@@ -71,13 +71,9 @@ class VideoPlayer extends React.Component {
         
 
         let currentMins = Math.floor(this.vid.currentTime / 60);
-      
         let currentSecs = Math.floor(this.vid.currentTime - currentMins * 60);
-   
         let totalMins = Math.floor(this.vid.duration / 60);
-     
         let totalSecs = Math.floor(this.vid.duration - totalMins * 60);
-       
         
         if (currentSecs < 10) { currentSecs = "0" + currentSecs; }
         if (currentMins < 10) { currentMins = "0" + currentMins; }

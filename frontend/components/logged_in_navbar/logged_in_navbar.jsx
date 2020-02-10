@@ -45,7 +45,6 @@ class loggedInNavBar extends React.Component {
     }
 
   handleClickBrowse(id) {
- 
     this.props.history.push(`/videos/genres/${id}`)
   }
 
