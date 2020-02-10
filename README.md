@@ -71,6 +71,23 @@ Beaucoup is video streaming web application that aims to be a clone of the popul
      
    ![progressbar](https://github.com/jbotoro/markdown_images/blob/master/videoplayerbeaucoup.png)
 #### Search
-   * Search component allows users to quickly find shows . 
+   * Search component allows users to quickly find shows by title.  
+     
+     ![search](https://github.com/jbotoro/markdown_images/blob/master/beaucoupsearch.png) .
+   
+   
+   
+#### Browse by Genre
+  * Joins tables on the backend link all shows with genre types allowing users to search for shows by genre . 
+    
+  ![genrebrowse](https://github.com/jbotoro/markdown_images/blob/master/beaucoupbrowsegenres.png) .
+  
+  
+  
+
+#### myStuff
+  * Users can add or remove videos for their personalized myStuff collection of content
+  
+  ![myStuff](https://github.com/jbotoro/markdown_images/blob/master/beaucoupmystuff.png) .
 
 
