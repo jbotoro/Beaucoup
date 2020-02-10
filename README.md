@@ -57,15 +57,13 @@ Beaucoup is video streaming web application that aims to be a clone of the popul
      
      
 #### Video Player  
+ 
 
-   * Video player has a minimize button that allows users to browse while watching videos  
+   * Video player has a minimize button that allows users to browse while watching videos . 
      
      
-   * Video player has a minimize button that allows users to browse while watching videos  
    ![minimized](https://github.com/jbotoro/markdown_images/blob/master/minimizedplayer.png) . 
-     
-     
-   * Video player has a minimize button that allows users to browse while watching videos  
+   
      
      
    * Video player has customized progress bar that allows for easy rewind /fast-forward and pause functionality . 
