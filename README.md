@@ -11,8 +11,8 @@
 
 Beaucoup is video streaming web application that aims to be a clone of the popular show streaming service Hulu
 
-![gif1](https://github.com/jbotoro/markdown_images/blob/master/.beaucoupgif1.gif.icloud)
-![gif2](https://github.com/jbotoro/markdown_images/blob/master/.beaucoupgif2.gif.icloud)
+![gif1](https://github.com/jbotoro/markdown_images/blob/master/beaucoupgif1.gif)
+![gif2](https://github.com/jbotoro/markdown_images/blob/master/beaucoupgif2.gif)
 
 ## Technologies 
  
@@ -46,14 +46,14 @@ Beaucoup is video streaming web application that aims to be a clone of the popul
    * Featured list highlights several shows and has unique UI . 
      
      
-   ![featured](https://github.com/jbotoro/markdown_images/blob/master/.beaucoupindexfeatured.png.icloud)
+   ![featured](https://github.com/jbotoro/markdown_images/blob/master/beaucoupindexfeatured.png)
    * All videos are fetched from backend and displayed to user . 
      
      
-   ![index](https://github.com/jbotoro/markdown_images/blob/master/.beaucoupindexshows.png.icloud)
+   ![index](https://github.com/jbotoro/markdown_images/blob/master/beaucoupindexshows.png)
    * Users can use NavBar to navigate to everyother feature from here . 
      
-   ![NavBar](https://github.com/jbotoro/markdown_images/blob/master/.logged-in-navbar.png.icloud)  
+   ![NavBar](https://github.com/jbotoro/markdown_images/blob/master/logged-in-navbar.png)  
      
      
 #### Video Player  
@@ -69,7 +69,7 @@ Beaucoup is video streaming web application that aims to be a clone of the popul
    * Video player has customized progress bar that allows for easy rewind /fast-forward and pause functionality . 
      
      
-   ![progressbar](https://github.com/jbotoro/markdown_images/blob/master/.videoplayerbeaucoup.png.icloud)
+   ![progressbar](https://github.com/jbotoro/markdown_images/blob/master/videoplayerbeaucoup.png)
 #### Search
    * Search component allows users to quickly find shows by title.  
      
